@@ -1,0 +1,79 @@
+<!--MVT Layer 관리 html -->
+<!--
+    sidemenu.mvtlayer.js - mvt 트리 및 기능을 수행한다.
+-->
+<div id="sidemenu-mvtlayer">
+    <hr />
+    <ul>
+        <li>
+            <span class="bdr-show-top">
+                <div>MVTLayer</div>
+                <br>
+                <table>
+                    <tr>
+                        <td>
+                            <button id="mvt-export">Tree Export</button>
+                            <button id="mvt-import">Tree Import</button>
+                            <span id="mvt-import-input" style="display: none;"></span>
+                            <button id="mvt-json-import">Tree List</button>
+
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td style="padding-top: 8px;">
+                            <button id="mvt-zindex-reverse">zIndex reverse</button>
+                            <button id="mvt-zindex-clear">zIndex clear</button>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr  style="vertical-align: baseline;">
+                        <td><a href="#" class="value-display ui-state-disabled abtn"
+                            id="layer-sub-mvt-featureinfo">F_Info</a>
+                        </td>
+                        <td>
+                            <select class="value-display ui-state-disabled abtn" id="layer-sub-mvt-featureanalysis">
+                                <option value="-">F_Analysis</option>
+                                <option value="rectangle">rectangle</option>
+                                <option value="circle">circle</option>
+                                <option value="polygon">polygon</option>
+                            </select>
+                        </td>
+                        <td><a href="#" id="layer-sub-mvt-featurenext">Next</a></td>
+                        <td><a href="#" class="value-display ui-state-disabled abtn"
+                            id="layer-sub-mvt-featureclear">Clear</a>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <td style="width: 80px;"><a href="#" id="mvt-style-export">Style Export</a></td>
+                        <td style="width: 80px;"><a href="#" id="mvt-style-import">Style Import</a></td>
+                        <span id="mvt-style-import-input" style="display: none;"></span>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <td title="world-boundary" style="width: 90px;"><a href="#" id="wb-style" style="display: none;">Style Change</a></td>
+                        <td title="world-boundary style clear" style="width: 80px;"><a href="#" id="wb-style-clear" style="display: none;">Style init</a></td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <td style="text-align: center; padding-right: 3px;">
+                            <div id="d2map_tree-container-mvt" class="tree-container-mvt">
+                                <ul id="d2map_mvtTree" class="d2map_ztree"></ul>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </span>
+        </li>
+    </ul>
+    <hr />
+</div>

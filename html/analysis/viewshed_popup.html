@@ -1,0 +1,25 @@
+<!--가시선 분석 창-->
+<!-- 
+    d2map.ui.viewshed.popup  - 이벤트 등록 후 D2Map에 가시선 분석을 요청한다.
+-->
+<div id="popup-viewshed" class="viewshed-popuplayer d2map_ui-popup">
+    <div id="viewshed-container">
+        <div id="viewshed-popup-title" class="popup-title">
+            <span>가시선 분석</span>
+        </div>
+        <div id="viewshed-value-container">
+            <span><label>높이(m)</label><input id="viewshed-height" type="text"></span>
+            <span><label>반경(m)</label><input id="viewshed-radius" type="text"></span>
+            <span><label>시작 각도(°)</label><input id="viewshed-startangle" type="text"></span>
+            <span><label>끝 각도(°)</label><input id="viewshed-endangle" type="text"></span>
+
+        </div>        
+        <div id="viewshed-value-button">
+            <a href="#" id="viewshed-apply" class="viewshed-btn">적용</a>
+        </div> 
+        <div id="viewshed-value-button">
+            <a href="#" id="viewshed-apply-direct" class="viewshed-btn" title="입력된 중심좌표와 기타정보를 기준으로 가시선 분석">설정값으로</a>
+        </div>       
+    </div>
+    <a href="#" class="d2map_popup-close-btn default-mode-btn"></a>
+</div>

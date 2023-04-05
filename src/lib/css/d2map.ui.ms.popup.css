@@ -1,0 +1,387 @@
+#d2map_ms_prop_modal {
+	font: normal 13px "Malgun Gothic";
+	box-sizing: border-box;
+}
+
+#d2map_basic-content-table {
+	border-collapse: separate;
+}
+
+#d2map_ms-prop-edit-select-affiliation,
+#d2map_ms-prop-edit-select-operationalConditionPoint,
+#d2map_ms-prop-edit-select-status,
+#d2map_ms-prop-edit-text-size,
+#d2map_ms-prop-edit-text-opacity,
+#d2map_ms-prop-edit-text-strokeWidth {
+	width: 120px;
+}
+
+#d2map_ms-prop-edit-chk-displayicon,
+#d2map_ms-prop-edit-chk-displayframe,
+#d2map_ms-prop-edit-chk-displayfill,
+#d2map_ms-prop-edit-chk-civilianColor,
+#d2map_ms-prop-edit-chk-showCombatEffectivenessWaterFill,
+#d2map_ms-prop-edit-chk-showUseDefineColor {
+	margin-left: 58px;
+}
+
+#d2map_ms-prop-edit-color-properties {
+	margin-left: 61px;
+}
+
+#d2map_ms-prop-edit-chk-userDefineFillColor {
+	margin-left: 35px;
+}
+
+#d2map_ms-prop-edit-color-useDefineColorTocombatEffectiveness {
+	margin-left: 50px;
+}
+
+#d2map_ms-prop-edit-text-headquarters,
+#d2map_ms-prop-edit-text-mobileUnit {
+	margin-left: 70px;
+}
+
+.d2map_extension-content {
+	display: none;
+}
+
+#d2map_extension-content-table {
+	/* height: 762px; */
+	height: auto;
+}
+
+#d2map_ms-prop-edit-select-echelon,
+#d2map_ms-prop-edit-select-evaluationRating,
+#d2map_ms-prop-edit-select-mobilityIndicator {
+	width: 147px
+}
+
+#d2map_ms-prop-edit-text-combatEffectiveness {
+	width: 80px;
+}
+
+/* 기본군대부호 AH-tab */
+.d2map_ms-prop-edit-bottom-forAH nav,
+.d2map_ms-prop-edit-bottom-forAI nav,
+.d2map_ms-prop-edit-bottom-forAJ nav {
+	display: flex;
+	position: relative;
+	background-color: #333;
+}
+
+#d2map_AH-confirm-btn,
+#d2map_AI-confirm-btn,
+#d2map_AJ-confirm-btn {
+	cursor: pointer;
+}
+
+.d2map_AH-tab {
+	--AH-tab-width: 128px;
+	width: var(--AH-tab-width);
+	text-align: center;
+	height: 25px;
+	line-height: normal;
+	cursor: pointer;
+	transition: color 0.15s ease-in;
+	z-index: 1000;
+	padding-top: 3px;
+}
+
+.d2map_AH-glider {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 128px;
+	background-color: #3d3d3d;
+	transition: 0.25s ease-out;
+	box-shadow: 0 7px 8px -4px rgb(0 0 0 / 20%);
+}
+
+.d2map_AH-tab-content {
+	min-height: 165px;
+	line-height: normal;
+	background-color: #333;
+	padding: 15px;
+	display: none;
+}
+
+.d2map_AH-tab-content table {
+	height: 215px;
+}
+
+.d2map_AH-tab-content.active {
+	display: block;
+	border-radius: 5px;
+}
+
+#d2map_AH-tab-none {
+	text-align: center;
+}
+
+#d2map_AH-tab-none div {
+	margin-top: 35px;
+	margin-bottom: 7px;
+}
+
+/* 기본군대부호 AI-tab */
+.d2map_AI-tab {
+	--AI-tab-width: 128px;
+	width: var(--AI-tab-width);
+	text-align: center;
+	height: 25px;
+	line-height: normal;
+	cursor: pointer;
+	transition: color 0.15s ease-in;
+	z-index: 1000;
+	padding-top: 3px;
+}
+
+.d2map_AI-glider {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 128px;
+	background-color: #3d3d3d;
+	transition: 0.25s ease-out;
+	box-shadow: 0 7px 8px -4px rgb(0 0 0 / 20%);
+}
+
+.d2map_AI-tab-content {
+	line-height: normal;
+	background-color: #333;
+	padding: 15px;
+	display: none;
+}
+
+.d2map_AI-tab-content table {
+	height: 215px;
+}
+
+.d2map_AI-tab-content.active {
+	display: block;
+}
+
+#d2map_AI-tab-none {
+	text-align: center;
+}
+
+#d2map_AI-tab-none div {
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+/* 기본군대부호 AJ-tab */
+.d2map_AJ-tab {
+	--AH-tab-width: 110px;
+	width: var(--AH-tab-width);
+	text-align: center;
+	height: 25px;
+	line-height: normal;
+	cursor: pointer;
+	transition: color 0.15s ease-in;
+	z-index: 1000;
+	padding-top: 3px;
+}
+
+.d2map_AJ-glider {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 110px;
+	background-color: #3d3d3d;
+	transition: 0.25s ease-out;
+	box-shadow: 0 7px 8px -4px rgb(0 0 0 / 20%);
+}
+
+.d2map_AJ-tab-content {
+	min-height: 165px;
+	line-height: normal;
+	background-color: #333;
+	padding: 15px;
+	display: none;
+}
+
+.d2map_AJ-tab-content table {
+	border-collapse: separate;
+	border-spacing: 0 5px;
+	height: 269px;
+}
+
+.d2map_AJ-tab-content table input {
+	width: 46px;
+}
+
+.d2map_AJ-tab-content.active {
+	display: block;
+}
+
+#d2map_AJ-none {
+	text-align: center;
+}
+
+#d2map_AJ-none div {
+	margin-top: 37px;
+	margin-bottom: 7px;
+}
+
+.d2map_popup-trigger {
+	margin-left: 70px;
+	font-weight: bolder;
+	cursor: pointer;
+}
+
+.d2map_popup-trigger:hover {
+	text-underline-position: under;
+	text-decoration: underline;
+}
+
+/* 기본군대부호 AH, AI, AJ 속성 창 */
+.d2map_popup-modal {
+	height: auto;
+	background: #333;
+	position: absolute;
+	padding: 0;
+	opacity: 0;
+	pointer-events: none;
+	box-shadow: 0 0 15px 3px #222 inset;
+	z-index: 1011;
+	border-radius: 5px;
+}
+
+.d2map_popup-modal-close {
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 10px;
+	height: 10px;
+	background: transparent;
+	border: none;
+	border-radius: 2px;
+	font-weight: bold;
+	font-size: 16px;
+	margin: 0;
+	color: #edffff;
+	font-size: small;
+	background-image: url(./img/close_btn.png);
+	cursor: pointer;
+}
+
+.d2map_popup-modal table {
+	white-space: nowrap;
+}
+
+.d2map_popup-modal input {
+	width: 80px;
+}
+
+.d2map_popup-modal input[type="color"] {
+	background: rgba(0, 0, 0, 0.1);
+	border: none;
+}
+
+.d2map_popup-modal.is-visible {
+	opacity: 0.7;
+	pointer-events: auto;
+}
+
+.d2map_popup-modal__close {
+	position: absolute;
+	font-size: 13px;
+	right: 5px;
+	top: 3px;
+	cursor: pointer;
+	height: 25px;
+	width: 25px;
+	border: none;
+	background: #333;
+	border-radius: 5px;
+	font-weight: bolder;
+	color: #edffff;
+}
+
+.d2map_popup-modal__close:hover {
+	background: rgba(170, 0, 0, 1);
+	color: #000;
+}
+
+.d2map_modal-header h4 {
+	height: 26px;
+	margin: 4px 0px 0px 0px;
+	border-bottom: 1px solid #4d4d4d;
+	text-align: center;
+}
+
+.d2map_AH-tab-content table tr th,
+.d2map_AI-tab-content table tr th,
+.d2map_AJ-tab-content table tr th {
+	text-align: left;
+}
+
+#d2map_AH-tab-direction,
+#d2map_AH-tab-ellipse,
+#d2map_AH-tab-rectangle {
+	margin-left: 8%;
+}
+
+/* 군대부호 선형/면형 속성 창 */
+.d2map_tab-container {
+	box-shadow: 0 0 15px 3px #222 inset;
+}
+
+#d2map_ms-style-nonpoint-strokeAlpha,
+#d2map_ms-style-nonpoint-fillAlpha {
+	width: 35px !important;
+	float: right;
+}
+
+#d2map_tail_left,
+#d2map_tail_center {
+	width: 50%;
+}
+
+.d2map_tail_left table tr td:nth-child(odd) {
+	width: 15%;
+}
+
+.d2map_tail_left table tr td:nth-child(2n) {
+	width: 35%;
+}
+
+input[name="ms-prop-edit-text_ex"] {
+	width: 60%;
+}
+
+#d2map_ms-prop-edit-select-status_ex,
+#d2map_ms-prop-edit-select-affiliation_ex,
+#d2map_ms-prop-edit-text-size_ex,
+#d2map_ms-prop-edit-text-strokeWidth_ex,
+#d2map_ms-prop-edit-select-addsymbol_ex {
+	width: 60%;
+}
+
+#d2map_tail_center table tr td {
+	width: 25%;
+}
+
+#d2map_ms_prop_container_ex {
+	width: 33%;
+	z-index: 102;
+}
+
+.d2map_tab-container_ex {
+	width: 55%;
+}
+
+.d2map_extend-content_ex {
+	display: none;
+}
+
+#d2map_ms-style-defineColor_ex {
+	width: 18px;
+	margin-left: 38px;
+}

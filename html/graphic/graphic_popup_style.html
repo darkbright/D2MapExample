@@ -1,0 +1,613 @@
+<!--팝업 그래픽 스타일-->
+<!-- 
+    new D2.Core.GraphicPopupUI(window.graphic) 생성 하면 D2Map 내에서 
+    이벤트를 등록하고 수행한다.
+-->
+<div id="d2map_popup-graphic-style" class="d2map_popuplayer d2map_ui-popup">
+    <div class="d2map_popup-container">
+        <div class="d2map_popup-title">Graphic Style</div>
+        <div class="d2map_graphic-style-content tab-container">
+            <ul id="d2map_graphic-tab-controller" class="d2map_tab-controller">
+                <li id="d2map_point-tab" class="d2map_selected" data-tab="point-content">점</li>
+                <li id="d2map_line-tab" data-tab="line-content">선</li>
+                <li id="d2map_arrow-tab" data-tab="arrow-content">화살표</li>
+                <li id="d2map_fill-tab" data-tab="fill-content">채움</li>
+                <li id="d2map_text-tab" data-tab="text-content">텍스트</li>
+                <li id="d2map_prop-tab" data-tab="prop-content">속성</li>
+            </ul>
+            <div id="d2map_graphic-tab-content" class="d2map_tab-content">
+                <div class="d2map_point-content">
+                    <span title="Point Style" id="d2map_graphicpopup-edit-sub-point-style" style="font-size: 15px;">점 속성
+                        <table style="margin: 10px 0 10px 0px;">
+                            <tr>
+                                <td>
+                                    <select name="graphicpopup-sub-select" id="d2map_graphicpopup-sub-point-type" style="width: 180px;">
+                                        <option value="circle">원</option>
+                                        <option value="rectangle">사각형</option>
+                                        <option value="rhombus">마름모</option>
+                                        <option value="triangle">삼각형</option>
+                                        <option value="invertTriangle">역삼각형</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" style="width:35px; text-align:right; float:left; margin: 0 2px 0 0px; height: 28px; line-height: 28px;" value="3" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-point-size" /><label style="padding-left:5px; float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-point-size">크기</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </span>
+                </div>
+                <div class="d2map_line-content">
+                    <span title="Line Style" id="d2map_graphicpopup-edit-sub-line-style" style="font-size: 15px;">선 속성
+                        <table style="margin: 10px 0 10px 0px;">
+                            <tr>
+                                <td>
+                                    <select name="graphicpopup-sub-select" id="d2map_graphicpopup-sub-line-type" style="width: 180px;">
+                                        <option value="simple">실선</option>
+                                        <option value="dash">점선</option>
+                                        <option value="dash dot">일점쇄선</option>
+                                        <option value="dash dot dot">이점쇄선</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" style="width:35px; text-align:right; float:left; margin: 0 2px 0 0px; height: 28px; line-height: 28px;" value="3" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-line-width" /><label style="padding-left:5px; float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-line-width">굵기</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="graphicpopup-sub-select" id="d2map_graphicpopup-sub-double-line-type" style="width: 180px;">
+                                        <option value="type-1">단선</option>
+                                        <option value="type-2">겹선-1</option>
+                                        <option value="type-3">겹선-2</option>
+                                        <option value="type-4">겹선-3</option>
+                                        <option value="type-5">겹선-4</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                        <span title="Line Fill Style" id="d2map_graphicpopup-edit-sub-line-fill-style" style="font-size: 15px;">선 채움 속성
+                            <table>
+                                <tr>
+                                    <td style="width: 190px;"><label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-line-fill-type">선 유형</label></td>
+                                    <td><select name="graphicpopup-sub-select" id="d2map_graphicpopup-sub-line-fill-type" style="width: 100px;">
+                                            <option value="simple">단색</option>
+                                            <option value="pattern">음영</option>
+                                            <option value="gradient">그라데이션</option>
+                                        </select></td>
+                                </tr>
+                                <tr id="d2map_graphicpopup-sub-line-fill-pattern">
+                                    <td style="width: 100px;"><label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-line-fill-pattern">패턴</label></td>
+                                    <td><select name="graphicpopup-sub-select" id="d2map_graphicpopup-sub-line-fill-pattern-type" style="width: 100px;">
+                                            <option value="horizontal">Horizontal</option>
+                                            <option value="vertical">Vertical</option>
+                                            <option value="forwardDiagonal">ForwardDiagonal</option>
+                                            <option value="backwardDiagonal">BackwardDiagonal</option>
+                                            <option value="cross">Cross</option>
+                                            <option value="diagonalCross">DiagonalCross</option>
+                                            <option value="percent05">Percent05</option>
+                                            <option value="percent10">Percent10</option>
+                                            <option value="percent20">Percent20</option>
+                                            <option value="percent25">Percent25</option>
+                                            <option value="percent30">Percent30</option>
+                                            <option value="percent40">Percent40</option>
+                                            <option value="percent50">Percent50</option>
+                                            <option value="percent60">Percent60</option>
+                                            <option value="percent70">Percent70</option>
+                                            <option value="percent75">Percent75</option>
+                                            <option value="percent80">Percent80</option>
+                                            <option value="percent90">Percent90</option>
+                                            <option value="lightDownwardDiagonal">LightDownwardDiagonal</option>
+                                            <option value="lightUpwardDiagonal">LightUpwardDiagonal</option>
+                                            <option value="darkDownwardDiagonal">DarkDownwardDiagonal</option>
+                                            <option value="darkUpwardDiagonal">DarkUpwardDiagonal</option>
+                                            <option value="wideDownwardDiagonal">WideDownwardDiagonal</option>
+                                            <option value="wideUpwardDiagonal">WideUpwardDiagonal</option>
+                                            <option value="lightVertical">LightVertical</option>
+                                            <option value="lightHorizontal">LightHorizontal</option>
+                                            <option value="narrowVertical">NarrowVertical</option>
+                                            <option value="narrowHorizontal">NarrowHorizontal</option>
+                                            <option value="darkVertical">DarkVertical</option>
+                                            <option value="darkHorizontal">DarkHorizontal</option>
+                                            <option value="dashedDownwardDiagonal">DashedDownwardDiagonal</option>
+                                            <option value="dashedUpwardDiagonal">DashedUpwardDiagonal</option>
+                                            <option value="dashedHorizontal">DashedHorizontal</option>
+                                            <option value="dashedVertical">DashedVertical</option>
+                                            <option value="smallConfetti">SmallConfetti</option>
+                                            <option value="largeConfetti">LargeConfetti</option>
+                                            <option value="zigZag">ZigZag</option>
+                                            <option value="wave">Wave</option>
+                                            <option value="diagonalBrick">DiagonalBrick</option>
+                                            <option value="horizontalBrick">HorizontalBrick</option>
+                                            <option value="weave">Weave</option>
+                                            <option value="plaid">Plaid</option>
+                                            <option value="divot">Divot</option>
+                                            <option value="dottedGrid">DottedGrid</option>
+                                            <option value="dottedDiamond">DottedDiamond</option>
+                                            <option value="shingle">Shingle</option>
+                                            <option value="trellis">Trellis</option>
+                                            <option value="sphere">Sphere</option>
+                                            <option value="smallGrid">SmallGrid</option>
+                                            <option value="smallCheckerBoard">SmallCheckerBoard</option>
+                                            <option value="largeCheckerBoard">LargeCheckerBoard</option>
+                                            <option value="outlinedDiamond">OutlinedDiamond</option>
+                                            <option value="solidDiamond">SolidDiamond</option>
+                                        </select></td>
+                                </tr>
+                                <tr id="d2map_graphicpopup-sub-line-fill-gradient">
+                                    <td style="width: 100px;">
+                                        <label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-line-fill-gradient">그라데이션 유형</label>
+                                    </td>
+                                    <td>
+                                        <select name="graphicpopup-sub-select" id="d2map_graphicpopup-sub-line-fill-gradient-type" style="width: 100px;">
+                                            <option value="horizontal">수평</option>
+                                            <option value="forwardDiagonal">전방 사선</option>
+                                            <option value="vertical">수직</option>
+                                            <option value="backwardDiagonal">후방 사선</option>
+                                            <option value="path">경로형</option>
+                                            <option value="radial">방사형</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="d2map_graphicpopup-sub-line-fill-simple-style">
+                                    <td style="width: 190px;"><input type="color" style="width:35px; float:left; margin: 0 1px 0 2px; height: 28px; line-height: 28px;" value="#C6EAFF" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-line-fill-backgroundColor" /><label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-line-fill-backgroundColor">색상</label>
+                                    </td>
+                                    <td><input type="text" style="padding-left:5px; width:35px; text-align:right; float:left; margin: 0 2px 0 0; height: 28px; line-height: 28px;" value="128" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-line-fill-backgroundAlpha" /><label style="padding-left:5px; float:left; font-size: 11px;  height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-line-fill-backgroundAlpha">투명도</label>
+                                    </td>
+                                </tr>
+                                <tr class="d2map_graphicpopup-sub-line-fill-pattern-style">
+                                    <td style="width: 190px;"><input type="color" style="width:35px; float:left; margin: 0 1px 0 2px; height: 28px; line-height: 28px;" value="#C6EAFF" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-line-fill-patternColor1" /><label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-line-fill-patternColor1">배경색</label>
+                                    </td>
+                                    <td><input type="text" style="padding-left:5px; width:35px; text-align:right; float:left; margin: 0 2px 0 0; height: 28px; line-height: 28px;" value="128" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-line-fill-patternAlpha1" /><label style="padding-left:5px; float:left; font-size: 11px;  height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-line-fill-patternAlpha1">투명도</label></td>
+                                </tr>
+                                <tr class="d2map_graphicpopup-sub-line-fill-pattern-style">
+                                    <td style="width: 190px;"><input type="color" style="width:35px; float:left; margin: 0 1px 0 2px; height: 28px; line-height: 28px;" value="#C6EAFF" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-line-fill-patternColor2" /><label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-line-fill-patternColor2">전경색</label>
+                                    </td>
+                                    <td><input type="text" style="padding-left:5px; width:35px; text-align:right; float:left; margin: 0 2px 0 0; height: 28px; line-height: 28px;" value="128" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-line-fill-patternAlpha2" /><label style="padding-left:5px; float:left; font-size: 11px;  height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-line-fill-patternAlpha2">투명도</label></td>
+                                </tr>
+                                <tr class="d2map_graphicpopup-sub-line-fill-gradient-style">
+                                    <td style="width: 100px;">
+                                        <label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-line-fill-gradient-stopPoint">중지점</label>
+                                    </td>
+                                    <td>
+                                        <select name="graphicpopup-sub-select" id="d2map_graphicpopup-sub-line-fill-gradient-stopPoint" name="graphicpopup-sub-select" style="width: 100px;">
+                                            <option value="color1">색상 1</option>
+                                            <option value="color2">색상 2</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="d2map_graphicpopup-sub-line-fill-gradient-style">
+                                    <td>
+                                        <input type="range" value="0.5" min="0" max="1" step="0.01" name="graphicpopup-sub-input" style="width: 110px;" id="d2map_graphicpopup-sub-line-fill-gradient-stopPoint-position" />
+                                        <label for="d2map_graphicpopup-sub-line-fill-gradient-stopPoint-position" id="d2map_graphicpopup-sub-line-fill-gradient-stopPoint-position-value" style="width: 30px; text-align: right">100%</label>
+                                    </td>
+                                    <td>
+                                        <a href="#" id="d2map_graphicpopup-sub-line-fill-gradient-stopPoint-add" class="d2map_abtn" style="color: #fff; float: none; width: 35px; text-align: center; float: left; margin-left: 5px;">추가</a>
+                                        <a href="#" id="d2map_graphicpopup-sub-line-fill-gradient-stopPoint-del" class="d2map_abtn" style="color: #fff; float: none; width: 35px; text-align: center;float: right; margin-right: 5px;">삭제</a>
+                                    </td>
+                                </tr>
+                                <tr class="d2map_graphicpopup-sub-line-fill-gradient-style">
+                                    <td style="width: 190px;"><input type="color" style="width:35px; float:left; margin: 0 1px 0 2px; height: 28px; line-height: 28px;" value="#C6EAFF" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-line-fill-gradientColor" /><label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-line-fill-gradientColor">color</label></td>
+                                    <td><input type="text" style="padding-left:5px; width:35px; text-align:right; float:left; margin: 0 2px 0 0; height: 28px; line-height: 28px;" value="128" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-line-fill-gradientAlpha" /><label style="padding-left:5px; float:left; font-size: 11px;  height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-line-fill-gradientAlpha">Alpha</label></td>
+                                </tr>
+                            </table>
+                        </span>
+                    </span>
+                </div>
+                <div class="d2map_arrow-content">
+                    <span title="Arrow Type" id="d2map_graphicpopup-edit-sub-arrow-style" style="font-size: 15px;">화살표 속성
+                        <table style="margin: 10px 0 10px 0px;">
+                            <tr id="d2map_graphicpopup-edit-sub-line-arrowbegin">
+                                <td>
+                                    <select name="graphicpopup-sub-select" id="d2map_graphicpopup-sub-line-style-arrowbegin" style="width: 180px;">
+                                        <option value="none">없음</option>
+                                        <option value="arrow">화살표</option>
+                                        <option value="arrowL">화살표(좌)</option>
+                                        <option value="arrowR">화살표(우)</option>
+                                        <option value="tail">화살꼬리</option>
+                                        <option value="tailL">화살꼬리(좌)</option>
+                                        <option value="tailR">화살꼬리(우)</option>
+                                        <option value="tailF">화살꼬리채움</option>
+                                        <option value="tailLF">화살꼬리채움(좌)</option>
+                                        <option value="tailRF">화살꼬리채움(우)</option>
+                                        <option value="tentL">텐트(좌)</option>
+                                        <option value="tentR">텐트(우)</option>
+                                        <option value="tentLF">텐트채움(좌)</option>
+                                        <option value="tentRF">텐트채움(우)</option>
+                                        <option value="slashL">사선</option>
+                                        <option value="slashR">역사선</option>
+                                        <option value="cross">가위표</option>
+                                        <option value="triangle">삼각형</option>
+                                        <option value="triangleF">삼각형채움</option>
+                                        <option value="triangleL">삼각형(좌)</option>
+                                        <option value="triangleLF">삼각형채움(좌)</option>
+                                        <option value="triangleR">삼각형(우)</option>
+                                        <option value="triangleRF">삼각형채움(우)</option>
+                                        <option value="rectangle">사각형</option>
+                                        <option value="rectangleF">사각형채움</option>
+                                        <option value="circle">원</option>
+                                        <option value="circleF">원채움</option>
+                                        <option value="diamond">마름모</option>
+                                        <option value="diamondF">마름모채움</option>
+                                        <option value="thick">겹화살표</option>
+                                        <option value="doubleArrow">이중화살표</option>
+                                        <option value="doubleArrowL">이중화살표(좌)</option>
+                                        <option value="doubleArrowR">이중화살표(우)</option>
+                                        <option value="doubleTail">이중화살꼬리</option>
+                                        <option value="doubleTailL">이중화살꼬리(좌)</option>
+                                        <option value="doubleTailR">이중화살꼬리(우)</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <label style="padding-left:5px; float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-line-Begin">시작 모양</label>
+                                </td>
+                            </tr>
+                            <tr id="d2map_graphicpopup-sub-line-style-arrowbegin-size">
+                                <td colspan="2">
+                                    <input type="text" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-line-style-arrowbegin-width" style="width: 35px; display: inline;" />
+                                    <label for="d2map_graphicpopup-sub-line-style-arrowbegin-width" style="width: 35px; height: 27px; line-height: 27px; display: inline-block;">
+                                        길이
+                                    </label>
+                                    <input type="text" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-line-style-arrowbegin-height" style="width: 35px; display: inline;" />
+                                    <label for="d2map_graphicpopup-sub-line-style-arrowbegin-height" style="width: 35px; height: 27px; line-height: 27px; display: inline-block;">
+                                        폭
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr id="d2map_graphicpopup-edit-sub-line-arrowend">
+                                <td>
+                                    <select name="graphicpopup-sub-select" id="d2map_graphicpopup-sub-line-style-arrowend" style="width: 180px;">
+                                        <option value="none">없음</option>
+                                        <option value="arrow">화살표</option>
+                                        <option value="arrowL">화살표(좌)</option>
+                                        <option value="arrowR">화살표(우)</option>
+                                        <option value="tail">화살꼬리</option>
+                                        <option value="tailL">화살꼬리(좌)</option>
+                                        <option value="tailR">화살꼬리(우)</option>
+                                        <option value="tailF">화살꼬리채움</option>
+                                        <option value="tailLF">화살꼬리채움(좌)</option>
+                                        <option value="tailRF">화살꼬리채움(우)</option>
+                                        <option value="tentL">텐트(좌)</option>
+                                        <option value="tentR">텐트(우)</option>
+                                        <option value="tentLF">텐트채움(좌)</option>
+                                        <option value="tentRF">텐트채움(우)</option>
+                                        <option value="slashL">사선</option>
+                                        <option value="slashR">역사선</option>
+                                        <option value="cross">가위표</option>
+                                        <option value="triangle">삼각형</option>
+                                        <option value="triangleF">삼각형채움</option>
+                                        <option value="triangleL">삼각형(좌)</option>
+                                        <option value="triangleLF">삼각형채움(좌)</option>
+                                        <option value="triangleR">삼각형(우)</option>
+                                        <option value="triangleRF">삼각형채움(우)</option>
+                                        <option value="rectangle">사각형</option>
+                                        <option value="rectangleF">사각형채움</option>
+                                        <option value="circle">원</option>
+                                        <option value="circleF">원채움</option>
+                                        <option value="diamond">마름모</option>
+                                        <option value="diamondF">마름모채움</option>
+                                        <option value="thick">겹화살표</option>
+                                        <option value="doubleArrow">이중화살표</option>
+                                        <option value="doubleArrowL">이중화살표(좌)</option>
+                                        <option value="doubleArrowR">이중화살표(우)</option>
+                                        <option value="doubleTail">이중화살꼬리</option>
+                                        <option value="doubleTailL">이중화살꼬리(좌)</option>
+                                        <option value="doubleTailR">이중화살꼬리(우)</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <label style="padding-left:5px; float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-line-End">끝 모양</label>
+                                </td>
+                            </tr>
+                            <tr id="d2map_graphicpopup-sub-line-style-arrowend-size">
+                                <td colspan="2">
+                                    <input type="text" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-line-style-arrowend-width" style="width: 35px; display: inline;" />
+                                    <label for="d2map_graphicpopup-sub-line-style-arrowend-width" style="width: 35px; height: 27px; line-height: 27px; display: inline-block;">
+                                        길이
+                                    </label>
+                                    <input type="text" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-line-style-arrowend-height" style="width: 35px; display: inline;" />
+                                    <label for="d2map_graphicpopup-sub-line-style-arrowend-height" style="width: 35px; height: 27px; line-height: 27px; display: inline-block;">
+                                        폭
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </span>
+                </div>
+                <div class="d2map_fill-content">
+                    <span title="Fill Style" id="d2map_graphicpopup-edit-sub-fill-style" style="font-size: 15px;">채움 속성
+                        <table>
+                            <tr>
+                                <td style="width: 190px;"><label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-fill-type">채움 유형</label></td>
+                                <td><select name="graphicpopup-sub-select" id="d2map_graphicpopup-sub-fill-type" style="width: 100px;">
+                                        <option value="simple">단색</option>
+                                        <option value="pattern">음영</option>
+                                        <option value="gradient">그라데이션</option>
+                                    </select></td>
+                            </tr>
+                            <tr id="d2map_graphicpopup-sub-fill-pattern">
+                                <td style="width: 100px;"><label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-fill-pattern">음영</label></td>
+                                <td><select name="graphicpopup-sub-select" id="d2map_graphicpopup-sub-fill-pattern-type" style="width: 100px;">
+                                        <option value="horizontal">Horizontal</option>
+                                        <option value="vertical">Vertical</option>
+                                        <option value="forwardDiagonal">ForwardDiagonal</option>
+                                        <option value="backwardDiagonal">BackwardDiagonal</option>
+                                        <option value="cross">Cross</option>
+                                        <option value="diagonalCross">DiagonalCross</option>
+                                        <option value="percent05">Percent05</option>
+                                        <option value="percent10">Percent10</option>
+                                        <option value="percent20">Percent20</option>
+                                        <option value="percent25">Percent25</option>
+                                        <option value="percent30">Percent30</option>
+                                        <option value="percent40">Percent40</option>
+                                        <option value="percent50">Percent50</option>
+                                        <option value="percent60">Percent60</option>
+                                        <option value="percent70">Percent70</option>
+                                        <option value="percent75">Percent75</option>
+                                        <option value="percent80">Percent80</option>
+                                        <option value="percent90">Percent90</option>
+                                        <option value="lightDownwardDiagonal">LightDownwardDiagonal</option>
+                                        <option value="lightUpwardDiagonal">LightUpwardDiagonal</option>
+                                        <option value="darkDownwardDiagonal">DarkDownwardDiagonal</option>
+                                        <option value="darkUpwardDiagonal">DarkUpwardDiagonal</option>
+                                        <option value="wideDownwardDiagonal">WideDownwardDiagonal</option>
+                                        <option value="wideUpwardDiagonal">WideUpwardDiagonal</option>
+                                        <option value="lightVertical">LightVertical</option>
+                                        <option value="lightHorizontal">LightHorizontal</option>
+                                        <option value="narrowVertical">NarrowVertical</option>
+                                        <option value="narrowHorizontal">NarrowHorizontal</option>
+                                        <option value="darkVertical">DarkVertical</option>
+                                        <option value="darkHorizontal">DarkHorizontal</option>
+                                        <option value="dashedDownwardDiagonal">DashedDownwardDiagonal</option>
+                                        <option value="dashedUpwardDiagonal">DashedUpwardDiagonal</option>
+                                        <option value="dashedHorizontal">DashedHorizontal</option>
+                                        <option value="dashedVertical">DashedVertical</option>
+                                        <option value="smallConfetti">SmallConfetti</option>
+                                        <option value="largeConfetti">LargeConfetti</option>
+                                        <option value="zigZag">ZigZag</option>
+                                        <option value="wave">Wave</option>
+                                        <option value="diagonalBrick">DiagonalBrick</option>
+                                        <option value="horizontalBrick">HorizontalBrick</option>
+                                        <option value="weave">Weave</option>
+                                        <option value="plaid">Plaid</option>
+                                        <option value="divot">Divot</option>
+                                        <option value="dottedGrid">DottedGrid</option>
+                                        <option value="dottedDiamond">DottedDiamond</option>
+                                        <option value="shingle">Shingle</option>
+                                        <option value="trellis">Trellis</option>
+                                        <option value="sphere">Sphere</option>
+                                        <option value="smallGrid">SmallGrid</option>
+                                        <option value="smallCheckerBoard">SmallCheckerBoard</option>
+                                        <option value="largeCheckerBoard">LargeCheckerBoard</option>
+                                        <option value="outlinedDiamond">OutlinedDiamond</option>
+                                        <option value="solidDiamond">SolidDiamond</option>
+                                    </select></td>
+                            </tr>
+                            <tr id="d2map_graphicpopup-sub-fill-gradient">
+                                <td style="width: 100px;"><label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-fill-gradient">그라데이션 유형</label></td>
+                                <td>
+                                    <select name="graphicpopup-sub-select" id="d2map_graphicpopup-sub-fill-gradient-type" style="width: 100px;">
+                                        <option value="horizontal">수평</option>
+                                        <option value="forwardDiagonal">전방사선</option>
+                                        <option value="vertical">수직</option>
+                                        <option value="backwardDiagonal">후방사선</option>
+                                        <option value="path">경로형</option>
+                                        <option value="radial">방사형</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr class="d2map_graphicpopup-sub-fill-simple-style">
+                                <td style="width: 190px;"><input type="color" style="width:35px; float:left; margin: 0 1px 0 2px; height: 28px; line-height: 28px;" value="#C6EAFF" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-fill-backgroundColor" /><label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-fill-backgroundColor">색상</label>
+                                </td>
+                                <td><input type="text" style="padding-left:5px; width:35px; text-align:right; float:left; margin: 0 2px 0 0; height: 28px; line-height: 28px;" value="128" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-fill-backgroundAlpha" /><label style="padding-left:5px; float:left; font-size: 11px;  height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-fill-backgroundAlpha">투명도</label></td>
+                            </tr>
+                            <tr class="d2map_graphicpopup-sub-fill-pattern-style">
+                                <td style="width: 190px;"><input type="color" style="width:35px; float:left; margin: 0 1px 0 2px; height: 28px; line-height: 28px;" value="#C6EAFF" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-fill-patternColor1" /><label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-fill-patternColor1">배경색</label></td>
+                                <td><input type="text" style="padding-left:5px; width:35px; text-align:right; float:left; margin: 0 2px 0 0; height: 28px; line-height: 28px;" value="128" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-fill-patternAlpha1" /><label style="padding-left:5px; float:left; font-size: 11px;  height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-fill-patternAlpha1">투명도</label></td>
+                            </tr>
+                            <tr class="d2map_graphicpopup-sub-fill-pattern-style">
+                                <td style="width: 190px;"><input type="color" style="width:35px; float:left; margin: 0 1px 0 2px; height: 28px; line-height: 28px;" value="#C6EAFF" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-fill-patternColor2" /><label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-fill-patternColor2">전경색</label></td>
+                                <td><input type="text" style="padding-left:5px; width:35px; text-align:right; float:left; margin: 0 2px 0 0; height: 28px; line-height: 28px;" value="128" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-fill-patternAlpha2" /><label style="padding-left:5px; float:left; font-size: 11px;  height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-fill-patternAlpha2">투명도</label></td>
+                            </tr>
+                            <tr class="d2map_graphicpopup-sub-fill-gradient-style">
+                                <td style="width: 100px;">
+                                    <label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-fill-gradient-stopPoint">중지점</label>
+                                </td>
+                                <td>
+                                    <select name="graphicpopup-sub-select" id="d2map_graphicpopup-sub-fill-gradient-stopPoint" name="graphicpopup-sub-select" style="width: 100px;">
+                                        <option value="color1">색상 1</option>
+                                        <option value="color2">색상 2</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr class="d2map_graphicpopup-sub-fill-gradient-style">
+                                <td>
+                                    <input type="range" value="0.5" min="0" max="1" step="0.01" name="graphicpopup-sub-input" style="width: 110px;" id="d2map_graphicpopup-sub-fill-gradient-stopPoint-position" />
+                                    <label for="d2map_graphicpopup-sub-fill-gradient-stopPoint-position" id="d2map_graphicpopup-sub-fill-gradient-stopPoint-position-value" style="width: 30px; text-align: right">100%</label>
+                                </td>
+                                <td>
+                                    <a href="#" id="d2map_graphicpopup-sub-fill-gradient-stopPoint-add" class="d2map_abtn" style="color: #fff; float: none; width: 35px; text-align: center; float: left; margin-left: 5px;">Add</a>
+                                    <a href="#" id="d2map_graphicpopup-sub-fill-gradient-stopPoint-del" class="d2map_abtn" style="color: #fff; float: none; width: 35px; text-align: center;float: right; margin-right: 5px;">Del</a>
+                                </td>
+                            </tr>
+                            <tr class="d2map_graphicpopup-sub-fill-gradient-style">
+                                <td style="width: 190px;"><input type="color" style="width:35px; float:left; margin: 0 1px 0 2px; height: 28px; line-height: 28px;" value="#C6EAFF" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-fill-gradientColor" /><label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-fill-gradientColor">color</label></td>
+                                <td><input type="text" style="padding-left:5px; width:35px; text-align:right; float:left; margin: 0 2px 0 0; height: 28px; line-height: 28px;" value="128" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-fill-gradientAlpha" /><label style="padding-left:5px; float:left; font-size: 11px;  height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-fill-gradientAlpha">Alpha</label></td>
+                            </tr>
+                        </table>
+                    </span>
+                </div>
+                <div class="d2map_text-content">
+                    <span title="Text Style" id="d2map_graphicpopup-edit-sub-text-style" style="font-size: 15px;">텍스트 속성
+                        <table>
+                            <tr>
+                                <td style="width: 190px;"><input type="color" style="width:35px; float:left; margin: 0 1px 0 2px; height: 28px; line-height: 28px;" value="#FFFFFF" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-text-color" /><label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-text-color">색상</label></td>
+                                <td><input type="text" style="width:35px; text-align:right; float:left; margin: 0 2px 0 0; height: 28px; line-height: 28px;" value="20" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-text-size" /><label style="padding-left:5px; float:left; font-size: 11px;  height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-text-size">크기</label></td>
+                            </tr>
+                            <tr>
+                                <td><label style="float:left; font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-text-fontsize">글꼴</label></td>
+                                <td>
+                                    <select name="graphicpopup-sub-select" id="d2map_graphicpopup-sub-font-type" style="width: 100px;">
+                                        <option value="Arial">Arial</option>
+                                        <option value="Arial Black">Arial Black</option>
+                                        <option value="Bookman Old Style">Bookman</option>
+                                        <option value="Comic Sans MS">Comic Sans MS</option>
+                                        <option value="Courier">Courier</option>
+                                        <option value="Garamond">Garamond</option>
+                                        <option value="Georgia">Georgia</option>
+                                        <option value="Impact">Impact</option>
+                                        <option value="Palatino Linotype">Palatino Linotype</option>
+                                        <option value="Roboto">Roboto</option>
+                                        <option value="Roboto Slab">Roboto Slab</option>
+                                        <option value="Terminal">Terminal</option>
+                                        <option value="Times New Roman">Times New Roman</option>
+                                        <option value="Verdana">Verdana</option>
+                                        <option value="굴림">굴림</option>
+                                        <option value="굴림체">굴림체</option>
+                                        <option value="궁서">궁서</option>
+                                        <option value="궁서체">궁서체</option>
+                                        <option value="돋음">돋음</option>
+                                        <option value="돋움체">돋음체</option>
+                                        <option value="바탕">바탕</option>
+                                        <option value="바탕체">바탕체</option>
+                                        <option value="새굴림">새굴림</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="d2map_range">
+                                    <input style="width: 10px;" type="checkbox" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-text-bold">
+                                    <label style="font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-text-bold">굵게</label>
+                                </td>
+                                <td>
+                                    <input style="width: 10px;" type="checkbox" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-text-rtl">
+                                    <label style="font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-text-rtl">우에서 좌로</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="d2map_range">
+                                    <input style="width: 10px;" type="checkbox" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-text-italic">
+                                    <label style="font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-text-italic">기울임</label>
+                                </td>
+                                <td>
+                                    <input style="width: 10px;" type="checkbox" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-text-vertical">
+                                    <label style="font-size: 11px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-text-vertical">세로방향</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </span>
+
+                    <span title="Text" id="d2map_graphicpopup-edit-sub-text" style="font-size: 15px;">문자열
+                        <table style="margin: 10px 0 10px 0px;">
+                            <tr>
+                                <td style="width: 224px;"><input title="text" type="text" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-text-value" value="Input Text" style="ime-mode:inactive;ime-mode:disabled; margin: 0 0 0 5px;"></td>
+                            </tr>
+                        </table>
+                    </span>
+                    <span title="Text" style="font-size: 15px;">정렬
+                        <table style="margin: 10px 0 10px 0px;">
+                            <tr>
+                                <td style="width: 150px;"><input name="graphicpopup-sub-textAlign" type="radio" value="top-left"></td>
+                                <td style="width: 150px;"><input name="graphicpopup-sub-textAlign" type="radio" value="top-center"></td>
+                                <td style="width: 150px;"><input name="graphicpopup-sub-textAlign" type="radio" value="top-right"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 150px;"><input name="graphicpopup-sub-textAlign" type="radio" value="middle-left"></td>
+                                <td style="width: 150px;"><input name="graphicpopup-sub-textAlign" type="radio" value="middle-center"></td>
+                                <td style="width: 150px;"><input name="graphicpopup-sub-textAlign" type="radio" value="middle-right"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 150px;"><input name="graphicpopup-sub-textAlign" type="radio" value="bottom-left"></td>
+                                <td style="width: 150px;"><input name="graphicpopup-sub-textAlign" type="radio" value="bottom-center"></td>
+                                <td style="width: 150px;"><input name="graphicpopup-sub-textAlign" type="radio" value="bottom-right"></td>
+                            </tr>
+                        </table>
+                    </span>
+                </div>
+                <div class="d2map_prop-content">
+                    <table style="margin: 0">
+                        <tr>
+                            <td>
+                                <span title="Rotate" id="d2map_graphicpopup-edit-sub-rotate" style="font-size: 15px;">
+                                    회전
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 250px;" colspan="2">
+                                <input title="rotate" type="number" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-rotate-value" class="d2map_onlyNumber" style="ime-mode:inactive;ime-mode:disabled; margin: 0 0 0 5px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label style="font-size: 15px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-lock">잠금</label>
+                                <input style="line-height: 30px;" type="checkbox" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-lock">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label style="font-size: 15px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-scalelimit">축척 설정</label>
+                                <input style="line-height: 30px;" type="checkbox" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-scalelimit">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label style="padding-left:5px; font-size: 11px;  height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-scalelower">축척하한</label>
+                                <input type="text" style="width:75px; text-align:right; height: 28px; line-height: 28px; display: inline-block;" value="20" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-scalelower" class="d2map_onlyNumber" />
+                                <label style="padding-left:5px; font-size: 11px;  height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-scaleupper">축척상한</label>
+                                <input type="text" style="width:75px; text-align:right; height: 28px; line-height: 28px; display: inline-block;" value="20" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-scaleupper" class="d2map_onlyNumber" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span title="Text" style="font-size: 15px;">
+                                    <label style="font-size: 15px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-screenMode">화면 좌표</label>
+                                    <input style="line-height: 30px;" type="checkbox" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-screenMode">
+                                    <table id="d2map_graphicpopup-sub-screenAnchor-table">
+                                        <tr>
+                                            <td style="width: 150px;"><input name="graphicpopup-sub-screenAnchor" type="radio"></td>
+                                            <td style="width: 150px;"><input name="graphicpopup-sub-screenAnchor" type="radio"></td>
+                                            <td style="width: 150px;"><input name="graphicpopup-sub-screenAnchor" type="radio"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;"><input name="graphicpopup-sub-screenAnchor" type="radio"></td>
+                                            <td style="width: 150px;"><input name="graphicpopup-sub-screenAnchor" type="radio"></td>
+                                            <td style="width: 150px;"><input name="graphicpopup-sub-screenAnchor" type="radio"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;"><input name="graphicpopup-sub-screenAnchor" type="radio"></td>
+                                            <td style="width: 150px;"><input name="graphicpopup-sub-screenAnchor" type="radio"></td>
+                                            <td style="width: 150px;"><input name="graphicpopup-sub-screenAnchor" type="radio"></td>
+                                        </tr>
+                                    </table>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="d2map_graphicpopup-sub-arcType">
+                            <td>
+                                <label style="font-size: 15px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-arcType">Arc Type</label>
+                                <select name="graphicpopup-sub-select" id="d2map_graphicpopup-sub-arcType" style="width: 100px;">
+                                    <option value="type-1">Type-1</option>
+                                    <option value="type-2">Type-2</option>
+                                    <option value="type-3">Type-3</option>
+                                    <option value="type-4">Type-4</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="d2map_graphicpopup-sub-radius">
+                            <td>
+                                <label style="font-size: 15px; height: 30px; line-height: 30px;" for="d2map_graphicpopup-sub-radius">둥근사각형 꼭지점 반경</label>
+                            </td>
+                        </tr>
+                        <tr class="d2map_graphicpopup-sub-radius">
+                            <td style="width: 250px;" colspan="2">
+                                <input title="radius" type="number" name="graphicpopup-sub-input" id="d2map_graphicpopup-sub-radius" class="d2map_onlyNumber" style="ime-mode:inactive;ime-mode:disabled; margin: 0 0 0 5px;">
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <a href="#" class="d2map_popup-close-btn"></a>
+
+    </div>
+</div>

@@ -1,0 +1,1370 @@
+{
+	"name": "Layer-01",
+	"guid": "17d608a3-6b31-2cbc-0445-f1396c5bcac0",
+	"createTime": "2022-03-22T16:10:06",
+	"editTime": "2022-03-22T16:10:06",
+	"author": "",
+	"exercise": false,
+	"security": 0,
+	"si": false,
+	"source": "",
+	"objects": [
+		{
+			"graphicObjList": [
+				{
+					"graphicObjProp": {
+						"type": "rectangle",
+						"name": "rectangle-01",
+						"positions": [],
+						"pixelPositions": [],
+						"rotate": 0,
+						"trackerRotate": [],
+						"bound": {
+							"minX": 13947922.616503017,
+							"minY": 4627472.823179577,
+							"maxX": 14051876.974970857,
+							"maxY": 4698406.38542822
+						},
+						"lock": false,
+						"screenMode": false,
+						"screenAnchor": [
+							0,
+							0
+						],
+						"guid": "44f193e9-0756-fd23-c935-e7946d04103a",
+						"createTime": "2022-03-22T16:16:58",
+						"editTime": "2022-03-22T16:21:05",
+						"scaleLimit": false,
+						"scaleUpper": 999999999,
+						"scaleLower": 0,
+						"text": "",
+						"links": {},
+						"attribute": {},
+						"sameRatio": false,
+						"radius": 0,
+						"visibility": true
+					},
+					"graphicObjStyle": {
+						"marker": {
+							"imgUrl": null,
+							"size": 10
+						},
+						"point": {
+							"type": "rectangle",
+							"size": 10
+						},
+						"line": {
+							"type": "simple",
+							"width": 3,
+							"color": [
+								0,
+								178,
+								255,
+								0.9
+							],
+							"arrow": {
+								"begin": {
+									"type": "none",
+									"width": 3,
+									"height": 3
+								},
+								"end": {
+									"type": "none",
+									"width": 3,
+									"height": 3
+								}
+							},
+							"useLineColor": true,
+							"dashOffset": 0,
+							"lineJoin": "round",
+							"lineCap": "round",
+							"fill": {
+								"type": "simple",
+								"pattern": "horizontal",
+								"patternColor": [
+									[
+										0,
+										0,
+										0,
+										0.85
+									],
+									[
+										255,
+										255,
+										255,
+										0.85
+									]
+								],
+								"gradient": {
+									"type": "horizontal",
+									"color": [
+										[
+											0,
+											0,
+											0,
+											0.85
+										],
+										[
+											255,
+											255,
+											255,
+											0.85
+										]
+									],
+									"anchor": [
+										0.5,
+										0.5
+									],
+									"stopPoint": [
+										0,
+										1
+									]
+								}
+							}
+						},
+						"fill": {
+							"type": "simple",
+							"color": [
+								198,
+								234,
+								255,
+								0.85
+							],
+							"useFillColor": true,
+							"pattern": "horizontal",
+							"patternColor": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"gradient": {
+								"type": "horizontal",
+								"color": [
+									[
+										0,
+										0,
+										0,
+										0.85
+									],
+									[
+										255,
+										255,
+										255,
+										0.85
+									]
+								],
+								"anchor": [
+									0.5,
+									0.5
+								],
+								"stopPoint": [
+									0,
+									1
+								]
+							}
+						},
+						"text": {
+							"color": [
+								0,
+								0,
+								0,
+								1
+							],
+							"outlineColor": [
+								255,
+								255,
+								255,
+								1
+							],
+							"backgroundColor": [
+								42,
+								42,
+								42,
+								0
+							],
+							"font": "Arial",
+							"fontSize": 15,
+							"showBackground": true,
+							"outlineWidth": 3,
+							"placement": "point",
+							"rotation": 0,
+							"textAlign": "left",
+							"textBaseline": "top",
+							"offsetX": 0,
+							"offsetY": 0,
+							"bold": false,
+							"italic": false,
+							"directionRightToLeft": false,
+							"directionVertical": false
+						},
+						"zIndex": 0
+					},
+					"graphicObjFeatures": [
+						{
+							"type": "text",
+							"id": 0,
+							"coordinates": [
+								125.29632068121005,
+								38.837394243461006
+							]
+						},
+						{
+							"type": "Polygon",
+							"id": 0,
+							"coordinates": [
+								125.29632068121005,
+								38.837394243461006,
+								126.23015857183506,
+								38.837394243461006,
+								126.23015857183506,
+								38.339326719486905,
+								125.29632068121005,
+								38.339326719486905,
+								125.29632068121005,
+								38.837394243461006
+							]
+						}
+					]
+				},
+				{
+					"graphicObjProp": {
+						"type": "rectangle",
+						"name": "rectangle-02",
+						"positions": [],
+						"pixelPositions": [],
+						"rotate": 0,
+						"trackerRotate": [],
+						"bound": {
+							"minX": 14038831.734584443,
+							"minY": 4562246.546601971,
+							"maxX": 14140340.108147157,
+							"maxY": 4647040.702420582
+						},
+						"lock": false,
+						"screenMode": false,
+						"screenAnchor": [
+							0,
+							0
+						],
+						"guid": "ae564f83-ff47-ad5d-5e6e-9f6e27ab4679",
+						"createTime": "2022-03-22T16:17:00",
+						"editTime": "2022-03-22T16:21:05",
+						"scaleLimit": false,
+						"scaleUpper": 999999999,
+						"scaleLower": 0,
+						"text": "",
+						"links": {},
+						"attribute": {},
+						"sameRatio": false,
+						"radius": 0,
+						"visibility": true
+					},
+					"graphicObjStyle": {
+						"marker": {
+							"imgUrl": null,
+							"size": 10
+						},
+						"point": {
+							"type": "rectangle",
+							"size": 10
+						},
+						"line": {
+							"type": "simple",
+							"width": 3,
+							"color": [
+								0,
+								178,
+								255,
+								0.9
+							],
+							"arrow": {
+								"begin": {
+									"type": "none",
+									"width": 3,
+									"height": 3
+								},
+								"end": {
+									"type": "none",
+									"width": 3,
+									"height": 3
+								}
+							},
+							"useLineColor": true,
+							"dashOffset": 0,
+							"lineJoin": "round",
+							"lineCap": "round",
+							"fill": {
+								"type": "simple",
+								"pattern": "horizontal",
+								"patternColor": [
+									[
+										0,
+										0,
+										0,
+										0.85
+									],
+									[
+										255,
+										255,
+										255,
+										0.85
+									]
+								],
+								"gradient": {
+									"type": "horizontal",
+									"color": [
+										[
+											0,
+											0,
+											0,
+											0.85
+										],
+										[
+											255,
+											255,
+											255,
+											0.85
+										]
+									],
+									"anchor": [
+										0.5,
+										0.5
+									],
+									"stopPoint": [
+										0,
+										1
+									]
+								}
+							}
+						},
+						"fill": {
+							"type": "simple",
+							"color": [
+								198,
+								234,
+								255,
+								0.85
+							],
+							"useFillColor": true,
+							"pattern": "horizontal",
+							"patternColor": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"gradient": {
+								"type": "horizontal",
+								"color": [
+									[
+										0,
+										0,
+										0,
+										0.85
+									],
+									[
+										255,
+										255,
+										255,
+										0.85
+									]
+								],
+								"anchor": [
+									0.5,
+									0.5
+								],
+								"stopPoint": [
+									0,
+									1
+								]
+							}
+						},
+						"text": {
+							"color": [
+								0,
+								0,
+								0,
+								1
+							],
+							"outlineColor": [
+								255,
+								255,
+								255,
+								1
+							],
+							"backgroundColor": [
+								42,
+								42,
+								42,
+								0
+							],
+							"font": "Arial",
+							"fontSize": 15,
+							"showBackground": true,
+							"outlineWidth": 3,
+							"placement": "point",
+							"rotation": 0,
+							"textAlign": "left",
+							"textBaseline": "top",
+							"offsetX": 0,
+							"offsetY": 0,
+							"bold": false,
+							"italic": false,
+							"directionRightToLeft": false,
+							"directionVertical": false
+						},
+						"zIndex": 0.0001
+					},
+					"graphicObjFeatures": [
+						{
+							"type": "text",
+							"id": 0,
+							"coordinates": [
+								126.11297118359377,
+								38.47706963583306
+							]
+						},
+						{
+							"type": "Polygon",
+							"id": 0,
+							"coordinates": [
+								126.11297118359377,
+								38.47706963583306,
+								127.02483641796877,
+								38.47706963583306,
+								127.02483641796877,
+								37.87829025456715,
+								126.11297118359377,
+								37.87829025456715,
+								126.11297118359377,
+								38.47706963583306
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"graphicObjList": [
+				{
+					"graphicObjProp": {
+						"type": "rectangle",
+						"name": "rectangle-01",
+						"positions": [],
+						"pixelPositions": [],
+						"rotate": 0,
+						"trackerRotate": [],
+						"bound": {
+							"minX": 14013556.569672398,
+							"minY": 4439947.338668455,
+							"maxX": 14117510.928140238,
+							"maxY": 4510880.900917099
+						},
+						"lock": false,
+						"screenMode": false,
+						"screenAnchor": [
+							0,
+							0
+						],
+						"guid": "615953fd-564a-62b1-c79f-633e7daa3a44",
+						"createTime": "2022-03-22T16:16:58",
+						"editTime": "2022-03-22T16:21:07",
+						"scaleLimit": false,
+						"scaleUpper": 999999999,
+						"scaleLower": 0,
+						"text": "",
+						"links": {},
+						"attribute": {},
+						"sameRatio": false,
+						"radius": 0,
+						"visibility": true
+					},
+					"graphicObjStyle": {
+						"marker": {
+							"imgUrl": null,
+							"size": 10
+						},
+						"point": {
+							"type": "rectangle",
+							"size": 10
+						},
+						"line": {
+							"type": "simple",
+							"width": 3,
+							"color": [
+								0,
+								178,
+								255,
+								0.9
+							],
+							"arrow": {
+								"begin": {
+									"type": "none",
+									"width": 3,
+									"height": 3
+								},
+								"end": {
+									"type": "none",
+									"width": 3,
+									"height": 3
+								}
+							},
+							"useLineColor": true,
+							"dashOffset": 0,
+							"lineJoin": "round",
+							"lineCap": "round",
+							"fill": {
+								"type": "simple",
+								"pattern": "horizontal",
+								"patternColor": [
+									[
+										0,
+										0,
+										0,
+										0.85
+									],
+									[
+										255,
+										255,
+										255,
+										0.85
+									]
+								],
+								"gradient": {
+									"type": "horizontal",
+									"color": [
+										[
+											0,
+											0,
+											0,
+											0.85
+										],
+										[
+											255,
+											255,
+											255,
+											0.85
+										]
+									],
+									"anchor": [
+										0.5,
+										0.5
+									],
+									"stopPoint": [
+										0,
+										1
+									]
+								}
+							}
+						},
+						"fill": {
+							"type": "simple",
+							"color": [
+								198,
+								234,
+								255,
+								0.85
+							],
+							"useFillColor": true,
+							"pattern": "horizontal",
+							"patternColor": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"gradient": {
+								"type": "horizontal",
+								"color": [
+									[
+										0,
+										0,
+										0,
+										0.85
+									],
+									[
+										255,
+										255,
+										255,
+										0.85
+									]
+								],
+								"anchor": [
+									0.5,
+									0.5
+								],
+								"stopPoint": [
+									0,
+									1
+								]
+							}
+						},
+						"text": {
+							"color": [
+								0,
+								0,
+								0,
+								1
+							],
+							"outlineColor": [
+								255,
+								255,
+								255,
+								1
+							],
+							"backgroundColor": [
+								42,
+								42,
+								42,
+								0
+							],
+							"font": "Arial",
+							"fontSize": 15,
+							"showBackground": true,
+							"outlineWidth": 3,
+							"placement": "point",
+							"rotation": 0,
+							"textAlign": "left",
+							"textBaseline": "top",
+							"offsetX": 0,
+							"offsetY": 0,
+							"bold": false,
+							"italic": false,
+							"directionRightToLeft": false,
+							"directionVertical": false
+						},
+						"zIndex": 3
+					},
+					"graphicObjFeatures": [
+						{
+							"type": "text",
+							"id": 0,
+							"coordinates": [
+								125.88592051410247,
+								37.51317993549593
+							]
+						},
+						{
+							"type": "Polygon",
+							"id": 0,
+							"coordinates": [
+								125.88592051410247,
+								37.51317993549593,
+								126.81975840472745,
+								37.51317993549593,
+								126.81975840472745,
+								37.00603009935189,
+								125.88592051410247,
+								37.00603009935189,
+								125.88592051410247,
+								37.51317993549593
+							]
+						}
+					]
+				},
+				{
+					"graphicObjProp": {
+						"type": "rectangle",
+						"name": "rectangle-02",
+						"positions": [],
+						"pixelPositions": [],
+						"rotate": 0,
+						"trackerRotate": [],
+						"bound": {
+							"minX": 14104465.687753826,
+							"minY": 4374721.0620908495,
+							"maxX": 14205974.06131654,
+							"maxY": 4459515.217909461
+						},
+						"lock": false,
+						"screenMode": false,
+						"screenAnchor": [
+							0,
+							0
+						],
+						"guid": "eec0b51b-1eff-6451-d33e-38afbb1fb1e9",
+						"createTime": "2022-03-22T16:17:00",
+						"editTime": "2022-03-22T16:21:07",
+						"scaleLimit": false,
+						"scaleUpper": 999999999,
+						"scaleLower": 0,
+						"text": "",
+						"links": {},
+						"attribute": {},
+						"sameRatio": false,
+						"radius": 0,
+						"visibility": true
+					},
+					"graphicObjStyle": {
+						"marker": {
+							"imgUrl": null,
+							"size": 10
+						},
+						"point": {
+							"type": "rectangle",
+							"size": 10
+						},
+						"line": {
+							"type": "simple",
+							"width": 3,
+							"color": [
+								0,
+								178,
+								255,
+								0.9
+							],
+							"arrow": {
+								"begin": {
+									"type": "none",
+									"width": 3,
+									"height": 3
+								},
+								"end": {
+									"type": "none",
+									"width": 3,
+									"height": 3
+								}
+							},
+							"useLineColor": true,
+							"dashOffset": 0,
+							"lineJoin": "round",
+							"lineCap": "round",
+							"fill": {
+								"type": "simple",
+								"pattern": "horizontal",
+								"patternColor": [
+									[
+										0,
+										0,
+										0,
+										0.85
+									],
+									[
+										255,
+										255,
+										255,
+										0.85
+									]
+								],
+								"gradient": {
+									"type": "horizontal",
+									"color": [
+										[
+											0,
+											0,
+											0,
+											0.85
+										],
+										[
+											255,
+											255,
+											255,
+											0.85
+										]
+									],
+									"anchor": [
+										0.5,
+										0.5
+									],
+									"stopPoint": [
+										0,
+										1
+									]
+								}
+							}
+						},
+						"fill": {
+							"type": "simple",
+							"color": [
+								198,
+								234,
+								255,
+								0.85
+							],
+							"useFillColor": true,
+							"pattern": "horizontal",
+							"patternColor": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"gradient": {
+								"type": "horizontal",
+								"color": [
+									[
+										0,
+										0,
+										0,
+										0.85
+									],
+									[
+										255,
+										255,
+										255,
+										0.85
+									]
+								],
+								"anchor": [
+									0.5,
+									0.5
+								],
+								"stopPoint": [
+									0,
+									1
+								]
+							}
+						},
+						"text": {
+							"color": [
+								0,
+								0,
+								0,
+								1
+							],
+							"outlineColor": [
+								255,
+								255,
+								255,
+								1
+							],
+							"backgroundColor": [
+								42,
+								42,
+								42,
+								0
+							],
+							"font": "Arial",
+							"fontSize": 15,
+							"showBackground": true,
+							"outlineWidth": 3,
+							"placement": "point",
+							"rotation": 0,
+							"textAlign": "left",
+							"textBaseline": "top",
+							"offsetX": 0,
+							"offsetY": 0,
+							"bold": false,
+							"italic": false,
+							"directionRightToLeft": false,
+							"directionVertical": false
+						},
+						"zIndex": 3.0001
+					},
+					"graphicObjFeatures": [
+						{
+							"type": "text",
+							"id": 0,
+							"coordinates": [
+								126.70257101648619,
+								37.14627444525934
+							]
+						},
+						{
+							"type": "Polygon",
+							"id": 0,
+							"coordinates": [
+								126.70257101648619,
+								37.14627444525934,
+								127.61443625086119,
+								37.14627444525934,
+								127.61443625086119,
+								36.53667882818115,
+								126.70257101648619,
+								36.53667882818115,
+								126.70257101648619,
+								37.14627444525934
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"graphicObjList": [
+				{
+					"graphicObjProp": {
+						"type": "rectangle",
+						"name": "rectangle-01",
+						"positions": [],
+						"pixelPositions": [],
+						"rotate": 0,
+						"trackerRotate": [],
+						"bound": {
+							"minX": 14212088.986256583,
+							"minY": 4558577.6065670485,
+							"maxX": 14316043.344724422,
+							"maxY": 4629511.168815692
+						},
+						"lock": false,
+						"screenMode": false,
+						"screenAnchor": [
+							0,
+							0
+						],
+						"guid": "806259f0-e06b-ac60-39b7-80c9dc67f1f0",
+						"createTime": "2022-03-22T16:16:58",
+						"editTime": "2022-03-22T16:21:09",
+						"scaleLimit": false,
+						"scaleUpper": 999999999,
+						"scaleLower": 0,
+						"text": "",
+						"links": {},
+						"attribute": {},
+						"sameRatio": false,
+						"radius": 0,
+						"visibility": true
+					},
+					"graphicObjStyle": {
+						"marker": {
+							"imgUrl": null,
+							"size": 10
+						},
+						"point": {
+							"type": "rectangle",
+							"size": 10
+						},
+						"line": {
+							"type": "simple",
+							"width": 3,
+							"color": [
+								0,
+								178,
+								255,
+								0.9
+							],
+							"arrow": {
+								"begin": {
+									"type": "none",
+									"width": 3,
+									"height": 3
+								},
+								"end": {
+									"type": "none",
+									"width": 3,
+									"height": 3
+								}
+							},
+							"useLineColor": true,
+							"dashOffset": 0,
+							"lineJoin": "round",
+							"lineCap": "round",
+							"fill": {
+								"type": "simple",
+								"pattern": "horizontal",
+								"patternColor": [
+									[
+										0,
+										0,
+										0,
+										0.85
+									],
+									[
+										255,
+										255,
+										255,
+										0.85
+									]
+								],
+								"gradient": {
+									"type": "horizontal",
+									"color": [
+										[
+											0,
+											0,
+											0,
+											0.85
+										],
+										[
+											255,
+											255,
+											255,
+											0.85
+										]
+									],
+									"anchor": [
+										0.5,
+										0.5
+									],
+									"stopPoint": [
+										0,
+										1
+									]
+								}
+							}
+						},
+						"fill": {
+							"type": "simple",
+							"color": [
+								198,
+								234,
+								255,
+								0.85
+							],
+							"useFillColor": true,
+							"pattern": "horizontal",
+							"patternColor": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"gradient": {
+								"type": "horizontal",
+								"color": [
+									[
+										0,
+										0,
+										0,
+										0.85
+									],
+									[
+										255,
+										255,
+										255,
+										0.85
+									]
+								],
+								"anchor": [
+									0.5,
+									0.5
+								],
+								"stopPoint": [
+									0,
+									1
+								]
+							}
+						},
+						"text": {
+							"color": [
+								0,
+								0,
+								0,
+								1
+							],
+							"outlineColor": [
+								255,
+								255,
+								255,
+								1
+							],
+							"backgroundColor": [
+								42,
+								42,
+								42,
+								0
+							],
+							"font": "Arial",
+							"fontSize": 15,
+							"showBackground": true,
+							"outlineWidth": 3,
+							"placement": "point",
+							"rotation": 0,
+							"textAlign": "left",
+							"textBaseline": "top",
+							"offsetX": 0,
+							"offsetY": 0,
+							"bold": false,
+							"italic": false,
+							"directionRightToLeft": false,
+							"directionVertical": false
+						},
+						"zIndex": 5
+					},
+					"graphicObjFeatures": [
+						{
+							"type": "text",
+							"id": 0,
+							"coordinates": [
+								127.66936755621003,
+								38.35368736290414
+							]
+						},
+						{
+							"type": "Polygon",
+							"id": 0,
+							"coordinates": [
+								127.66936755621003,
+								38.35368736290414,
+								128.60320544683503,
+								38.35368736290414,
+								128.60320544683503,
+								37.852270845926256,
+								127.66936755621003,
+								37.852270845926256,
+								127.66936755621003,
+								38.35368736290414
+							]
+						}
+					]
+				},
+				{
+					"graphicObjProp": {
+						"type": "rectangle",
+						"name": "rectangle-02",
+						"positions": [],
+						"pixelPositions": [],
+						"rotate": 0,
+						"trackerRotate": [],
+						"bound": {
+							"minX": 14302998.104338013,
+							"minY": 4493351.329989443,
+							"maxX": 14404506.477900727,
+							"maxY": 4578145.485808054
+						},
+						"lock": false,
+						"screenMode": false,
+						"screenAnchor": [
+							0,
+							0
+						],
+						"guid": "93efe9a6-a32e-2740-57cf-46e9e5fb7c51",
+						"createTime": "2022-03-22T16:17:00",
+						"editTime": "2022-03-22T16:21:09",
+						"scaleLimit": false,
+						"scaleUpper": 999999999,
+						"scaleLower": 0,
+						"text": "",
+						"links": {},
+						"attribute": {},
+						"sameRatio": false,
+						"radius": 0,
+						"visibility": true
+					},
+					"graphicObjStyle": {
+						"marker": {
+							"imgUrl": null,
+							"size": 10
+						},
+						"point": {
+							"type": "rectangle",
+							"size": 10
+						},
+						"line": {
+							"type": "simple",
+							"width": 3,
+							"color": [
+								0,
+								178,
+								255,
+								0.9
+							],
+							"arrow": {
+								"begin": {
+									"type": "none",
+									"width": 3,
+									"height": 3
+								},
+								"end": {
+									"type": "none",
+									"width": 3,
+									"height": 3
+								}
+							},
+							"useLineColor": true,
+							"dashOffset": 0,
+							"lineJoin": "round",
+							"lineCap": "round",
+							"fill": {
+								"type": "simple",
+								"pattern": "horizontal",
+								"patternColor": [
+									[
+										0,
+										0,
+										0,
+										0.85
+									],
+									[
+										255,
+										255,
+										255,
+										0.85
+									]
+								],
+								"gradient": {
+									"type": "horizontal",
+									"color": [
+										[
+											0,
+											0,
+											0,
+											0.85
+										],
+										[
+											255,
+											255,
+											255,
+											0.85
+										]
+									],
+									"anchor": [
+										0.5,
+										0.5
+									],
+									"stopPoint": [
+										0,
+										1
+									]
+								}
+							}
+						},
+						"fill": {
+							"type": "simple",
+							"color": [
+								198,
+								234,
+								255,
+								0.85
+							],
+							"useFillColor": true,
+							"pattern": "horizontal",
+							"patternColor": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"gradient": {
+								"type": "horizontal",
+								"color": [
+									[
+										0,
+										0,
+										0,
+										0.85
+									],
+									[
+										255,
+										255,
+										255,
+										0.85
+									]
+								],
+								"anchor": [
+									0.5,
+									0.5
+								],
+								"stopPoint": [
+									0,
+									1
+								]
+							}
+						},
+						"text": {
+							"color": [
+								0,
+								0,
+								0,
+								1
+							],
+							"outlineColor": [
+								255,
+								255,
+								255,
+								1
+							],
+							"backgroundColor": [
+								42,
+								42,
+								42,
+								0
+							],
+							"font": "Arial",
+							"fontSize": 15,
+							"showBackground": true,
+							"outlineWidth": 3,
+							"placement": "point",
+							"rotation": 0,
+							"textAlign": "left",
+							"textBaseline": "top",
+							"offsetX": 0,
+							"offsetY": 0,
+							"bold": false,
+							"italic": false,
+							"directionRightToLeft": false,
+							"directionVertical": false
+						},
+						"zIndex": 5.0001
+					},
+					"graphicObjFeatures": [
+						{
+							"type": "text",
+							"id": 0,
+							"coordinates": [
+								128.48601805859377,
+								37.990936233827256
+							]
+						},
+						{
+							"type": "Polygon",
+							"id": 0,
+							"coordinates": [
+								128.48601805859377,
+								37.990936233827256,
+								129.3978832929688,
+								37.990936233827256,
+								129.3978832929688,
+								37.38816751040859,
+								128.48601805859377,
+								37.38816751040859,
+								128.48601805859377,
+								37.990936233827256
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"selectObjectsGUID": []
+}

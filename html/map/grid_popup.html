@@ -1,0 +1,117 @@
+<!--그리드 설정 창-->
+<!-- 
+    d2map.ui.js - setupGridMVT() 그리드 레이어를 추가한다.
+    d2map.ui.grid.popup.js - 이벤트 등록 후 스타일 변경을 수행한다.
+-->
+<div id="popup-grid" class="d2map_ui-popup">
+    <div id="grid-title" class="popup-title">
+        그리드
+    </div>
+    <div class="popup-grid-content">
+        <ul class="grid-option">
+            <li>
+                <span>
+                    <label class="checkbox"><input type="checkbox" id="grid-geographic">Geographic</label>
+                </span>
+                <span>
+                    <label class="#"><input type="checkbox" id="grid-geographic-label" >Label</label>
+                </span>
+                <span>
+                    <input type="color" id="grid-geographic-color" value="#ffffff">
+                </span>
+                <span>
+                    <label>
+                        <input type="number" id="grid-geographic-width" value="1">width
+                    </label>
+                </span>
+                <span></span>
+            </li>
+            <li>
+                <span>
+                    <label class="checkbox"><input type="checkbox" id="grid-mgrs">MGRS</label>
+                </span>                
+                <span>
+                    <label class="#"><input type="checkbox" id="grid-mgrs-label" >Label</label>
+                </span>                
+                <span>
+                    <input type="color" id="grid-mgrs-color" value="#ffffff">
+                </span>
+                <span>
+                    <label>
+                        <input type="number" id="grid-mgrs-width" value="1">width
+                    </label>
+                </span>
+                <span>
+                    <select style="width: 40px;" id="grid-mgrs-distance">
+                        <option>1</option>
+                        <option>5</option>
+                        <option>10</option>
+                        <option selected>20</option>
+                    </select>
+                    km
+                </span>
+            </li>
+            <li>
+                <span>
+                    <label class="checkbox"><input type="checkbox" id="grid-utm">UTM</label>
+                </span>
+                <span>
+                    <label class="#"><input type="checkbox" id="grid-utm-label" >Label</label>
+                </span>
+                <span>
+                    <input type="color" id="grid-utm-color" value="#ffffff">
+                </span>
+                <span>
+                    <label>
+                        <input type="number" id="grid-utm-width" value="1">width
+                    </label>
+                </span>
+                <span>
+                    <select style="width: 40px;" id="grid-utm-distance">
+                        <option >1</option>
+                        <option >5</option>
+                        <option >10</option>
+                        <option selected>20</option>
+                    </select>
+                    km
+                </span>
+            </li>
+            <li>
+                <span>
+                    <label class="checkbox"><input type="checkbox" id="grid-georef">GeoRef</label>
+                </span>
+                <span>
+                    <label class="#"><input type="checkbox" id="grid-georef-label" >Label</label>
+                </span>
+                <span>
+                    <input type="color" id="grid-georef-color" value="#ffffff">
+                </span>
+                <span>
+                    <label>
+                        <input type="number" id="grid-georef-width" value="1">width
+                    </label>
+                </span>
+                <span></span>
+            </li>
+            <li>
+                <span>
+                    <label class="checkbox"><input type="checkbox" id="grid-gars">GARS</label>
+                </span>
+                <span>
+                    <label class="#"><input type="checkbox" id="grid-gars-label" >Label</label>
+                </span>
+                <span>
+                    <input type="color" id="grid-gars-color" value="#ffffff">
+                </span>
+                <span>
+                    <label>
+                        <input type="number" id="grid-gars-width" value="1">width
+                    </label>
+                </span>
+                <span></span>
+            </li>           
+        </ul>
+    </div>
+    <a href="#" class="d2map_popup-close-btn default-mode-btn"></a>
+
+</div>

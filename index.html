@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D2MapExample</title>
+    <link rel="shortcut icon" href="#">
+    <meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <!-- 샘플에서 사용되는 CSS -->
+    <link rel="stylesheet" href="src/css/main.css">
+    <!-- D2Map 내부에서 사용되는 CSS -->
+    <link rel="stylesheet" href="src/lib/css/ol.css">
+    <link rel="stylesheet" href="src/lib/css/d2map.ui.css">
+    <link rel="stylesheet" href="src/lib/css/d2map.ui.editor.css">
+    <link rel="stylesheet" href="src/lib/css/d2map.ui.ms.popup.css">
+    <!-- <link rel="stylesheet" href="src/lib/css/zTreeStyle.css"> -->
+    <link rel="stylesheet" href="src/lib/css/sub.dark.css">
+    <link rel="stylesheet" href="src/lib/css/notification.css">
+    <link rel="stylesheet" href="src/lib/css/treeview.css">
+    <script type="text/javascript" src="/src/js/config/mapConfig.js"></script>
+    <script>
+        window.CKEDITOR_BASEPATH = '/src/lib/js/d2editor/';
+        let encoding = document.characterSet;
+        if (encoding !== "UTF-8") encoding = "UTF-8";
+    </script>
+
+    <!-- D2Map JS -->
+    <script src="src/lib/js/icops.min.js" charset=`${encoding}`></script>
+    <script src="src/lib/js/d2map.min.js" charset=`${encoding}`></script>
+
+    <!-- 유틸 -->
+    <script src="src/lib/js/jquery-3.6.3.min.js"></script>
+    <script src="src/js/util/includeHTML.js"></script>
+</head>
+
+<body>
+    <!-- 투명도 팝업 메뉴 html  -->
+    <div include-html="./html/graphic/graphic_contextmenu.html"></div>
+
+    <!-- 투명도 일반도형 팝업 스타일 설정 html -->
+    <div include-html="./html/graphic/graphic_popup_style.html"></div>
+
+    <!-- 그리드 설정 html -->
+    <div include-html="./html/map/grid_popup.html"></div>
+
+    <!-- 가시선 분석 html-->
+    <div include-html="./html/analysis/viewshed_popup.html"></div>
+
+    <!-- 툴바 html -->
+    <div include-html="./html/toolbarcontainer/toolbarcontainer.html"></div>
+
+    <!-- Map 영역, SideMenu html -->
+    <div include-html="./html/mapcontainer/mapcontainer.html"></div>
+
+    <script>
+        // sub html이 로딩된 후 JS를 참조한다.
+        includeHTML(function () {
+            // 샘플에서 사용되는 유틸리티 JS
+            createScriptTag('src/js/util/d2map.util.js');
+
+            // 그리드 스타일 설정 JS
+            createScriptTag('src/js/ui/style/gridStyle.js');
+
+            // Cross section 팝업 JS
+            createScriptTag('src/js/ui/popup/d2map.ui.crosschart.popup.js');
+
+            // 그리드 레이어 팝업 JS
+            createScriptTag('src/js/ui/popup/d2map.ui.grid.popup.js');
+
+            // 가시선 분석 JS
+            createScriptTag('src/js/ui/popup/d2map.ui.viewshed.popup.js');
+
+            // 툴바 설정 JS
+            createScriptTag('src/js/ui/d2map.ui.toolbar.js');
+
+            // 상황도 구성 JS
+            createScriptTag('src/js/milSymbol/milSymLayerSample.js');
+
+            // Side Menu - 지도관리
+            createScriptTag('src/js/ui/sideMenu/sidemenu.map.js');
+
+            // Side Menu - 지도관리 MVT
+            createScriptTag('src/js/ui/sideMenu/sidemenu.mvtlayer.js');
+
+            // Side Menu - 좌표변환관리
+            createScriptTag('src/js/ui/sideMenu/sidemenu.coordinate.js');
+
+            // Side Menu - 측정관리
+            createScriptTag('src/js/ui/sideMenu/sidemenu.measurement.js');
+
+            // Side Menu - 지형분석관리
+            createScriptTag('src/js/ui/sideMenu/sidemenu.terrainanalysis.js');
+
+            // Side Menu - 상황도관리
+            createScriptTag('src/js/ui/sideMenu/sidemenu.milsym.js');
+
+            // Side Menu - 투명도 레이어
+            createScriptTag('src/js/ui/sideMenu/sidemenu.graphiclayer.js');
+
+            // Side Menu - 투명도 응용
+            createScriptTag('src/js/ui/sideMenu/sidemenu.graphicapp.js');
+
+            // 투명도 관리 - 우클릭 메뉴
+            createScriptTag('src/js/ui/graphic/graphic.contextmenu.js');
+
+            // 투명도 관리 - 그래픽 팝업
+            createScriptTag('src/js/ui/graphic/graphic.popup.js');
+
+            // 투명도 관리 - 군대부호 속성창 아이콘 부호코드 선택 팝업
+            createScriptTag('src/js/ui/ms/graphic.ms.icon.js');
+
+            // 투명도 관리 - 에디터 팝업 (텍스트와 표 객체)
+            createScriptTag('src/js/ui/graphic/graphic.editor.js');
+
+            // 지형 분석 - 하단 좌표
+            createScriptTag('src/js/analysis/analysis.coordinate.js');
+
+            // 샘플 메인 UI JS
+            createScriptTag('src/js/ui/d2map.ui.js');
+
+            // 투명도 관리 - 군대부호 속성창 아이콘 부호코드 선택 팝업
+            // createScriptTag('src/js/ui/ms/graphic.ms.milSymTree.js');
+
+            function createScriptTag(path) {
+                const script = document.createElement('script');
+                script.setAttribute('src', path);
+                document.querySelector('body').appendChild(script);
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

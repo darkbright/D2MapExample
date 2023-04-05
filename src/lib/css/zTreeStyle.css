@@ -1,0 +1,219 @@
+/*-------------------------------------
+zTree Style
+
+version:	3.5.19
+author:		Hunter.z
+email:		hunter.z@263.net
+website:	http://code.google.com/p/jquerytree/
+
+-------------------------------------*/
+
+/* ztree 및 상위 요소 초기화 코드 삽입 */
+/* div#d2map_tree-container * { all: unset; } */
+/* For Military Symbol Explorer */
+#d2map_tree-container {
+	height: 200px;
+	max-height: 200px;
+	min-height: 200px;
+	width: 206px;
+	max-width: 206px;
+	overflow: auto;
+
+	scrollbar-base-color: rgb(85, 85, 85);
+	scrollbar-face-color: rgb(85, 85, 85);
+	scrollbar-track-color:  #333;
+	scrollbar-3dlight-color:  rgb(85, 85, 85);
+	scrollbar-darkshadow-color:  rgb(85, 85, 85);
+	scrollbar-arrow-color:  #333;
+	scrollbar-highlight-color: rgb(85, 85, 85);
+}
+
+#d2map_tree-container-gl {
+	height: 400px;
+	max-height: 400px;
+	min-height: 400px;
+	width: 200px;
+	max-width: 200px;
+	overflow: auto;
+
+	scrollbar-base-color: rgb(85, 85, 85);
+	scrollbar-face-color: rgb(85, 85, 85);
+	scrollbar-track-color:  #333;
+	scrollbar-3dlight-color:  rgb(85, 85, 85);
+	scrollbar-darkshadow-color:  rgb(85, 85, 85);
+	scrollbar-arrow-color:  #333;
+	scrollbar-highlight-color: rgb(85, 85, 85);
+}
+
+#d2map_tree-container-mvt {
+	height: 400px;
+	max-height: 400px;
+	min-height: 400px;
+	width: 224px;
+	max-width: 224px;
+	overflow: auto;
+
+	scrollbar-base-color: rgb(85, 85, 85);
+	scrollbar-face-color: rgb(85, 85, 85);
+	scrollbar-track-color:  #333;
+	scrollbar-3dlight-color:  rgb(85, 85, 85);
+	scrollbar-darkshadow-color:  rgb(85, 85, 85);
+	scrollbar-arrow-color:  #333;
+	scrollbar-highlight-color: rgb(85, 85, 85);
+}
+
+#d2map_msSIDCTree {
+	height: 200px;
+	max-height: 200px;
+	min-height: 200px;
+	width: 206px;
+	max-width: 206px;
+	overflow: auto;
+	
+	scrollbar-base-color: rgb(85, 85, 85);
+	scrollbar-face-color: rgb(85, 85, 85);
+	scrollbar-track-color:  #333;
+	scrollbar-3dlight-color:  rgb(85, 85, 85);
+	scrollbar-darkshadow-color:  rgb(85, 85, 85);
+	scrollbar-arrow-color:  #333;
+	scrollbar-highlight-color: rgb(85, 85, 85);
+}
+
+#d2map_ms_prop_container_sidc > div {
+	display: inline-block;
+}
+
+/* 스크롤바 모양 변경 */
+div#d2map_tree-container::-webkit-scrollbar, div#d2map_tree-container-gl::-webkit-scrollbar, ul#d2map_msSIDCTree::-webkit-scrollbar, div#d2map_tree-container-mvt::-webkit-scrollbar { width: 5.2px; height: 5.2px; border: none; } /* 스크롤 바 */
+/* div#d2map_tree-container::-webkit-scrollbar-track { background-color:#5D5D5D;  } */ /* 스크롤 바 밑의 배경 */
+div#d2map_tree-container::-webkit-scrollbar-thumb, div#d2map_tree-container-gl::-webkit-scrollbar-thumb, ul#d2map_msSIDCTree::-webkit-scrollbar-thumb, div#d2map_tree-container-mvt::-webkit-scrollbar-thumb { background: /* #d2map_303030 */rgba(255,255,255,.3); -webkit-border-radius: 5.2px; border-raidus: 5.2px; -webkit-box-shadow: inset 0 0 4px rgba(255,255,255,.5); } /* 실질적 스크롤 바 */
+/* div#d2map_tree-container::-webkit-scrollbar-thumb:hover { background: #404040; } */ /* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
+/* div#d2map_tree-container::-webkit-scrollbar-thumb:active { background: #808080; } */ /* 실질적 스크롤 바를 클릭할 때 */
+/* div#d2map_tree-container::-webkit-scrollbar-button { display: none; } */ /* 스크롤 바 상 하단 버튼 */
+div#d2map_tree-container::-webkit-scrollbar-corner, div#d2map_tree-container-gl::-webkit-scrollbar-corner, ul#d2map_msSIDCTree::-webkit-scrollbar-corner, div#d2map_tree-container-mvt::-webkit-scrollbar-corner { display: none; }
+
+/* Select Box 모양 변경 */
+select#d2map_milsymbol-sub-explorer-affiliation, select#d2map_milsymbol-sub-explorer-affiliation option, select#d2map_unit-deploy-sub-explorer-affiliation, select#d2map_unit-deploy-sub-explorer-affiliation option {padding-left: 1px; padding-right: 1px;}
+select#d2map_milsymbol-sub-explorer-affiliation option, select#d2map_unit-deploy-sub-explorer-affiliation option {background: #4D4D4D;}
+
+#d2map_milsymbolTree.d2map_ztree *, #d2map_glTree.d2map_ztree *, #d2map_msSIDCTree.d2map_ztree *, #d2map_mvtTree.d2map_ztree * {padding:0; margin:0; font-size:12px; font-family: Verdana, Arial, Helvetica, AppleGothic, sans-serif}
+#d2map_milsymbolTree.d2map_ztree, #d2map_glTree.d2map_ztree, #d2map_msSIDCTree.d2map_ztree, #d2map_mvtTree.d2map_ztree {margin:0; padding:5px; color:#333}
+#d2map_milsymbolTree.d2map_ztree li, #d2map_glTree.d2map_ztree li, #d2map_msSIDCTree.d2map_ztree li, #d2map_mvtTree.d2map_ztree li {padding:0; margin:0; list-style:none; line-height:14px; text-align:left; white-space:nowrap; outline:0; border-top:none; border-bottom: none;}
+
+/* Removing the style inherited */
+#d2map_milsymbolTree.d2map_ztree li ul, #d2map_glTree.d2map_ztree li ul, #d2map_msSIDCTree.d2map_ztree li ul, #d2map_mvtTree.d2map_ztree li ul {border-top: 0;}
+#d2map_milsymbolTree.d2map_ztree ul:hover, #d2map_milsymbolTree.d2map_ztree li:hover, #d2map_milsymbolTree.d2map_ztree li:hover span, #d2map_milsymbolTree.d2map_ztree li:hover a, 
+#d2map_glTree.d2map_ztree ul:hover, #d2map_glTree.d2map_ztree li:hover, #d2map_glTree.d2map_ztree li:hover span, #d2map_glTree.d2map_ztree li:hover a,
+#d2map_mvtTree.d2map_ztree ul:hover, #d2map_mvtTree.d2map_ztree li:hover, #d2map_mvtTree.d2map_ztree li:hover span, #d2map_mvtTree.d2map_ztree li:hover a,
+#d2map_msSIDCTree.d2map_ztree ul:hover, #d2map_msSIDCTree.d2map_ztree li:hover, #d2map_msSIDCTree.d2map_ztree li:hover span, #d2map_msSIDCTree.d2map_ztree li:hover a {box-shadow: none;}
+
+#d2map_milsymbolTree.d2map_ztree li ul, #d2map_glTree.d2map_ztree li ul, #d2map_msSIDCTree.d2map_ztree li ul, #d2map_mvtTree.d2map_ztree li ul { margin:0; padding:0 0 0 18px}
+#d2map_milsymbolTree.d2map_ztree li ul.line, #d2map_glTree.d2map_ztree li ul.line, #d2map_msSIDCTree.d2map_ztree li ul.line, #d2map_mvtTree.d2map_ztree li ul.line { background:url(./img/line_conn.gif) 0 0 repeat-y;}
+
+#d2map_milsymbolTree.d2map_ztree li a, #d2map_glTree.d2map_ztree li a, #d2map_msSIDCTree.d2map_ztree li a, #d2map_mvtTree.d2map_ztree li a {padding:1px 3px 0 0; margin:0; cursor:pointer; height:17px; color:#333; background-color: transparent;
+	text-decoration:none; vertical-align:top; display: inline-block;}
+#d2map_milsymbolTree.d2map_ztree li a:hover, #d2map_glTree.d2map_ztree li a:hover, #d2map_msSIDCTree.d2map_ztree li a:hover, #d2map_mvtTree.d2map_ztree li a:hover {text-decoration:underline}
+#d2map_milsymbolTree.d2map_ztree li a.curSelectedNode, #d2map_glTree.d2map_ztree li a.curSelectedNode, #d2map_msSIDCTree.d2map_ztree li a.curSelectedNode, #d2map_mvtTree.d2map_ztree li a.curSelectedNode {padding-top:0px; /* background-color:#FFE6B0; */ color:black; height:16px; border:1px #FFB951 solid; /* opacity:0.8; */}
+#d2map_milsymbolTree.d2map_ztree li a.curSelectedNode_Edit, #d2map_glTree.d2map_ztree li a.curSelectedNode_Edit , #d2map_msSIDCTree.d2map_ztree li a.curSelectedNode_Edit, #d2map_mvtTree.d2map_ztree li a.curSelectedNode_Edit {padding-top:0px; /*background-color:#FFE6B0; */ color:black; height:16px; border:1px #FFB951 solid; opacity:0.8;}
+#d2map_milsymbolTree.d2map_ztree li a.tmpTargetNode_inner, #d2map_glTree.d2map_ztree li a.tmpTargetNode_inner, #d2map_msSIDCTree.d2map_ztree li a.tmpTargetNode_inner, #d2map_mvtTree.d2map_ztree li a.tmpTargetNode_inner {padding-top:0px; background-color:#316AC5; color:white; height:16px; border:1px #316AC5 solid;
+	opacity:0.8; filter:alpha(opacity=80)}
+#d2map_milsymbolTree.d2map_ztree li a input.rename, #d2map_glTree.d2map_ztree li a input.rename , #d2map_msSIDCTree.d2map_ztree li a input.rename, #d2map_mvtTree.d2map_ztree li a input.rename {height:14px; padding:0; margin:0;
+	font-size:12px; border:1px #7EC4CC solid; *border:0px}
+#d2map_milsymbolTree.d2map_ztree li span, #d2map_glTree.d2map_ztree li span, #d2map_msSIDCTree.d2map_ztree li span, #d2map_mvtTree.d2map_ztree li span {line-height:16px; margin-right:2px; display: inline-block; border-top: 0; border-bottom: 0;}
+#d2map_milsymbolTree.d2map_ztree li span.button, #d2map_glTree.d2map_ztree li span.button, #d2map_msSIDCTree.d2map_ztree li span.button, #d2map_mvtTree.d2map_ztree li span.button {line-height:0; margin:0; width:16px; height:16px; display: inline-block; vertical-align:middle;
+	border:0 none; cursor: pointer;outline:none;
+	background-color:transparent; background-repeat:no-repeat; background-attachment: scroll;
+	background-image:url("./img/zTreeStandard.png"); *background-image:url("./img/zTreeStandard.gif")}
+
+#d2map_milsymbolTree.d2map_ztree li span.button.chk, #d2map_glTree.d2map_ztree li span.button.chk, #d2map_msSIDCTree.d2map_ztree li span.button.chk, #d2map_mvtTree.d2map_ztree li span.button.chk {width:13px; height:13px; margin:0 3px 0 0; cursor: auto}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.checkbox_false_full, #d2map_glTree.d2map_ztree li span.button.chk.checkbox_false_full, #d2map_msSIDCTree.d2map_ztree li span.button.chk.checkbox_false_full, #d2map_mvtTree.d2map_ztree li span.button.chk.checkbox_false_full {background-position:0 0}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.checkbox_false_full_focus, #d2map_glTree.d2map_ztree li span.button.chk.checkbox_false_full_focus, #d2map_msSIDCTree.d2map_ztree li span.button.chk.checkbox_false_full_focus, #d2map_mvtTree.d2map_ztree li span.button.chk.checkbox_false_full_focus {background-position:0 -14px}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.checkbox_false_part, #d2map_glTree.d2map_ztree li span.button.chk.checkbox_false_part, #d2map_msSIDCTree.d2map_ztree li span.button.chk.checkbox_false_part, #d2map_mvtTree.d2map_ztree li span.button.chk.checkbox_false_part {background-position:0 -28px}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.checkbox_false_part_focus, #d2map_glTree.d2map_ztree li span.button.chk.checkbox_false_part_focus, #d2map_msSIDCTree.d2map_ztree li span.button.chk.checkbox_false_part_focus, #d2map_mvtTree.d2map_ztree li span.button.chk.checkbox_false_part_focus {background-position:0 -42px}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.checkbox_false_disable, #d2map_glTree.d2map_ztree li span.button.chk.checkbox_false_disable, #d2map_msSIDCTree.d2map_ztree li span.button.chk.checkbox_false_disable, #d2map_mvtTree.d2map_ztree li span.button.chk.checkbox_false_disable {background-position:0 -56px}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.checkbox_true_full, #d2map_glTree.d2map_ztree li span.button.chk.checkbox_true_full, #d2map_msSIDCTree.d2map_ztree li span.button.chk.checkbox_true_full, #d2map_mvtTree.d2map_ztree li span.button.chk.checkbox_true_full {background-position:-14px 0}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.checkbox_true_full_focus, #d2map_glTree.d2map_ztree li span.button.chk.checkbox_true_full_focus, #d2map_msSIDCTree.d2map_ztree li span.button.chk.checkbox_true_full_focus, #d2map_mvtTree.d2map_ztree li span.button.chk.checkbox_true_full_focus {background-position:-14px -14px}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.checkbox_true_part, #d2map_glTree.d2map_ztree li span.button.chk.checkbox_true_part, #d2map_msSIDCTree.d2map_ztree li span.button.chk.checkbox_true_part, #d2map_mvtTree.d2map_ztree li span.button.chk.checkbox_true_part {background-position:-14px -28px}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.checkbox_true_part_focus, #d2map_glTree.d2map_ztree li span.button.chk.checkbox_true_part_focus, #d2map_msSIDCTree.d2map_ztree li span.button.chk.checkbox_true_part_focus, #d2map_mvtTree.d2map_ztree li span.button.chk.checkbox_true_part_focus {background-position:-14px -42px}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.checkbox_true_disable, #d2map_glTree.d2map_ztree li span.button.chk.checkbox_true_disable, #d2map_msSIDCTree.d2map_ztree li span.button.chk.checkbox_true_disable, #d2map_mvtTree.d2map_ztree li span.button.chk.checkbox_true_disable {background-position:-14px -56px}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.radio_false_full, #d2map_glTree.d2map_ztree li span.button.chk.radio_false_full, #d2map_msSIDCTree.d2map_ztree li span.button.chk.radio_false_full, #d2map_mvtTree.d2map_ztree li span.button.chk.chk.radio_false_full {background-position:-28px 0}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.radio_false_full_focus, #d2map_glTree.d2map_ztree li span.button.chk.radio_false_full_focus, #d2map_msSIDCTree.d2map_ztree li span.button.chk.radio_false_full_focus, #d2map_mvtTree.d2map_ztree li span.button.chk.radio_false_full_focus {background-position:-28px -14px}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.radio_false_part, #d2map_glTree.d2map_ztree li span.button.chk.radio_false_part, #d2map_msSIDCTree.d2map_ztree li span.button.chk.radio_false_part, #d2map_mvtTree.d2map_ztree li span.button.chk.radio_false_part {background-position:-28px -28px}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.radio_false_part_focus, #d2map_glTree.d2map_ztree li span.button.chk.radio_false_part_focus, #d2map_msSIDCTree.d2map_ztree li span.button.chk.radio_false_part_focus, #d2map_mvtTree.d2map_ztree li span.button.chk.radio_false_part_focus {background-position:-28px -42px}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.radio_false_disable, #d2map_glTree.d2map_ztree li span.button.chk.radio_false_disable, #d2map_msSIDCTree.d2map_ztree li span.button.chk.radio_false_disable, #d2map_mvtTree.d2map_ztree li span.button.chk.radio_false_disable {background-position:-28px -56px}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.radio_true_full, #d2map_glTree.d2map_ztree li span.button.chk.radio_true_full, #d2map_msSIDCTree.d2map_ztree li span.button.chk.radio_true_full, #d2map_mvtTree.d2map_ztree li span.button.chk.radio_true_full {background-position:-42px 0}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.radio_true_full_focus, #d2map_glTree.d2map_ztree li span.button.chk.radio_true_full_focus, #d2map_msSIDCTree.d2map_ztree li span.button.chk.radio_true_full_focus, #d2map_mvtTree.d2map_ztree li span.button.chk.radio_true_full_focus {background-position:-42px -14px}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.radio_true_part, #d2map_glTree.d2map_ztree li span.button.chk.radio_true_part, #d2map_msSIDCTree.d2map_ztree li span.button.chk.radio_true_part, #d2map_mvtTree.d2map_ztree li span.button.chk.radio_true_part {background-position:-42px -28px}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.radio_true_part_focus, #d2map_glTree.d2map_ztree li span.button.chk.radio_true_part_focus, #d2map_msSIDCTree.d2map_ztree li span.button.chk.radio_true_part_focus,  #d2map_mvtTree.d2map_ztree li span.button.chk.radio_true_part_focus {background-position:-42px -42px}
+#d2map_milsymbolTree.d2map_ztree li span.button.chk.radio_true_disable, #d2map_glTree.d2map_ztree li span.button.chk.radio_true_disable, #d2map_msSIDCTree.d2map_ztree li span.button.chk.radio_true_disable, #d2map_mvtTree.d2map_ztree li span.button.chk.radio_true_disable {background-position:-42px -56px}
+
+#d2map_milsymbolTree.d2map_ztree li span.button.switch, #d2map_glTree.d2map_ztree li span.button.switch, #d2map_msSIDCTree.d2map_ztree li span.button.switch, #d2map_mvtTree.d2map_ztree li span.button.switch {width:18px; height:18px}
+#d2map_milsymbolTree.d2map_ztree li span.button.root_open, #d2map_glTree.d2map_ztree li span.button.root_open, #d2map_msSIDCTree.d2map_ztree li span.button.root_open, #d2map_mvtTree.d2map_ztree li span.button.root_open {background-position:-92px -54px}
+#d2map_milsymbolTree.d2map_ztree li span.button.root_close, #d2map_glTree.d2map_ztree li span.button.root_close, #d2map_msSIDCTree.d2map_ztree li span.button.root_close, #d2map_mvtTree.d2map_ztree li span.button.root_close {background-position:-74px -54px}
+#d2map_milsymbolTree.d2map_ztree li span.button.roots_open, #d2map_glTree.d2map_ztree li span.button.roots_open, #d2map_msSIDCTree.d2map_ztree li span.button.roots_open, #d2map_mvtTree.d2map_ztree li span.button.roots_open {background-position:-92px 0}
+#d2map_milsymbolTree.d2map_ztree li span.button.roots_close, #d2map_glTree.d2map_ztree li span.button.roots_close, #d2map_msSIDCTree.d2map_ztree li span.button.roots_close, #d2map_mvtTree.d2map_ztree li span.button.roots_close {background-position:-74px 0}
+#d2map_milsymbolTree.d2map_ztree li span.button.center_open, #d2map_glTree.d2map_ztree li span.button.center_open, #d2map_msSIDCTree.d2map_ztree li span.button.center_open, #d2map_mvtTree.d2map_ztree li span.button.center_open {background-position:-92px -18px}
+#d2map_milsymbolTree.d2map_ztree li span.button.center_close, #d2map_glTree.d2map_ztree li span.button.center_close, #d2map_msSIDCTree.d2map_ztree li span.button.center_close, #d2map_mvtTree.d2map_ztree li span.button.center_close {background-position:-74px -18px}
+#d2map_milsymbolTree.d2map_ztree li span.button.bottom_open, #d2map_glTree.d2map_ztree li span.button.bottom_open, #d2map_msSIDCTree.d2map_ztree li span.button.bottom_open, #d2map_mvtTree.d2map_ztree li span.button.bottom_open {background-position:-92px -36px}
+#d2map_milsymbolTree.d2map_ztree li span.button.bottom_close, #d2map_glTree.d2map_ztree li span.button.bottom_close, #d2map_msSIDCTree.d2map_ztree li span.button.bottom_close, #d2map_mvtTree.d2map_ztree li span.button.bottom_close {background-position:-74px -36px}
+#d2map_milsymbolTree.d2map_ztree li span.button.noline_open, #d2map_glTree.d2map_ztree li span.button.noline_open, #d2map_msSIDCTree.d2map_ztree li span.button.noline_open, #d2map_mvtTree.d2map_ztree li span.button.noline_open {background-position:-92px -72px}
+#d2map_milsymbolTree.d2map_ztree li span.button.noline_close, #d2map_glTree.d2map_ztree li span.button.noline_close, #d2map_msSIDCTree.d2map_ztree li span.button.noline_close, #d2map_mvtTree.d2map_ztree li span.button.noline_close {background-position:-74px -72px}
+#d2map_milsymbolTree.d2map_ztree li span.button.root_docu, #d2map_glTree.d2map_ztree li span.button.root_docu, #d2map_msSIDCTree.d2map_ztree li span.button.root_docu, #d2map_mvtTree.d2map_ztree li span.button.root_docu { background:none;}
+#d2map_milsymbolTree.d2map_ztree li span.button.roots_docu, #d2map_glTree.d2map_ztree li span.button.roots_docu, #d2map_msSIDCTree.d2map_ztree li span.button.roots_docu, #d2map_mvtTree.d2map_ztree li span.button.roots_docu {background-position:-56px 0}
+#d2map_milsymbolTree.d2map_ztree li span.button.center_docu, #d2map_glTree.d2map_ztree li span.button.center_docu, #d2map_msSIDCTree.d2map_ztree li span.button.center_docu, #d2map_mvtTree.d2map_ztree li span.button.center_docu {background-position:-56px -18px}
+#d2map_milsymbolTree.d2map_ztree li span.button.bottom_docu, #d2map_glTree.d2map_ztree li span.button.bottom_docu, #d2map_msSIDCTree.d2map_ztree li span.button.bottom_docu, #d2map_mvtTree.d2map_ztree li span.button.bottom_docu {background-position:-56px -36px}
+#d2map_milsymbolTree.d2map_ztree li span.button.noline_docu, #d2map_glTree.d2map_ztree li span.button.noline_docu, #d2map_msSIDCTree.d2map_ztree li span.button.noline_docu, #d2map_mvtTree.d2map_ztree li span.button.noline_docu { background:none;}
+
+#d2map_milsymbolTree.d2map_ztree li span.button.ico_open, #d2map_glTree.d2map_ztree li span.button.ico_open, #d2map_msSIDCTree.d2map_ztree li span.button.ico_open {margin-right:2px; background-position:-110px -16px; vertical-align:top; *vertical-align:middle}
+#d2map_milsymbolTree.d2map_ztree li span.button.ico_close, #d2map_glTree.d2map_ztree li span.button.ico_close, #d2map_msSIDCTree.d2map_ztree li span.button.ico_close {margin-right:2px; background-position:-110px 0; vertical-align:top; *vertical-align:middle}
+#d2map_milsymbolTree.d2map_ztree li span.button.ico_docu, #d2map_glTree.d2map_ztree li span.button.ico_docu, #d2map_msSIDCTree.d2map_ztree li span.button.ico_docu, #d2map_mvtTree.d2map_ztree li span.button.ico_docu {margin-right:2px; background-position:-110px -32px; vertical-align:top; *vertical-align:middle}
+#d2map_milsymbolTree.d2map_ztree li span.button.edit, #d2map_glTree.d2map_ztree li span.button.edit, #d2map_msSIDCTree.d2map_ztree li span.button.edit, #d2map_mvtTree.d2map_ztree li span.button.edit {margin-right:2px; background-position:-110px -48px; vertical-align:top; *vertical-align:middle}
+#d2map_milsymbolTree.d2map_ztree li span.button.remove, #d2map_glTree.d2map_ztree li span.button.remove, #d2map_msSIDCTree.d2map_ztree li span.button.remove, #d2map_mvtTree.d2map_ztree li span.button.remove {margin-right:2px; background-position:-110px -64px; vertical-align:top; *vertical-align:middle}
+
+#d2map_milsymbolTree.d2map_ztree li span.button.ico_loading, #d2map_glTree.d2map_ztree li span.button.ico_loading, #d2map_msSIDC.d2map_ztree li span.button.ico_loading, #d2map_mvtTree.d2map_ztree li span.button.ico_loading {margin-right:2px; background:url(./img/loading.gif) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+
+/* custom icon */
+#d2map_glTree.d2map_ztree li span.button.marker_ico_docu{margin-right:2px; background: url("./img/diy/marker_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+#d2map_glTree.d2map_ztree li span.button.point_ico_docu{margin-right:2px; background: url("./img/diy/point_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+#d2map_glTree.d2map_ztree li span.button.text_ico_docu{margin-right:2px; background: url("./img/diy/text_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+#d2map_glTree.d2map_ztree li span.button.rectangle_ico_docu{margin-right:2px; background: url("./img/diy/rectangle_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+#d2map_glTree.d2map_ztree li span.button.rounded_rectangle_ico_docu{margin-right:2px; background: url("./img/diy/rounded_rectangle_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+#d2map_glTree.d2map_ztree li span.button.ellipse_ico_docu{margin-right:2px; background: url("./img/diy/ellipse_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+#d2map_glTree.d2map_ztree li span.button.triangle_ico_docu{margin-right:2px; background: url("./img/diy/triangle_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+#d2map_glTree.d2map_ztree li span.button.arc1_ico_docu{margin-right:2px; background: url("./img/diy/arc1_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+#d2map_glTree.d2map_ztree li span.button.arc2_ico_docu{margin-right:2px; background: url("./img/diy/arc2_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+#d2map_glTree.d2map_ztree li span.button.arc3_ico_docu{margin-right:2px; background: url("./img/diy/arc3_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+#d2map_glTree.d2map_ztree li span.button.arc4_ico_docu{margin-right:2px; background: url("./img/diy/arc4_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+#d2map_glTree.d2map_ztree li span.button.polyline_ico_docu{margin-right:2px; background: url("./img/diy/polyline_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+#d2map_glTree.d2map_ztree li span.button.polygon_ico_docu{margin-right:2px; background: url("./img/diy/polygon_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+#d2map_glTree.d2map_ztree li span.button.spline_ico_docu{margin-right:2px; background: url("./img/diy/spline_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+#d2map_glTree.d2map_ztree li span.button.closed_spline_ico_docu{margin-right:2px; background: url("./img/diy/closed_spline_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+#d2map_glTree.d2map_ztree li span.button.image_ico_docu{margin-right:2px; background: url("./img/diy/image_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+#d2map_glTree.d2map_ztree li span.button.milsymbol_ico_docu{margin-right:2px; background: url("./img/diy/milsymbol_sb.png") no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+
+/* MVT Layer custom icon */
+#d2map_mvtTree {padding-left: 0px;}
+#d2map_mvtTree.d2map_ztree {background-color: #999999;}
+#d2map_mvtTree.d2map_ztree li span.button.ico_open {background-image:url("./img/zTreeStandard.gif"); margin-right:2px; background-position:-110px -16px; vertical-align:top; *vertical-align:middle} 
+#d2map_mvtTree.d2map_ztree li span.button.ico_close {background-image:url("./img/zTreeStandard.gif"); margin-right:2px; background-position:-110px 0; vertical-align:top; *vertical-align:middle}
+
+/* ul.tmpTargetzTree {background-color:#FFE6B0; opacity:0.8; filter:alpha(opacity=80)} */
+
+span.tmpzTreeMove_arrow {width:16px; height:16px; display: inline-block; padding:0; margin:2px 0 0 1px; border:0 none; position:absolute;
+	background-color:transparent; background-repeat:no-repeat; background-attachment: scroll;
+	z-index: 999999;
+	background-position:-110px -80px; background-image:url("./img/zTreeStandard.png"); *background-image:url("./img/zTreeStandard.gif")
+	
+} 
+
+ul#d2map_milsymbolTree.d2map_ztree.ztreeDragUL, ul#d2map_glTree.d2map_ztree.ztreeDragUL, ul#d2map_msSIDCTree.d2map_ztree.ztreeDragUL {margin:0; padding:0; position:absolute; width:auto; height:auto;overflow:hidden; background-color:#cfcfcf; border:1px #00B83F dotted; opacity:0.8; filter:alpha(opacity=80)}
+.ztreeMask {z-index:10000; background-color:#cfcfcf; opacity:0.0; filter:alpha(opacity=0); position:absolute}
+
+/* level style*/
+/*#d2map_milsymbolTree.d2map_ztree li span.button.level0 {
+	display:none;
+}
+#d2map_milsymbolTree.d2map_ztree li ul.level0 {
+	padding:0;
+	background:none;
+}*/

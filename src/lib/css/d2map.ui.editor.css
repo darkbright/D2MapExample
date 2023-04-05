@@ -1,0 +1,188 @@
+#d2map_popup-text-editor-popup {
+    width: 500px;
+    opacity: 1;
+    background-color: transparent;
+    color: #000;
+    border: none;
+}
+
+#d2map_popup-text-editor-popup .d2map_popup-container {
+    width: 100%;
+    height: 100%;
+}
+
+#d2map_popup-text-editor:focus {
+    outline: none;
+}
+
+#d2map_popup-text-editor {
+    overflow-x: auto;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+#d2map_popup-text-editor * {
+    box-sizing: border-box;
+    font: inherit;
+    word-break: break-all;
+}
+
+#d2map_popup-text-editor ul {
+    list-style: disc outside none;
+}
+
+#d2map_popup-text-editor ol {
+    list-style: decimal outside none;
+}
+
+#d2map_popup-text-editor li {
+    list-style: inherit;
+}
+
+#d2map_popup-text-editor.table * {
+    margin: 0;
+}
+
+#d2map_popup-text-editor.textEditor * {
+    margin: 0 0 10px;
+}
+
+/* table */
+#d2map_popup-text-editor-popup table {
+    table-layout: fixed;
+}
+
+#d2map_popup-text-editor-popup th,
+#d2map_popup-text-editor-popup td {
+    vertical-align: baseline;
+}
+
+#d2map_popup-text-editor-popup th,
+#d2map_popup-text-editor-popup td {
+    display: table-cell;
+}
+
+.hide-all-border tr {
+    border: hidden;
+}
+
+.hide-all-border td {
+    border: hidden;
+}
+
+.show-all-border-thin td,
+.show-out-border-thin td,
+.show-inner-border-thin td,
+.show-inner-row-border-thin td,
+.show-inner-height-border-thin td {
+    border-left-width: thin;
+    border-top-width: thin;
+    border-right-width: thin;
+    border-bottom-width: thin;
+}
+
+.show-all-border-medium td,
+.show-out-border-medium td,
+.show-inner-border-medium td,
+.show-inner-row-border-medium td,
+.show-inner-height-border-medium td {
+    border-left-width: medium;
+    border-top-width: medium;
+    border-right-width: medium;
+    border-bottom-width: medium;
+}
+
+.show-all-border-thick td,
+.show-out-border-thick td,
+.show-inner-border-thick td,
+.show-inner-row-border-thick td,
+.show-inner-height-border-thick td {
+    border-left-width: thick;
+    border-top-width: thick;
+    border-right-width: thick;
+    border-bottom-width: thick;
+}
+
+.show-out-border-thin tr:not(:last-child),
+.show-out-border-medium tr:not(:last-child),
+.show-out-border-thick tr:not(:last-child) {
+    border-bottom: hidden;
+}
+
+.show-out-border-thin td:not(:last-child),
+.show-out-border-medium td:not(:last-child),
+.show-out-border-thick td:not(:last-child) {
+    border-right: hidden;
+}
+
+.show-inner-border-thin tr:first-child,
+.show-inner-border-medium tr:first-child,
+.show-inner-border-thick tr:first-child {
+    border-top: hidden;
+}
+
+.show-inner-border-thin tr:last-child,
+.show-inner-border-medium tr:last-child,
+.show-inner-border-thick tr:last-child {
+    border-bottom: hidden;
+}
+
+.show-inner-border-thin td:first-child,
+.show-inner-border-medium td:first-child,
+.show-inner-border-thick td:first-child {
+    border-left: hidden;
+}
+
+.show-inner-border-thin td:last-child,
+.show-inner-border-medium td:last-child,
+.show-inner-border-thick td:last-child {
+    border-right: hidden;
+}
+
+.show-inner-row-border-thin tr:first-child,
+.show-inner-row-border-medium tr:first-child,
+.show-inner-row-border-thick tr:first-child {
+    border-top: hidden;
+}
+
+.show-inner-row-border-thin tr:last-child,
+.show-inner-row-border-medium tr:last-child,
+.show-inner-row-border-thick tr:last-child {
+    border-bottom: hidden;
+}
+
+.show-inner-row-border-thin td,
+.show-inner-row-border-medium td,
+.show-inner-row-border-thick td {
+    border-right: hidden;
+}
+
+.show-inner-row-border-thin td:first-child,
+.show-inner-row-border-medium td:first-child,
+.show-inner-row-border-thick td:first-child {
+    border-left: hidden;
+}
+
+.show-inner-height-border-thin tr,
+.show-inner-height-border-medium tr,
+.show-inner-height-border-thick tr {
+    border-bottom: hidden;
+}
+
+.show-inner-height-border-thin tr:first-child,
+.show-inner-height-border-medium tr:first-child,
+.show-inner-height-border-thick tr:first-child {
+    border-top: hidden;
+}
+
+.show-inner-height-border-thin td:first-child,
+.show-inner-height-border-medium td:first-child,
+.show-inner-height-border-thick td:first-child {
+    border-left: hidden;
+}
+
+.show-inner-height-border-thin td:last-child,
+.show-inner-height-border-medium td:last-child,
+.show-inner-height-border-thick td:last-child {
+    border-right: hidden;
+}

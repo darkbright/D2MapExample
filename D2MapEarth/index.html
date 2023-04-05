@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<title>D2MapEarth for Web</title>
+	<script type="text/javascript" src="./config/mapConfig.js"></script>
+	<style id="hide_ui">
+		* {
+			display: none !important;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="menu-btn"><a id="d2mapweb-menu" href="#sidra" title="Toggle Left Menu"></a></div>
+
+	<div id="sidr">
+		<ul>
+			<li class="menu" title="Layer"><a href="#" id="layer-menu"></a></li>
+			<li class="menu" title="Coordinate"><a href="#" id="coord-menu"></a></li>
+			<li class="menu" title="Move"><a href="#" id="move-menu"></a></li>
+			<li class="menu" title="Building"><a href="#" id="b3dm-menu"></a></li>
+			<!-- <li class="menu" title="Grid"><a href="#" id="grid-menu"></a></li> -->
+			<li class="menu" title="Measurement"><a href="#" id="measurement-menu"></a></li>
+			<li class="menu" title="Terrain Analysis Tools"><a href="#" id="terrain-menu"></a></li>
+			<li class="menu" title="Effect"><a href="#" id="effect-menu"></a></li>
+			<li class="menu" title="Export"><a href="#" id="export-menu"></a></li>
+			<li class="menu" title="Unit Deploy"><a href="#" id="unit-deploy-menu"></a></li>
+		</ul>
+	</div>
+
+	<!-- 사이드바 부 항목 -->
+	<!-- layer 부 항목 -->
+	<div id="layer-sub" class="sub">
+		<ul>
+			<li class="sub-header"><a href="#" title="Fixing Sub Menu On/Off"></a></li>
+			<li id="sortable">
+				<span title="Mesh" class="ui-state-default" id="d2mapearth_layer-sub-mesh-span">
+					<input type="checkbox" name="d2mapearth_layer-sub" id="d2mapearth_layer-sub-mesh" onClick="changeMesh()" />
+					<label for="d2mapearth_layer-sub-mesh">Mesh(2D 그물망)</label>
+				</span>
+				<span title="HillShade" class="ui-state-default" id="d2mapearth_layer-sub-hillshade-span">
+					<input type="checkbox" name="d2mapearth_layer-sub" id="d2mapearth_layer-sub-hillshade" onClick="toggleLayer(this)" />
+					<label for="d2mapearth_layer-sub-hillshade">HillShade(음영도)</label>
+				</span>
+				<span title="HillShade Custom" class="ui-state-default" id="d2mapearth_layer-sub-hillshade-custom-span">
+					<input type="checkbox" name="d2mapearth_layer-sub" id="d2mapearth_layer-sub-hillshade-custom" onClick="toggleLayer(this)" />
+					<label for="d2mapearth_layer-sub-hillshade-custom">HillShade II(음영도)</label>
+				</span>
+				<span title="Spectrum" class="ui-state-default" id="d2mapearth_layer-sub-spectrum-span">
+					<input type="checkbox" name="d2mapearth_layer-sub" id="d2mapearth_layer-sub-spectrum" onClick="toggleLayer(this)" />
+					<label for="d2mapearth_layer-sub-spectrum">Spectrum(색상도)</label>
+				</span>
+				<span title="Arirang Satellite Image (1m)" class="ui-state-default" id="d2mapearth_layer-sub-arirang-span">
+					<input type="checkbox" name="d2mapearth_layer-sub" id="d2mapearth_layer-sub-arirang" checked onClick="toggleLayer(this)" />
+					<label for="d2mapearth_layer-sub-arirang">Arirang(1m)(텍스쳐)</label>
+				</span>
+				<span title="Land 50K" class="ui-state-default" id="d2mapearth_layer-sub-land50k-span">
+					<input type="checkbox" name="d2mapearth_layer-sub" id="d2mapearth_layer-sub-land50k" onClick="toggleLayer(this)" />
+					<label for="d2mapearth_layer-sub-land50k">Land 50K</label>
+				</span>
+				<span title="Land 100K" class="ui-state-default" id="d2mapearth_layer-sub-land100k-span">
+					<input type="checkbox" name="d2mapearth_layer-sub" id="d2mapearth_layer-sub-land100k" onClick="toggleLayer(this)" />
+					<label for="d2mapearth_layer-sub-land100k">Land 100K</label>
+				</span>
+				<span title="Land 250K" class="ui-state-default" id="d2mapearth_layer-sub-land250k-span">
+					<input type="checkbox" name="d2mapearth_layer-sub" id="d2mapearth_layer-sub-land250k" onClick="toggleLayer(this)" />
+					<label for="d2mapearth_layer-sub-land250k">Land 250K</label>
+				</span>
+				<span title="Land 500K" class="ui-state-default" id="d2mapearth_layer-sub-land500k-span">
+					<input type="checkbox" name="d2mapearth_layer-sub" id="d2mapearth_layer-sub-land500k" onClick="toggleLayer(this)" />
+					<label for="d2mapearth_layer-sub-land500k">Land 500K</label>
+				</span>
+				<span title="Land 1M" class="ui-state-default" id="d2mapearth_layer-sub-land1M-span">
+					<input type="checkbox" name="d2mapearth_layer-sub" id="d2mapearth_layer-sub-land1M" onClick="toggleLayer(this)" />
+					<label for="d2mapearth_layer-sub-land1M">Land 1M</label>
+				</span>
+				<span title="OSM" class="ui-state-default" id="d2mapearth_layer-sub-osm-span">
+					<input type="checkbox" name="d2mapearth_layer-sub" id="d2mapearth_layer-sub-osm" onClick="toggleLayer(this)" />
+					<label for="d2mapearth_layer-sub-osm">OSM</label>
+				</span>
+				<span title="VWorld" class="ui-state-default" id="d2mapearth_layer-sub-vworld-base-span">
+					<input type="checkbox" name="layer-sub" id="d2mapearth_layer-sub-vworld" onClick="toggleLayer(this)" />
+					<label for="d2mapearth_layer-sub-vworld">VWorld</label>
+				</span>
+				<span title="VWorld Hybrid" class="ui-state-default" id="d2mapearth_layer-sub-vworld-hybrid-span">
+					<input type="checkbox" name="layer-sub" id="d2mapearth_layer-sub-vworld-hybrid" onClick="toggleLayer(this)" />
+					<label for="d2mapearth_layer-sub-vworld-hybrid">VWorld Hybrid</label>
+				</span>
+				<span title="World Label" class="ui-state-default" id="d2mapearth_layer-sub-world-label-span">
+					<input type="checkbox" name="d2mapearth_layer-sub" id="d2mapearth_layer-sub-world-label" onClick="toggleLayer(this)" />
+					<label for="d2mapearth_layer-sub-world-label">World Label</label>
+				</span>
+				<span title="NASA BlueMarble Image" class="ui-state-default" id="d2mapearth_layer-sub-world-span">
+					<input type="checkbox" name="d2mapearth_layer-sub" id="d2mapearth_layer-sub-world" checked onClick="toggleLayer(this)" />
+					<label for="d2mapearth_layer-sub-world">World</label>
+				</span>
+			</li>
+		</ul>
+	</div>
+	<!-- coord 부 항목 -->
+	<div id="coord-sub" class="sub">
+		<ul>
+			<li class="sub-header"><a href="#" title="Fixing Sub Menu On/Off"></a></li>
+			<li>
+				<span title="Geographic Coordinate" class="bdr-show-both"><input type="checkbox" name="coord-sub" id="coord-sub-geographic" checked /><label for="coord-sub-geographic">Geographic(Degree)</label></span>
+				<span title="Geographic Coordinate" class="bdr-show-both"><input type="checkbox" name="coord-sub" id="coord-sub-geographic-dms" checked /><label for="coord-sub-geographic-dms">Geographic(DMS)</label></span>
+				<span title="Military Grid Reference System" class="bdr-show-both"><input type="checkbox" name="coord-sub" id="coord-sub-mgrs" checked /><label for="coord-sub-mgrs">MGRS</label></span>
+				<span title="Universal Transverse Mercator" class="bdr-show-both"><input type="checkbox" name="coord-sub" id="coord-sub-utm" /><label for="coord-sub-utm">UTM</label></span>
+				<span title="Transverse Mercator" class="bdr-show-both"><input type="checkbox" name="coord-sub" id="coord-sub-tm" /><label for="coord-sub-tm">TM</label></span>
+				<span title="Geographic Reference System" class="bdr-show-both"><input type="checkbox" name="coord-sub" id="coord-sub-georef" /><label for="coord-sub-georef">GeoRef</label></span>
+				<span title="Global Area Reference System" class="bdr-show-both"><input type="checkbox" name="coord-sub" id="coord-sub-gars" /><label for="coord-sub-gars">GARS</label></span>
+				<span title="Elevation" class="bdr-show-both"><input type="checkbox" name="coord-sub" id="coord-sub-elevation" checked /><label for="coord-sub-elevation">Elevation</label></span>
+				<span title="Altitude" class="bdr-show-both"><input type="checkbox" name="coord-sub" id="coord-sub-altitude" /><label for="coord-sub-altitude">Altitude</label></span>
+				<span title="Display Position" class="bdr-show-both">
+					<input type="radio" name="coord-sub-view" title="Cursor" value="CURSOR" id="view-cursor" /><label for="view-cursor">Cursor</label>
+					<input type="radio" name="coord-sub-view" title="Bottom" value="BOTTOM" id="view-bottom" checked="" /><label for="view-bottom">Bottom</label>
+				</span>
+			</li>
+		</ul>
+	</div>
+	<!-- move 부 항목 -->
+	<div id="move-sub" class="sub">
+		<ul>
+			<li class="sub-header"><a href="#" title="Fixing Sub Menu On/Off"></a></li>
+			<li>
+				<span title="Geographic" class="bdr-show-top">Geographic<a class="abtn" title="Move to the coordinate" href="#" id="move-sub-geographic">Move</a>
+					<table>
+						<tbody>
+							<tr>
+								<td style="width: 55px; text-align: right; padding-right: 5px">longitude</td>
+								<td colspan="3"><input title="The Longitude of the Center" type="text" id="move-sub-geographic-lon" value="127.125587" style="ime-mode: inactive" />
+								</td>
+							</tr>
+							<tr>
+								<td style="width: 55px; text-align: right; padding-right: 5px">latitude</td>
+								<td colspan="3"><input title="The Latitude of the Center" type="text" id="move-sub-geographic-lat" value="37.413236" style="ime-mode: inactive" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</span>
+				<span title="MGRS" class="bdr-show-top">MGRS<a class="abtn" title="Move to the coordinate" href="#" id="move-sub-mgrs">Move</a>
+					<table>
+						<tbody>
+							<tr>
+								<td style="width: 35px; text-align: right; padding-right: 5px">Zone</td>
+								<td><input title="Zone" type="text" id="move-sub-mgrs-zone" value="52" maxlength="2" style="ime-mode: inactive; width: 28px" /></td>
+								<td><input title="Band" type="text" id="move-sub-mgrs-band" value="S" maxlength="1" style="ime-mode: inactive; width: 22px" /></td>
+								<td style="width: 55x; text-align: right; padding-right: 5px">Square ID</td>
+								<td><input title="Square ID" type="text" id="move-sub-mgrs-squareid" value="CG" maxlength="2" style="ime-mode: inactive; width: 34px" /></td>
+							</tr>
+							<tr>
+								<td style="width: 35px; text-align: right; padding-right: 5px">Easting</td>
+								<td colspan="2"><input title="Easting" type="text" id="move-sub-mgrs-easting" value="34121" maxlength="5" style="ime-mode: inactive" /></td>
+								<td style="width: 55px; text-align: right; padding-right: 5px">Northing</td>
+								<td><input title="Northing" type="text" id="move-sub-mgrs-northing" width="5" value="42364" maxlength="5" style="ime-mode: inactive" /></td>
+							</tr>
+						</tbody>
+					</table>
+				</span>
+				<span title="Move Ratio" class="bdr-show-top">Map Moving Ratio<a class="abtn" title="Move Ratio" href="#" id="move-sub-ratio">Apply</a>
+					<table>
+						<tbody>
+							<tr>
+								<td style="width: 55px; text-align: right; padding-right: 5px">Ratio</td>
+								<td colspan="3"><input title="Move Ratio" type="text" id="move-sub-ratio-value" value="1" style="ime-mode: inactive; ime-mode: disabled" /></td>
+							</tr>
+						</tbody>
+					</table>
+				</span>
+			</li>
+		</ul>
+	</div>
+	<!-- b3dm 부 항목 -->
+	<div id="b3dm-sub" class="sub">
+		<ul>
+			<li class="sub-header"><a href="#" title="Fixing Sub Menu On/Off"></a></li>
+			<li>
+				<span title="Building" class="bdr-show-both"><input type="checkbox" name="b3dm-sub"
+					id="b3dm-sub-show" checked /><label
+					for="b3dm-sub-show">Building</label></span>
+				<span title="Geographic Coordinate" class="bdr-show-both"><input type="checkbox" name="b3dm-sub"
+					id="b3dm-sub-selection"/><label
+					for="b3dm-sub-selection">Selection</label></span>
+			</li>
+		</ul>
+	</div>
+	<!-- measurement 부 항목 -->
+	<div id="measurement-sub" class="sub">
+		<ul>
+			<li class="sub-header"><a href="#" title="Fixing Sub Menu On/Off"></a></li>
+			<li>
+				<span title="Clear" class="bdr-show-bottom"><a id="measurement-sub-clear" href="#">Clear</a></span>
+				<span title="Distance" class="bdr-show-both"><a id="measurement-sub-distance" href="#">Distance</a></span>
+				<span title="Slope Distance" class="bdr-show-both"><a id="measurement-sub-slopedistance" href="#">Slope
+						Distance</a></span>
+				<span title="Area" class="bdr-show-both"><a id="measurement-sub-area" href="#">Area</a></span>
+			</li>
+		</ul>
+	</div>
+	<!-- terrain 부 항목 -->
+	<div id="terrain-sub" class="sub">
+		<ul>
+			<li class="sub-header"><a href="#" title="Fixing Sub Menu On/Off"></a></li>
+			<li>
+				<span title="Clear" class="bdr-show-bottom"><a id="terrain-sub-clear" href="#">Clear</a></span>
+				<span title="Get Height (Elevation)" class="bdr-show-both"><a id="terrain-sub-getheight" href="#">Get
+						Height</a></span>
+				<span title="Cross Section" class="bdr-show-both"><a id="terrain-sub-crosssection" href="#">Cross
+						Section</a></span>
+				<!-- <span title="Line Of Sight" class="bdr-show-both"><a id="terrain-sub-lineofsight" href="#">Line Of Sight</a></span> -->
+				<span title="Line Of Sight" class="bdr-show-both">Line Of Sight<a class="abtn" title="Click to Add Line Of Sight" href="#" id="terrain-sub-lineofsight">Add</a>
+					<table>
+						<tbody>
+							<tr>
+								<td style="width: 55px; text-align: right; padding-right: 5px">height<br />(m)</td>
+								<td><input title="Observation Height" type="text" id="terrain-sub-lineofsight-height" value="2" style="ime-mode: inactive; ime-mode: disabled" /></td>
+							</tr>
+						</tbody>
+					</table>
+				</span>
+				<span title="Viewshed" class="bdr-show-both">Viewshed<a class="abtn" title="Click to Add Viewshed" href="#" id="terrain-sub-viewshed">Add</a>
+					<table>
+						<tbody>
+							<tr>
+								<td style="width: 55px; text-align: right; padding-right: 5px">height<br />( m )</td>
+								<td><input type="text" title="Observation Height" id="terrain-sub-viewshed-height" value="10" style="ime-mode: inactive; ime-mode: disabled" /></td>
+								<td style="width: 55px; text-align: right; padding-right: 5px">radius<br />( m )</td>
+								<td><input type="text" title="Observation Radius" id="terrain-sub-viewshed-radius" value="3000" style="ime-mode: inactive; ime-mode: disabled" /></td>
+							</tr>
+							<tr>
+								<td style="width: 55px; text-align: right; padding-right: 5px">start angle<br />( degree
+									)</td>
+								<td><input type="text" title="Start Angle" id="terrain-sub-viewshed-startangle" value="315" style="ime-mode: inactive; ime-mode: disabled" /></td>
+								<td style="width: 55px; text-align: right; padding-right: 5px">end angle<br />( degree )
+								</td>
+								<td><input type="text" title="End Angle" id="terrain-sub-viewshed-endangle" value="45" style="ime-mode: inactive; ime-mode: disabled" /></td>
+							</tr>
+						</tbody>
+					</table>
+				</span>
+			</li>
+		</ul>
+	</div>
+	<!-- Effect 부 항목 정의 -->
+	<div id="effect-sub" class="sub">
+		<ul>
+			<li>
+				<span title="Day / Night">
+					<table>
+						<tr>
+							<td class="range"><input type="checkbox" name="effect-sub" id="effect-sub-light" /><label for="effect-sub-light">Day/Night(하늘)</label></td>
+							<td style="width: 65px;"><input type="range" min="0" max="100" step="1" value="50" id="effect-sub-light-range" /></td>
+							<td style="width: 25px;"><span class="value-display" id="effect-sub-light-value">50</span>
+							</td>
+						</tr>
+					</table>
+				</span>
+				<span title="Fog">
+					<table>
+						<tr>
+							<td class="range"><input type="checkbox" name="effect-sub" id="effect-sub-fog" /><label for="effect-sub-fog">Fog(안개)</label></td>
+							<td style="width: 65px;"><input type="range" min="0" max="100" step="1" value="50" id="effect-sub-fog-range" /></td>
+							<td style="width: 25px;"><span class="value-display" id="effect-sub-fog-value">50</span>
+							</td>
+						</tr>
+					</table>
+				</span>
+				<span title="Rain"><input type="checkbox" name="effect-sub" id="effect-sub-rain" /><label for="effect-sub-rain">Rain(비)</label></span>
+				<span title="Snow"><input type="checkbox" name="effect-sub" id="effect-sub-snow" /><label for="effect-sub-snow">Snow(눈)</label></span>
+				<span title="Terrain Exaggeration">
+					<table>
+						<tr>
+							<td class="range"><input type="checkbox" name="effect-sub" id="effect-sub-terrain-exaggeration" /><label for="effect-sub-terrain-exaggeration">고도왜곡률</label></td>
+							<td style="width: 65px;"><input type="range" min="0" max="100" step="1" value="25" id="effect-sub-terrain-exaggeration-range" /></td>
+							<td style="width: 25px;"><span class="value-display" id="effect-sub-terrain-exaggeration-value">25</span>
+							</td>
+						</tr>
+					</table>
+				</span>
+			</li>
+		</ul>
+	</div>
+	<!-- export 부 항목 -->
+	<div id="export-sub" class="sub">
+		<ul>
+			<li class="sub-header"><a href="#" title="Fixing Sub Menu On/Off"></a></li>
+			<li>
+				<span title="Export Clipboard" class="bdr-show-both"><a id="export-sub-clipboard" href="#">Copy to Clipboard</a></span>
+				<span title="Export as jpg file" class="bdr-show-bottom"><a id="export-sub-jpg" href="#">JPG</a></span>
+				<span title="Export as png file" class="bdr-show-both"><a id="export-sub-png" href="#">PNG</a></span>
+				<span title="Export partial area to jpg file" class="bdr-show-bottom"><a id="export-sub-partial-area-jpg" href="#">Partial Area to JPG</a></span>
+				<span title="Export partial area to png file" class="bdr-show-both"><a id="export-sub-partial-area-png" href="#">Partial Area to PNG</a></span>
+			</li>
+		</ul>
+	</div>
+	<!-- unit deploy 부 항목 -->
+	<div id="unit-deploy-sub" class="sub">
+		<ul>
+			<li class="sub-header"><a href="#" title="Fixing Sub Menu On/Off"></a></li>
+			<li>
+				<span title="Clear" class="bdr-show-both"><a id="unit-remove-all" href="#">Clear</a></span>
+				<span title="Add Military Symbol" class="bdr-show-both"><a id="unit-add-mssymbol" href="#">Add Military Symbol</a></span>
+				<span title="Add Polyline" class="bdr-show-both"><a id="unit-add-polyline" href="#">Add Polyline</a></span>
+				<span title="Add Polygon" class="bdr-show-both"><a id="unit-add-polygon" href="#">Add Polygon</a></span>
+				<span title="Add Label" class="bdr-show-both"><a id="unit-add-label" href="#">Add Label</a></span>
+				<span title="Add Overlay 2D to 3D" class="bdr-show-both"><a id="unit-add-overlay2dto3d" href="#">Add Overlay 2D to 3D</a></span>
+				<span title="Move Center" class="bdr-show-both"><a id="move-center" href="#">Move Center</a></span>
+			</li>
+		</ul>
+	</div>
+
+	<div id="D2MapEarthContainer"></div>
+
+	<!-- 하단 상태바 -->
+	<div class="status-bottom">
+		<div>
+			<!-- <div id="Title" class="d2map-logo-bottom">(C) 2021. D2 INNOVATION. All Rights Reserved.</div> -->
+			<div id="d2map-coord-bottom" class="d2map-coord-bottom"></div>
+		</div>
+	</div>
+
+	<script defer src="d2mapearth.min.js"></script>
+	<script defer src="index.js"></script>
+	<script defer src="COP.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			$("#hide_ui").remove();
+		});
+	</script>
+</body>
+
+</html>

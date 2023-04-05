@@ -1,0 +1,191 @@
+<!--툴바 영역 설정 html -->
+<!--
+    d2map.ui.toolbar.js에서 툴바 이벤트를 수행한다.
+-->
+<div id="toolbarcontainer">
+    <div id="toolbar-logo" class="logo">
+        <!-- 로고 이미지 -->
+        <p style="width: 100%;height: inherit;line-height: 50px;font-size: 30px;text-align: center;color: #f8f8f8;">
+            D2Map Example</p>
+    </div>
+
+    <!-- 로딩 -->
+    <div id="loading"></div>
+    <!-- 상단 툴바의 도구들 -->
+    <div id="main-toolbar" class="toolbar">
+        <!-- 로컬 서버 연결 버튼 -->
+        <button type="button" id="btn-local" class="tools-service">local</button>
+        <button type="button" id="btn-server" class="tools-service">server</button>
+
+        <!-- 지도 관리 -->
+        <span id="tools-management">
+            <a href="#" title="기본 모드 선택" id="tools-management-default" class="toggle"></a>
+            <a href="#" title="지도 저장" id="tools-management-save"></a>
+            <a href="#" title="그리드" id="tools-management-grid"></a>
+            <a href="#" title="중심선" id="tools-management-centerline"></a>
+
+            <span id="tools-centerline-coordtype">
+                <span class="toolbar-select">
+                    <select title="중심선 좌표타입설정" id="tools-centerline-coodrdtype-where" class="toolbar-select">
+                        <option value="geo">경위도</option>
+                        <option value="mgrs">MGRS</option>
+                        <option value="utm">UTM</option>
+                        <option value="georef">GeoRef</option>
+                        <option value="gars">GARS</option>
+                    </select>
+                </span>
+            </span>
+
+        </span>
+        <img src="./src/image/line.png" alt="아이콘 분리선">
+        <!-- 지도계산 -->
+        <span id="tools-calculation">
+            <a href="#" title="거리" id="tools-calculation-dist"></a>
+            <a href="#" title="거리 단위변경" id="tools-calculation-distunit" class="dist-unit-meter"></a>
+            <a href="#" title="거리(소요시간)" id="tools-calculation-elapse"></a>
+            <a href="#" title="면적" id="tools-calculation-area"></a>
+            <a href="#" title="면적 단위 변경" id="tools-calculation-areaunit" class="area-unit-meter"></a>
+            <a href="#" title="거리, 면적 삭제" id="tools-calculation-remove"></a>
+            <a href="#" title="좌표값 클립보드로 복사" id="tools-calculation-point"></a>
+            <a href="#" title="가시선 분석" id="tools-calculation-viewshed"></a>
+            <a href="#" title="고도" id="tools-calculation-elevation"></a>
+            <a href="#" title="거리, 높이 차트" id="tools-calculation-crosschart"></a>
+        </span>
+        <img src="./src/image/line.png" alt="아이콘 분리선">
+        <span id="tools-3d">
+            <a href="#" title="전구 3D" id="tools-3d-3d"></a>
+        </span>
+        <img src="./src/image/line.png" alt="아이콘 분리선">
+        <!-- 빠른이동 -->
+        <span id="tools-movement">
+            <span class="toolbar-select">
+                <select title="빠른 이동" id="tools-movement-where" class="toolbar-select">
+                    <option value="none" selected>지도 이동</option>
+                    <option value="world">세계</option>
+                    <option value="eastasia">동북아</option>
+                    <option value="korea">한반도</option>
+                    <option value="westsea">서해</option>
+                    <option value="eastsea">동해</option>
+                </select>
+            </span>
+        </span>
+        <img src="./src/image/line.png" alt="아이콘 분리선">
+        <!-- 투명도 -->
+        <span id="tools-drawing">
+            <a href="#" title="투명도" id="tools-drawing-drawing"></a>
+        </span>
+
+        <img src="./src/image/line.png" alt="아이콘 분리선">
+        <!-- API Reference Guide -->
+        <span id="tools-api">
+            <a href="#" title="API Reference Guide" id="tools-api-reference-guide"></a>
+        </span>
+
+    </div>
+    <div id="sub-toolbar">
+        <div id="sub-toolbar-drawing" class="toolbar">
+            <a href="#" id="drawing-select" title="투명도 선택"></a>
+            <a href="#" id="drawing-point" title="포인트"></a>
+            <a href="#" id="drawing-text" title="텍스트"></a>
+            <a href="#" id="drawing-table" title="표"></a>
+            <a href="#" id="drawing-rectangle" title="사각형"></a>
+            <a href="#" id="drawing-rectangleround" title="둥근사각형"></a>
+            <a href="#" id="drawing-ellipse" title="타원"></a>
+            <a href="#" id="drawing-triangle" title="삼각형"></a>
+            <a href="#" id="drawing-arc1" title="원호 - 1"></a>
+            <a href="#" id="drawing-arc2" title="원호 - 2"></a>
+            <a href="#" id="drawing-arc3" title="원호 - 3"></a>
+            <a href="#" id="drawing-arc4" title="원호 - 4"></a>
+            <a href="#" id="drawing-polyline" title="연결선"></a>
+            <a href="#" id="drawing-polygon" title="다각형"></a>
+            <a href="#" id="drawing-spline" title="곡선"></a>
+            <a href="#" id="drawing-splineclosed" title="폐곡선"></a>
+            <a href="#" id="drawing-image" title="이미지"></a>
+            <a href="#" id="drawing-milsymbol" title="군대부호"></a>
+            <label style="margin: 0px 5px;">공통 속성</label>
+            <input type="color" title="선 색상" id="common-linecolor" name="common-style-input" style="display: block;" />
+            <label style="margin: 0px 5px;">선 색상</label>
+            <input type="text" title="선 두께" id="common-line-width" name="common-style-input" style="display: block;width: 30px;" />
+            <label style="margin: 0px 5px;">선 두께</label>
+            <input type="color" title="채움 색상" id="common-fillcolor" name="common-style-input" style="display: block;" />
+            <label style="margin: 0px 5px;">채움색</label>
+        </div>
+    </div>
+    <input type="file" id="drawing-img-source" style="display: none;">
+    <div id="toolbar-popup">
+        <div id="popup-text">
+            <span class="close-btn"><span class="toolbar-popup-title">Text</span><a href="#">X</a></span>
+            <span>
+                <input type="text" id="popup-text-value" placeholder="텍스트 입력">
+                <a href="#" id="popup-text-add" class="normalBtn">추가</a>
+            </span>
+        </div>
+        <div id="popup-milsymbol">
+            <span class="close-btn">
+                <span class="toolbar-popup-title">군대부호</span><a href="#">X</a>
+                <div class="d2map_translate-btn" id="d2map_translate-container">
+                    <input type="checkbox" class="d2map_translate-chk" style="width: 100%;" />
+                    <div class="d2map_translate-knobs"></div>
+                    <div class="d2map_translate-layer"></div>
+                </div>
+            </span>
+            <table>
+                <tr style="border-bottom: 1px solid #1a1a1a;">
+                    <td colspan="4">
+                        <div id="d2map_tree-container" class="d2map_tree-container">
+                            <ul id="d2map_milsymbolTree" class="d2map_ztree"></ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 1px solid #1a1a1a;">
+                    <td colspan="4">
+                        <div id="d2map_milsymbol-sub-explorer-img">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 20px; text-align: right; padding-right: 3px;">ID</td>
+                    <td colspan="3">
+                        <div><input type="text" title="Military Symbol ID" id="d2map_milsymbol-sub-explorer-id" readonly style="border: none;  outline: none; background: transparent;" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 20px; text-align: right; padding-right: 3px;">SIDC</td>
+                    <td colspan="3">
+                        <div><input type="text" title="Military Symbol Code" readonly style="border: none;  outline: none; background: transparent;" id="d2map_milsymbol-sub-explorer-sidc" />
+                        </div>
+                    </td>
+                </tr>
+                <tr style="display: none;">
+                    <td style="width: 40px; text-align: right; padding-right: 1px;">Affiliation</td>
+                    <td colspan="3">
+                        <select title="affiliation" id="d2map_milsymbol-sub-explorer-affiliation">
+                            <option value="-">-:미지정</option>
+                            <option value="P">P:식별보류</option>
+                            <option value="U">U:미식별</option>
+                            <option value="F" selected>F:아군</option>
+                            <option value="H">H:적군</option>
+                            <option value="N">N:중립</option>
+                            <option value="A">A:아군간주</option>
+                            <option value="S">S:적군간주</option>
+                            <option value="G">G:(훈)식별보류</option>
+                            <option value="W">W:(훈)미식별</option>
+                            <option value="D">D:(훈)아군</option>
+                            <option value="L">L:(훈)중립</option>
+                            <option value="M">M:(훈)아군간주</option>
+                            <option value="J">J:의심적</option>
+                            <option value="K">K:가상적</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right; padding-right: 3px;">검색</td>
+                    <td>
+                        <input type="text" title="Military Symbol Search" id="d2map_milsymbol-sub-explorer-search">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

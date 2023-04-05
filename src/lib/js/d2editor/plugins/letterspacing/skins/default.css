@@ -1,0 +1,18 @@
+.cke_letterspacingblock {
+    font-size: 11px;
+    font-family: "Microsoft Sans Serif", Tahoma, Arial, Verdana, sans-serif;
+    height: 100%;
+}
+
+.cke_letterspacingblock > span > div {
+    padding: 3px;
+    text-align: center;
+}
+
+.cke_letterspacingblock > span {
+    align-items: center;
+}
+
+/* .custom_letterspacing div:hover, .custom_letterspacing div.checked {
+    background-color: #d1d1d1;
+} */

@@ -1,0 +1,57 @@
+<!-- 투명도 레이어 html -->
+<!-- 
+    sidemenu.graphiclayer.js - 투명도 레이어 관리를 수행한다.    
+-->
+<div id="sidemenu-graphiclayer">
+    <hr />
+    <!-- 레이어 관리 -->
+    <div id="graphiclayer-layer">
+        <div id="graphiclayer-layer-list" class="graphiclayerlist-list">
+            <div id="graphiclayer-layer-list-title">
+                <div class="graphiclayer-list-row">
+                    <span><input type="checkbox" id="graphiclayer-layer-visible-checkAll" checked="true"></span>
+                    <span>투명도 레이어명</span>
+                    <span>활성</span>
+                    <span>생성일시</span>
+                </div>
+            </div>
+            <div id="graphiclayer-layer-list-content">
+
+            </div>
+        </div>
+        <div id="graphiclayer-layer-controller">
+            <ul>
+                <li class="normalBtn"><a id="layer-forward" href="#">위</a></li>
+                <li class="normalBtn"><a id="layer-backward" href="#">아래</a></li>
+                <li class="normalBtn"><a id="layer-top" href="#">맨 위</a></li>
+                <li class="normalBtn"><a id="layer-bottom" href="#">맨 아래</a></li>
+                <li class="normalBtn"><a id="layer-create" href="#">생성</a></li>
+                <li class="normalBtn"><a id="layer-remove" href="#">삭제</a></li>
+                <li class="normalBtn"><a id="layer-save" href="#">저장</a></li>
+                <li class="normalBtn"><a id="layer-open" href="#">열기</a></li>
+                <li class="normalBtn"><a id="layer-rename" href="#">이름 변경</a></li>
+            </ul>
+            <!-- 레이어 열기 input -->
+            <input type="file" id="layer-open-input" style="display: none;">
+        </div>
+    </div>
+
+    <!-- 객체 관리 -->
+    <div id="graphiclayer-object">
+        <div id="graphiclayer-object-list" class="graphiclayerlist-list">
+            <div id="graphiclayer-object-list-title">
+                <div class="graphiclayer-list-row">
+                    <span><input type="checkbox" id="graphiclayer-object-visible-checkAll" checked="true"></span>
+                    <span>명칭</span>
+                    <span>활성</span>
+                    <span>잠금</span>
+                    <span>생성일시</span>
+                </div>
+            </div>
+            <div id="graphiclayer-object-list-content">
+
+            </div>
+        </div>
+    </div>
+    <hr />
+</div>

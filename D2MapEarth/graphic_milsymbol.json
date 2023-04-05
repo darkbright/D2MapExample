@@ -1,0 +1,255 @@
+{
+	"name": "Layer-01",
+	"guid": "71f1ea44-d0f0-70ac-e57a-94f6f2b78b2c",
+	"createTime": "2022-02-06T20:50:36",
+	"editTime": "2022-02-06T20:50:36",
+	"author": "",
+	"exercise": false,
+	"security": 0,
+	"si": false,
+	"source": "",
+	"objects": [
+		{
+			"graphicObjProp": {
+				"type": "milSymbol",
+				"name": "위성",
+				"positions": [],
+				"pixelPositions": [],
+				"rotate": 0,
+				"trackerRotate": [],
+				"bound": {
+					"minX": 14207298.944924971,
+					"minY": 4522499.329216448,
+					"maxX": 14207298.944924971,
+					"maxY": 4522499.329216448
+				},
+				"lock": false,
+				"screenMode": false,
+				"screenAnchor": [
+					0,
+					0
+				],
+				"guid": "27502e73-9f63-ea24-a5fa-b80e393bb1eb",
+				"createTime": "2022-02-06T20:50:44",
+				"editTime": "2022-02-06T20:53:25",
+				"scaleLimit": false,
+				"scaleUpper": 999999999,
+				"scaleLower": 0,
+				"text": "",
+				"links": {},
+				"attribute": {},
+				"sameRatio": false,
+				"msType": "msPoint",
+				"msKey": "S*P*S-----*****",
+				"msUseDefineColor": false,
+				"msOldStyle": {},
+				"msFontRatio": 1,
+				"msLineRatio": 1,
+				"msSize": 1,
+				"lineType": 0,
+				"options": {
+					"SIDC": "SFP*S-----*C***",
+					"operationalConditionPoint": "0",
+					"civilianColor": false,
+					"userDefineFillColor": "",
+					"dtg": "활동시각",
+					"altitudeDepth": "고도/심도/거리",
+					"location": "위치",
+					"headquarters": false,
+					"type": "장비명/종류",
+					"uniqueDesignation": "고유명칭",
+					"speed": "속도",
+					"feintDummyIndicator": "ㄴㅇㄹ",
+					"platformType": "ELNOT",
+					"equipmentTeardownTime": "AE",
+					"commonIdentifier": "AF",
+					"auxiliaryEquipmentIndicator": "shortSonar",
+					"direction": 45,
+					"mobilityIndicator": "T",
+					"mobilityCode": "M",
+					"quantity": 0,
+					"mobileUnit": "기동부대",
+					"reinforcedReduced": "부대증감",
+					"staffComments": "군/국가구분코드",
+					"additionalInformation": "활동사항",
+					"signatureEquipment": "신호정보장비",
+					"higherFormation": "상급부대",
+					"hostile": "적군표시",
+					"evaluationRating": "A4",
+					"iffSif": "IFF/SIF",
+					"showCombatEffectivenessLabel": false,
+					"showCombatEffectivenessWaterFill": false,
+					"showUseDefineColor": false,
+					"size": 50,
+					"strokeWidth": 4,
+					"fillOpacity": 1,
+					"infoColor": "#e3db0d",
+					"infoFields": true,
+					"icon": true,
+					"frame": true,
+					"fill": true,
+					"areaOfUncertainty": "",
+					"infoAHLineLength": "",
+					"infoAHAzimuthError": "",
+					"infoAHLineColorError": "#0d0d0d",
+					"infoAHLineWidthError": "",
+					"infoAHLineStyleError": "",
+					"deadReckoningTrailer": "circle",
+					"infoAIRadius": "",
+					"infoAIFillColor": "",
+					"infoAILineColor": "#0d0d0d",
+					"infoAILineWidth": "",
+					"infoAILineStyle": "",
+					"speedLeaderTrailer": "",
+					"infoAJMovingDirection": "",
+					"infoAJMovingSpeed": "",
+					"infoAJSpeedRangeLower": "",
+					"infoAJSpeedRangeUpper": "",
+					"infoAJSpeedRangeLengthLow": "",
+					"infoAJSpeedRangeLengthMid": "",
+					"infoAJSpeedRangeLengthHigh": "",
+					"infoAJLineColor": "",
+					"infoAJLineWidth": "",
+					"infoAJLineStyle": "",
+					"infoAJDynamicLength": "",
+					"infoAJDynamicSize": ""
+				},
+				"visibility": true
+			},
+			"graphicObjStyle": {
+				"marker": {
+					"imgUrl": null,
+					"size": 10
+				},
+				"point": {
+					"type": "rectangle",
+					"color": [
+						255,
+						0,
+						0,
+						1
+					],
+					"size": 10
+				},
+				"line": {
+					"type": "simple",
+					"width": 3,
+					"color": [
+						0,
+						178,
+						255,
+						0.9
+					],
+					"arrow": {
+						"begin": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						},
+						"end": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						}
+					},
+					"dashOffset": 0,
+					"lineJoin": "round",
+					"lineCap": "round"
+				},
+				"fill": {
+					"type": "simple",
+					"color": [
+						198,
+						234,
+						255,
+						0.85
+					],
+					"pattern": "horizontal",
+					"patternColor1": [
+						0,
+						0,
+						0,
+						0.85
+					],
+					"patternColor2": [
+						255,
+						255,
+						255,
+						0.85
+					],
+					"gradient": {
+						"type": "horizontal",
+						"color": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"anchor": [
+							0.5,
+							0.5
+						],
+						"stopPoint": [
+							0,
+							1
+						]
+					}
+				},
+				"text": {
+					"color": [
+						0,
+						0,
+						0,
+						1
+					],
+					"outlineColor": [
+						255,
+						255,
+						255,
+						1
+					],
+					"backgroundColor": [
+						42,
+						42,
+						42,
+						0
+					],
+					"font": "Arial",
+					"fontSize": 15,
+					"showBackground": true,
+					"outlineWidth": 3,
+					"placement": "point",
+					"rotation": 0,
+					"textAlign": "left",
+					"textBaseline": "top",
+					"offsetX": 0,
+					"offsetY": 0,
+					"bold": false,
+					"italic": false,
+					"directionRightToLeft": false,
+					"directionVertical": false
+				},
+				"zIndex": 0
+			},
+			"graphicObjFeatures": [
+				{
+					"type": "Point",
+					"id": 0,
+					"coordinates": [
+						127.62633788281252,
+						37.59592177078838
+					]
+				}
+			]
+		}
+	],
+	"selectObjectsGUID": []
+}

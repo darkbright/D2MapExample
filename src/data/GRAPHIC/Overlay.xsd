@@ -1,0 +1,1080 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:icops.cngsol.co.kr" version="$Id:Overlay-06.xsd.v 1.6 2020/01/21$" elementFormDefault="qualified" xmlns="urn:icops.cngsol.co.kr" xmlns:mstns="urn:icops.cngsol.co.kr" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- ovd : overlay document - 투명도 문서 -->
+  <!-- ovsd : overlay symbol data - 투명도 부호자료 -->
+  <!-- ovsp : overlay symbol additional properties - 투명도 부호 부가속성 -->
+  <!-- pointTypeList : 점 부호의 부호모양 목록 및 자료 -->
+  <!-- lineCapList : 선 끝 모양 목록 및 자료 -->
+  <xs:element name="ovd" type="type_ovd" />
+  <xs:element name="ovp" type="type_ovp" />
+  <xs:element name="ovsd" type="type_ovsd" />
+  <xs:element name="ovs" type="type_ovs" />
+  <xs:element name="ovsp" type="type_ovp" />
+  <xs:element name="pg" type="type_pg" />
+  <xs:element name="codeset" type="type_codeset" />
+  <xs:element name="pointTypeList" type="type_pointTypeList" />
+  <xs:element name="lineCapList" type="type_lineCapList" />
+  <!--
+
+### 투명도 저장 포맷
+
+  -->
+  <!--
+
+      type_ovd : overlay document - 투명도 문서 저장
+  -->
+  <xs:complexType name="type_ovd">
+    <xs:sequence>
+      <!-- ovi : overlay information - 투명도 문서정보 저장 -->
+      <!-- ovp : overlay properties - 투명도 문서 부가속성 -->
+      <!-- ovsd : overlay symbol data - 투명도 부호자료 저장 -->
+      <!-- ovsp : overlay symbol additional properties - 부호 부가속성 저장 -->
+      <xs:element name="ovi" type="type_ovi" minOccurs="1" maxOccurs="1" />
+      <xs:element name="ovp" type="type_ovp" minOccurs="0" maxOccurs="1" />
+      <xs:element name="ovsd" type="type_ovsd" minOccurs="0" maxOccurs="1" />
+      <xs:element name="ovsp" type="type_ovp" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+    <!-- did : document ID - 투명도 문서 식별자 -->
+    <xs:attribute name="did" type="type_UUID" use="required" />
+  </xs:complexType>
+  <!--
+
+      type_ovi : overlay information - 투명도 문서정보 저장
+  -->
+  <xs:complexType name="type_ovi">
+    <!-- nm : name - 투명도 문서명 -->
+    <!-- au : author - 작성자 -->
+    <!-- ex : exercise - 훈련용 구분 -->
+    <!-- sec : security - 비밀등급 -->
+    <!-- si : SI - SI 구분 -->
+    <!-- ovc : overlay category - 투명도 분류 -->
+    <!-- dc : date time created - 생성일시 -->
+    <!-- de : date time edited - 수정일시 -->
+    <!-- src : data source - 원천자료 출처 -->
+    <xs:attribute name="nm" type="xs:string" use="required" />
+    <xs:attribute name="au" type="xs:string" use="optional" />
+    <xs:attribute name="ex" type="xs:boolean" use="optional" default="0" />
+    <xs:attribute name="sec" type="enum_security" use="optional" default="0" />
+    <xs:attribute name="si" type="xs:boolean" use="optional" default="0" />
+    <xs:attribute name="ovc" type="xs:string" use="optional" />
+    <xs:attribute name="dc" type="xs:dateTime" use="required" />
+    <xs:attribute name="de" type="xs:dateTime" use="required" />
+    <xs:attribute name="src" type="xs:string" use="optional" />
+  </xs:complexType>
+  <!--
+
+      type_ovsd : overlay symbol data - 투명도 부호자료 저장
+  -->
+  <xs:complexType name="type_ovsd">
+    <xs:sequence>
+      <!-- ovi : overlay information - 투명도 문서 정보 -->
+      <xs:element name="ovi" type="type_ovi" minOccurs="0" maxOccurs="1" />
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <!-- ovg : overlay symbol group - 투명도 부호 그룹 객체 -->
+        <!-- ovs : overlay symbol - 투명도 부호 객체 -->
+        <!-- ovx : overlay extra symbol - 체계 정의 부호 객체 -->
+        <xs:element name="ovg" type="type_ovg" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="ovs" type="type_ovs" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="ovx" type="type_ovx" minOccurs="0" maxOccurs="unbounded" />
+      </xs:choice>
+    </xs:sequence>
+    <!-- did : document ID - 투명도 문서 식별자 -->
+    <xs:attribute name="did" type="type_UUID" use="optional" />
+  </xs:complexType>
+<!--
+
+      type_ovg : overlay symbol group - 투명도 부호 그룹객체
+-->
+  <xs:complexType name="type_ovg">
+    <!-- oid : object ID - 객체 식별자 -->
+    <!-- gid : group ID - 객체가 속한 그룹객체의 식별자 -->
+    <!-- nm : name - 그룹화된 객체명 -->
+    <!-- dc : date time created - 객체 생성 일시 -->
+    <!-- de : date time edited - 객체 수정 일시 -->
+    <!-- sh : show - 그룹화된 부호의 도시여부 -->
+    <!-- lck : lock symbol editing - 부호 수정금지 설정 상태 -->
+    <xs:attribute name="oid" type="type_UUID" use="required" />
+    <xs:attribute name="gid" type="type_UUID" use="optional" />
+    <xs:attribute name="nm" type="xs:string" use="optional" />
+    <xs:attribute name="dc" type="xs:dateTime" use="optional" />
+    <xs:attribute name="de" type="xs:dateTime" use="optional" />
+    <xs:attribute name="sh" type="xs:boolean" use="optional" default="1" />
+    <xs:attribute name="lck" type="xs:boolean" use="optional" default="0" />
+  </xs:complexType>
+  <!--
+
+      ovs : overlay symbol - 투명도 부호 객체
+  -->
+  <xs:complexType name="type_ovs">
+    <xs:sequence>
+      <!-- geo : geometry - 부호 공간정보 -->
+      <!-- lp : line properties - 부호 선속성 -->
+      <!-- fp : fill properties - 부호 채움속성 -->
+      <!-- tp : text properties - 부호 문자속성 -->
+      <xs:element name="geo" type ="type_geo" minOccurs="1" maxOccurs="1" />
+      <xs:element name="lp" type ="type_lp" minOccurs="0" maxOccurs="1" />
+      <xs:element name="fp" type ="type_fp" minOccurs="0" maxOccurs="1" />
+      <xs:element name="tp" type ="type_tp" minOccurs="0" maxOccurs="1" />
+      <xs:choice minOccurs="0" maxOccurs="1">
+        <!-- spt : point symbol - 점 부호 -->
+        <!-- srt : rectangle symbol - 사각형 부호 -->
+        <!-- sel : ellipse symbol - 타원 부호 -->
+        <!-- sar : arc symbol - 호 부호 -->
+        <!-- spl : polyline symbol - 다각형 부호 -->
+        <!-- sts : tactical symbol - 전술부호 -->
+        <xs:element name="spt" type="type_ols_point" />
+        <xs:element name="srt" type="type_ols_rect" />
+        <xs:element name="sel" type="type_ols_ellipse" />
+        <xs:element name="sar" type="type_ols_arc" />
+        <xs:element name="spl" type="type_ols_polyline" />
+        <xs:element name="sts" type="type_ols_tacsym" />
+      </xs:choice>
+      <!-- ovsp : overlay symbol property - 투명도 부호 부가속성 -->
+      <!-- links : 추가정보 연결 목록 -->
+      <xs:element name="ovsp" type="type_ovp" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="links" type="type_links" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+    <!-- oid : object ID - 객체 식별자 -->
+    <!-- gid : group ID - 객체가 속한 그룹객체의 식별자 -->
+    <!-- nm : name - 부호 객체명 -->
+    <!-- dc : date time created - 객체 생성 일시 -->
+    <!-- de : date time edited - 객체 수정 일시 -->
+    <!-- sh : show - 부호의 도시여부 -->
+    <!-- lck : lock symbol editing - 부호 수정금지 설정 상태 -->
+    <!-- st : symbol type - 부호 종류 -->
+    <xs:attribute name="oid" type="type_UUID" use="required" />
+    <xs:attribute name="gid" type="type_UUID" use="optional" />
+    <xs:attribute name="nm" type="xs:string" use="optional" />
+    <xs:attribute name="dc" type="xs:dateTime" use="optional" />
+    <xs:attribute name="de" type="xs:dateTime" use="optional" />
+    <xs:attribute name="sh" type="xs:boolean" use="optional" default="1" />
+    <xs:attribute name="lck" type="xs:boolean" use="optional" default="0" />
+    <xs:attribute name="st" type="enum_overlaySymbolType" use="required" />
+  </xs:complexType>
+  <!--
+
+      type_ovx : overlay extra symbol - 체계 정의 부호 객체
+  -->
+  <xs:complexType name="type_ovx">
+    <xs:sequence>
+      <!-- geo : geometry - 부호 공간정보 -->
+      <!-- ovsp : overlay symbol property - 투명도 부호 부가속성 -->
+      <!-- links : 추가정보 연결 목록 -->
+      <xs:element name="geo" type ="type_geo" minOccurs="1" maxOccurs="1" />
+      <xs:element name="ovsp" type="type_ovp" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="links" type="type_links" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+    <!-- oid : object ID - 객체 식별자 -->
+    <!-- gid : group ID - 객체가 속한 그룹객체의 식별자 -->
+    <!-- nm : name - 부호 객체명 -->
+    <!-- dc : date time created - 객체 생성 일시 -->
+    <!-- de : date time edited - 객체 수정 일시 -->
+    <!-- sh : show - 부호의 도시여부 -->
+    <!-- lck : lock symbol editing - 부호 수정금지 설정 상태 -->
+    <!-- sid : system ID - 부호를 생성 및 사용하는 체계 식별자. 체계 약어 사용 (예: KJCCS, MIMS, ATCIS, KNCCS, AFCCS 등) -->
+    <!-- st : symbol type - 체계에서 사용하는 부호 종류. 체계에서 정한 식별번호 사용 -->
+    <!-- sd : symbol data - 체계에서 사용하는 포맷의 부호자료를 base64로 인코딩하여 저장 -->
+    <xs:attribute name="oid" type="type_UUID" use="required" />
+    <xs:attribute name="gid" type="type_UUID" use="optional" />
+    <xs:attribute name="nm" type="xs:string" use="optional" />
+    <xs:attribute name="dc" type="xs:dateTime" use="optional" />
+    <xs:attribute name="de" type="xs:dateTime" use="optional" />
+    <xs:attribute name="sh" type="xs:boolean" use="optional" default="1" />
+    <xs:attribute name="lck" type="xs:boolean" use="optional" default="0" />
+    <xs:attribute name="sid" type="xs:string" use="required" />
+    <xs:attribute name="st" type="xs:int" use="required" />
+    <xs:attribute name="sd" type="xs:base64Binary" use="required" />
+  </xs:complexType>
+  <!--
+
+      type_ovp : overlay property - 부가속성 저장
+  -->
+  <xs:complexType name="type_ovp">
+    <xs:sequence>
+      <!-- ovi : overlay information - 투명도 문서정보 저장 -->
+      <!-- pg : property group - 부가속성 그룹 -->
+      <xs:element name="ovi" type="type_ovi" minOccurs="0" maxOccurs="1" />
+      <xs:element name="pg" type="type_pg" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <!-- did : overlay document ID - 투명도 문서 식별자 -->
+    <xs:attribute name="did" type="type_UUID" use="optional" />
+  </xs:complexType>
+  <!--
+
+    type_pg : property group - 부가속성 그룹
+  -->
+  <xs:complexType name="type_pg">
+    <xs:sequence>
+      <!-- pi : property item - 부가속성 항목 -->
+      <xs:element name="pi" type="type_pi" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <!-- nm : name - 부가속성 그룹명 -->
+    <!-- roid : 참조 객체 식별자 -->
+    <!-- rnm : 참조 객체명 -->
+    <xs:attribute name="nm" type="xs:string" use="required" />
+    <xs:attribute name="roid" type="type_UUID" use="required" />
+    <xs:attribute name="rnm" type="xs:string" use="optional" />
+  </xs:complexType>
+  <!--
+  
+    type_pi : property item - 부가속성 항목
+  -->
+  <xs:complexType name="type_pi">
+    <!-- nm : name - 속성명 -->
+    <!-- val : value - 속성값 -->
+    <xs:attribute name="nm" type="xs:string" use="required" />
+    <xs:attribute name="val" type="xs:string" use="required" />
+  </xs:complexType>
+   <!--
+
+### 투명도 부호 공통 속성 정의
+
+  -->
+  <!--
+
+      type_geo : geometry - 부호 공간정보
+  -->
+  <xs:complexType name="type_geo">
+    <!-- pt : points - 부호 좌표 -->
+    <!-- ct : coordinate type - 적용 좌표 종류 -->
+    <!-- ha : horizontal alignment - 수평기준 -->
+    <!-- va : vertical alignment - 수직기준 -->
+    <!-- as : auto show - 축척/배울에 따른 도시상태 자동조절 여부 -->
+    <!-- asl : auto show lower scale limit - 자동조절 축척 하한 -->
+    <!-- asu : auto show upper scale limit - 자동조절 축척 상한 -->
+    <xs:attribute name="pt" type="type_coord" use="required" />
+    <xs:attribute name="ct" type="enum_coordType" use="optional" default="0" />
+    <xs:attribute name="ha" type="enum_alignment" use="optional" default="0" />
+    <xs:attribute name="va" type="enum_alignment" use="optional" default="0" />
+    <xs:attribute name="as" type="xs:boolean" use="optional" default="0" />
+    <xs:attribute name="asl" type="xs:integer" use="optional" default="-1" />
+    <xs:attribute name="asu" type="xs:integer" use="optional" default="-1" />
+  </xs:complexType>
+  <!--
+
+      type_lp : line properties - 부호 선속성
+  -->
+  <xs:complexType name="type_lp">
+    <xs:sequence>
+      <!-- lcs : line cap of starting point - 시작점 선 끝 모양 -->
+      <!-- lce : line cap of ending point - 끝점 선 끝 모양 -->
+      <!-- ds : dash style - 점선 모양 -->
+      <xs:element name="lcs" type="type_lineCap" minOccurs="0" maxOccurs="1" />
+      <xs:element name="lce" type="type_lineCap" minOccurs="0" maxOccurs="1" />
+      <xs:element name="ds" type="type_lineDash" minOccurs="0" maxOccurs="1" />
+      <!-- 선에 적용할 채움 속성 -->
+      <xs:choice minOccurs="0" maxOccurs="1">
+        <!-- hb : hatch brush - 음영 -->
+        <!-- pgb : path gradient brush - 경로형 그라데이션 -->
+        <!-- lgb : linear gradient brush - 선형 그라데이션 -->
+        <xs:element name="hb" type="type_hatchBrush"/>
+        <xs:element name="pgb" type="type_pathGradientBrush" />
+        <xs:element name="lgb" type="type_linearGradientBrush" />
+      </xs:choice>
+    </xs:sequence>
+    <!-- la : line alignment - 선 치우침 상태 -->
+    <!-- lc : line color - 선 색상  -->
+    <!-- ls : line stripe - 겹선 정보 -->
+    <!-- lj : line join - 선 연결 모양 -->
+    <!-- ml : miter limit - 선 연결 부위 처리 길이 -->
+    <!-- ft : line fill type - 선 채움 방법 -->
+    <!-- lw : line width - 선 굵기 -->
+    <xs:attribute name="la" type="enum_lineAlignment" use="optional" default="0" />
+    <xs:attribute name="lc" type="type_ARGB" use="optional" default="#FF000000" />
+    <xs:attribute name="ls" type="xs:string" use="optional" />
+    <xs:attribute name="lj" type="enum_lineJoin" use="optional" default="0" />
+    <xs:attribute name="ml" type="xs:float" use="optional" />
+    <xs:attribute name="ft" type="enum_lineFillType" use="optional" default="0" />
+    <xs:attribute name="lw" type="xs:float" use="optional" default="1.0" />
+  </xs:complexType>
+  <!--
+
+      type_fp : fill properties - 부호 채움속성
+  -->
+  <xs:complexType name="type_fp">
+    <xs:choice minOccurs="0" maxOccurs="1">
+      <!-- 면에 적용할 패턴 정보 -->
+      <!-- hb : hatch brush - 음영 -->
+      <!-- pgb : path gradient brush - 경로형 그라데이션 -->
+      <!-- lgb : linear gradient brush - 선형 그라데이션 -->
+      <!-- rgb : radial gradient brush - 방사형 그라데이션 -->
+      <xs:element name="hb" type="type_hatchBrush" />
+      <xs:element name="pgb" type="type_pathGradientBrush" />
+      <xs:element name="lgb" type="type_linearGradientBrush" />
+      <xs:element name="rgb" type="type_radialGradientBrush" />
+    </xs:choice>
+    <!-- ft : fill type - 채움 방법 -->
+    <!-- fc : fill color - 채움 색상 -->
+    <xs:attribute name="ft" type="enum_fillType" use="optional" default="-1" />
+    <xs:attribute name="fc" type="type_ARGB" use="optional" default="#00000000" />
+  </xs:complexType>
+  <!--
+
+      type_tp : text properties - 부호 문자속성
+  -->
+  <xs:complexType name="type_tp">
+    <!-- tx : text - 문자열 -->
+    <!-- ha : horizontal alignment - 좌우정렬 -->
+    <!-- va : vertical alignment - 상하정렬 -->
+    <!-- fn : font name - 글꼴명 -->
+    <!-- fs : font size - 문자크기 -->
+    <!-- tc : text color - 문자 색상 -->
+    <!-- bd : bold - 굵게 -->
+    <!-- it : italic - 기울임 -->
+    <!-- drl : direction right to left - 우에서 좌로 문자 나열 -->
+    <!-- dv : direction vertical - 세로 방향으로 -->
+    <xs:attribute name="tx" type="xs:string" use="required" />
+    <xs:attribute name="ha" type="enum_alignment" use="optional" default="0" />
+    <xs:attribute name="va" type="enum_alignment" use="optional" default="0" />
+    <xs:attribute name="fn" type="xs:string" use="optional" default="굴림" />
+    <xs:attribute name="fs" type="xs:float" use="optional" default="10.0" />
+    <xs:attribute name="tc" type="type_ARGB" use="optional" default="#FF000000" />
+    <xs:attribute name="bd" type="xs:boolean" use="optional" default="0" />
+    <xs:attribute name="it" type="xs:boolean" use="optional" default="0" />
+    <xs:attribute name="drl" type="xs:boolean" use="optional" default="0" />
+    <xs:attribute name="dv" type="xs:boolean" use="optional" default="0" />
+  </xs:complexType>
+  <!--
+
+      type_links : 추가정보 연결 목록
+  -->
+  <xs:complexType name="type_link">
+    <!-- nm : name - 추가정보 명칭 -->
+    <!-- desc : description - 추가정보 설명 -->
+    <!-- url : 추가정보 위치 -->
+    <!-- x : 화면 배치 위치 X -->
+    <!-- y : 화면 배치 위치 Y -->
+    <!-- w : 화면 가로크기 -->
+    <!-- h : 화면 세로크기 -->
+    <xs:attribute name="nm" type="xs:string" use="required" />
+    <xs:attribute name="desc" type="xs:string" use="optional" />
+    <xs:attribute name="url" type="xs:string" use="required" />
+    <xs:attribute name="x" type="xs:int" use="optional" />
+    <xs:attribute name="y" type="xs:int" use="optional" />
+    <xs:attribute name="w" type="xs:int" use="optional" />
+    <xs:attribute name="h" type="xs:int" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="type_links">
+    <xs:sequence>
+      <!-- link : 추가정보 연결 -->
+      <xs:element name="link" type="type_link" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <!--
+
+      type_hatchBrush : hatch brush - 음영
+  -->
+  <xs:complexType name="type_hatchBrush">
+    <!-- hs : hatch style - 음영 모양 -->
+    <!-- fg : foreground color - 전경색 -->
+    <!-- bg : background color - 배경색 -->
+    <xs:attribute name="hs" type="enum_hatchStyle" use="required" />
+    <xs:attribute name="fg" type="type_ARGB" use="optional" default="#FF000000" />
+    <xs:attribute name="bg" type="type_ARGB" use="optional" default="#00000000" />
+  </xs:complexType>
+  <!--
+
+      type_pathGradientBrush : path gradient brush
+  -->
+  <xs:complexType name="type_pathGradientBrush">
+    <!-- wm : wrap mode - 패턴 반복 방식 -->
+    <!-- fsx : focus scale x - 중앙 색상 가로 크기 -->
+    <!-- fsy : focus scale x - 중앙 색상 세로 크기 -->
+    <!-- ic : interpolation colors - 그라데이션 적용 색상 -->
+    <!-- bf : blend factors - 색변화 조절 인자 -->
+    <!-- bp : blend positions - 색변화 조절 위치 -->
+    <!-- cpx ; center point x - 중앙 위치 이동 비율 -->
+    <!-- cpy ; center point y - 중앙 위치 이동 비율 -->
+    <!-- gmc : gamma correction - 색상 보정 -->
+    <xs:attribute name="wm" type="enum_textureWrapMode" use="optional" default="0" />
+    <xs:attribute name="fsx" type="xs:float" use="optional" default="0.0" />
+    <xs:attribute name="fsy" type="xs:float" use="optional" default="0.0" />
+    <xs:attribute name="ic" type="type_ARGBs" use="optional"/>
+    <xs:attribute name="bf" type="xs:string" use="optional"/>
+    <xs:attribute name="bp" type="xs:string" use="optional"/>
+    <xs:attribute name="cpx" type="xs:float" use="optional" default="0.0" />
+    <xs:attribute name="cpy" type="xs:float" use="optional" default="0.0" />
+    <xs:attribute name="gmc" type="xs:boolean" use="optional" default="0" />
+  </xs:complexType>
+  <!--
+
+      type_linearGradientBrush : linear gradient brush - 선형 그라데이션
+  -->
+  <xs:complexType name="type_linearGradientBrush">
+    <!-- lgm ; linear gradation mode - 선형 그라데이션 방향 -->
+    <!-- ic : interpolation colors - 그라데이션 색상 -->
+    <!-- bf : blend factors - 색 변화 조절 인자 -->
+    <!-- bp : blend positions - 색 변화 조절 위치 -->
+    <xs:attribute name="lgm" type="enum_linearGradientMode" use="optional" default="0" />
+    <xs:attribute name="ic" type="type_ARGBs" use="required" />
+    <xs:attribute name="bf" type="xs:string" use="optional"/>
+    <xs:attribute name="bp" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <!--
+
+      type_radialGradientBrush : radial gradient brush
+  -->
+  <xs:complexType name="type_radialGradientBrush">
+    <!-- csz : center size - 중심 반경 크기 -->
+    <!-- ic : interpolation colors - 그라데이션 적용 색상 -->
+    <!-- cpx ; center point x - 중앙 위치 이동 비율 -->
+    <!-- cpy ; center point y - 중앙 위치 이동 비율 -->
+    <xs:attribute name="csz" type="xs:float" use="optional" default="0.0" />
+    <xs:attribute name="ic" type="type_ARGBs" use="optional"/>
+    <xs:attribute name="cpx" type="xs:float" use="optional" default="0.0" />
+    <xs:attribute name="cpy" type="xs:float" use="optional" default="0.0" />
+  </xs:complexType>
+  <!--
+
+      type_lineCap : line cap - 선 끝 모양 속성
+  -->
+  <xs:complexType name="type_lineCap">
+    <!-- cs : line cap style - 선 끝 모양 -->
+    <!-- cl : line cap length - 선 끝 모양 길이 -->
+    <!-- cw : line cap width - 선 끝 모양 폭 -->
+    <xs:attribute name="cs" type="enum_lineCap" use="optional" default="0" />
+    <xs:attribute name="cl" type="xs:float" use="optional" default="1.0" />
+    <xs:attribute name="cw" type="xs:float" use="optional" default="1.0" />
+  </xs:complexType>
+   <!--
+
+      type_lineDash : line dash - 점선 모양 속성
+  -->
+  <xs:complexType name="type_lineDash">
+    <!-- cd : dash line cap - 점선 사이의 선 끝 모양 -->
+    <!-- ds : dash style - 점선 모양 -->
+    <!-- dp : dash pattern - 점선 패턴 -->
+    <!-- do : dash offset - 점선 시작 위치 -->
+    <xs:attribute name="cd" type="enum_lineDashCap" use="optional" default="0" />
+    <xs:attribute name="ds" type="enum_lineDashStyle" use="optional" default="0" />
+    <xs:attribute name="dp" type="xs:string" use="optional" />
+    <xs:attribute name="do" type="xs:float" use="optional" default="0.0" />
+  </xs:complexType>
+ <!--
+
+### 투명도 부호 종류별 객체 속성 정의
+
+  -->
+  <!--
+
+      ols_point : 점 부호 객체 (Point symbol)
+  -->
+  <xs:complexType name="type_ols_point">
+    <!-- sz : size - 부호크기 -->
+    <!-- ps : point style - 부호 종류 -->
+    <xs:attribute name="sz" type="xs:float" use="optional" default="5.0" />
+    <xs:attribute name="ps" type="enum_pointShape" use="optional" default="1" />
+  </xs:complexType>
+  <!--
+  
+      ols_rect : 사각형 부호 객체 (Rectangle symbol)
+  -->
+  <xs:complexType name="type_ols_rect">
+    <!-- rot : rotate - 회전값 -->
+    <!-- rad : radius - 둥근사각형 꼭지점 반경-->
+    <xs:attribute name="rot" type="xs:float" use="optional" default="0.0" />
+    <xs:attribute name="rad" type="xs:float" use="optional" default="0.0" />
+  </xs:complexType>
+  <!--
+
+      ols_ellipse : 타원 부호 객체 (Ellipse symbol)
+  -->
+  <xs:complexType name="type_ols_ellipse">
+    <!-- rot : rotate - 회전값 -->
+    <xs:attribute name="rot" type="xs:float" use="optional" default="0.0" />
+  </xs:complexType>
+  <!--
+
+      ols_arc : 원호 부호 객체 (Arc symbol)
+  -->
+  <xs:complexType name="type_ols_arc">
+    <!-- rot : rotate - 회전값 -->
+    <!-- alt : arc line type - 호 선 모양 -->
+    <!-- aft : arc fill type - 호 채움 모양 -->
+    <xs:attribute name="rot" type="xs:float" use="optional" default="0.0" />
+    <xs:attribute name="alt" type="enum_arcType" use="optional" default="1" />
+    <xs:attribute name="aft" type="enum_arcType" use="optional" default="3" />
+  </xs:complexType>
+  <!--
+
+      ols_polyline : 다각형 부호 객체 (Polyline symbol)
+  -->
+  <xs:complexType name="type_ols_polyline">
+    <!-- rot : rotate - 회전값 -->
+    <!-- plt : polyline type - 직선/곡선 종류 -->
+    <!-- cls : closed - 닫힘 여부 -->
+    <xs:attribute name="rot" type="xs:float" use="optional" default="0.0" />
+    <xs:attribute name="plt" type="enum_polylineType" use="optional" default="0" />
+    <xs:attribute name="cls" type="xs:boolean" use="optional" default="0" />
+  </xs:complexType>
+  <!--
+
+      ols_tacsym : 전술부호 객체 (Tactical symbol)
+  -->
+  <xs:complexType name="type_ols_tacsym">
+    <!-- sym : symbol assembly string - 부호 조립정보 문자열(부호코드 + 수식정보) -->
+    <!-- sz : symbol size - 부호크기 -->
+    <!-- cm : color mode - 색상 설정 방법 -->
+    <!-- lc : line/icon color - 사용자 지정 선/아이콘/피아구분 색상 -->
+    <!-- fc : fill/frame color - 사용자 지정 채움/외형채움/물채움 색상 -->
+    <!-- shi : show icon - 기능부호 표시 여부 -->
+    <!-- shf : show frame - 외형부호 표시 여부 -->
+    <!-- shc : show CIV - 민간부호 색상 채움 여부 -->
+    <!-- ff : fill frame - 외형부호 채움 여부 -->
+    <!-- ocp : operation condition position - 운용조건 표시 위치 -->
+    <!-- tp : transparency - 투명값 -->
+    <!-- ifr : isfillrate – 외형 물채움 설정 여부 -->
+    <!-- fr : fill rate – 물채움 값 -->
+    <xs:attribute name="sym" type="xs:string" use="required" />
+    <xs:attribute name="sz" type="xs:float" use="optional" default="7.0" />
+    <xs:attribute name="cm" type="enum_tacsymColorMode" use="optional" default="0" />
+    <xs:attribute name="lc" type="type_ARGB" use="optional" />
+    <xs:attribute name="fc" type="type_ARGB" use="optional" />
+    <xs:attribute name="shi" type="xs:boolean" use="optional" default="1" />
+    <xs:attribute name="shf" type="xs:boolean" use="optional" default="1" />
+    <xs:attribute name="shc" type="xs:boolean" use="optional" default="0" />
+    <xs:attribute name="ff" type="xs:boolean" use="optional" default="1" />
+    <xs:attribute name="ocp" type="enum_opPos" use="optional" default="0" />
+    <xs:attribute name="tp" type="xs:int" use="optional" default="255" />
+    <xs:attribute name="ifr" type="xs:boolean" use="optional" default="0" />
+    <xs:attribute name="fr" type="type_fillrate" use="optional" default="0" />
+  </xs:complexType>
+  <!--
+
+### 표준코드 정의
+    
+  -->
+  <!--
+
+      enum_coordType - 적용 좌표 종류
+  -->
+  <xs:simpleType name="enum_coordType">
+    <xs:restriction base="xs:integer">
+      <!-- 0 : geographic -  지리좌표 -->
+      <!-- 1 : logical - 화면좌표 -->
+      <xs:enumeration value="0" />
+      <xs:enumeration value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      enum_lineAlignment - 선 치우침 상태
+  -->
+  <xs:simpleType name="enum_lineAlignment">
+    <xs:restriction base="xs:integer">
+      <!-- 0 : center - 치우치지 않음 -->
+      <!-- 1 : inset - 안쪽으로 치우침 -->
+      <xs:enumeration value="0" />
+      <xs:enumeration value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      enum_lineDashCap - 점선 사이의 선끝모양
+  -->
+  <xs:simpleType name="enum_lineDashCap">
+    <!-- 0 : flat - 직선 -->
+    <!-- 2 : round - 원형 -->
+    <!-- 3 : triangle - 삼각형 -->
+    <xs:restriction base="xs:integer">
+      <xs:enumeration value="0" />
+      <xs:enumeration value="2" />
+      <xs:enumeration value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      enum_lineDashStyle - 점선 모양
+  -->
+  <xs:simpleType name="enum_lineDashStyle">
+    <xs:restriction base="xs:integer">
+      <!-- 0 : solid - 실선 -->
+      <!-- 1 : dash - 점선 -->
+      <!-- 2 : dot - 둥근모양 점선 -->
+      <!-- 3 : dashDot - 일점쇄선 -->
+      <!-- 4 : dashDotDot - 이점쇄선 -->
+      <!-- 5 : custom - 점선 패턴 적용 -->
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      enum_lineJoin - 선 연결 모양
+  -->
+  <xs:simpleType name="enum_lineJoin">
+    <xs:restriction base="xs:integer">
+      <!-- 0 : miter - -->
+      <!-- 1 : bevel - -->
+      <!-- 2 : round - -->
+      <!-- 3 : meterClipped - -->
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      enum_lineFillType - 선 채움 방법
+  -->
+  <xs:simpleType name="enum_lineFillType">
+    <xs:restriction base="xs:integer">
+      <!-- 0 : solid color - 단색 -->
+      <!-- 1 : hatch fill - 음영 -->
+      <!-- 2 : (사용하지 않음) -->
+      <!-- 3 : path gradient - 경로형 그라데이션 -->
+      <!-- 4 : linear gradation - 선형 그라데이션 -->
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      enum_fillType - 면 채움 방법
+  -->
+  <xs:simpleType name="enum_fillType">
+    <xs:restriction base="xs:integer">
+      <!-- -1 : none - 채우지 않음 -->
+      <!-- 0 : solid color - 단색 -->
+      <!-- 1 : hatch fill - 음영 -->
+      <!-- 2 : (사용하지 않음) -->
+      <!-- 3 : path gradient - 경로형 그라데이션 -->
+      <!-- 4 : linear gradation - 선형 그라데이션 -->
+      <!-- 5 : radial gradation - 방사형 그라데이션 -->
+      <xs:minInclusive value="-1" />
+      <xs:maxInclusive value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      enum_hatchStyle - 음영 모양
+  -->
+  <xs:simpleType name="enum_hatchStyle">
+    <xs:restriction base="xs:integer">
+      <!-- 0 : horizontal -->
+      <!-- 1 : vertical -->
+      <!-- 2 : forwardDiagonal -->
+      <!-- 3 : backwardDiagonal -->
+      <!-- 4 : cross -->
+      <!-- 5 : diagonalCross -->
+      <!-- 6 : percent05 -->
+      <!-- 7 : percent10 -->
+      <!-- 8 : percent20 -->
+      <!-- 9 : percent25 -->
+      <!-- 10 : percent30 -->
+      <!-- 11 : percent40 -->
+      <!-- 12 : percent50 -->
+      <!-- 13 : percent60 -->
+      <!-- 14 : percent70 -->
+      <!-- 15 : percent75 -->
+      <!-- 16 : percent80 -->
+      <!-- 17 : percent90 -->
+      <!-- 18 : lightDownwardDiagonal -->
+      <!-- 19 : lightUpwardDiagonal -->
+      <!-- 20 : darkDownwardDiagonal -->
+      <!-- 21 : darkUpwardDiagonal -->
+      <!-- 22 : wideDownwardDiagonal -->
+      <!-- 23 : wideUpwardDiagonal -->
+      <!-- 24 : lightVertical -->
+      <!-- 25 : lightHorizontal -->
+      <!-- 26 : narrowVertical -->
+      <!-- 27 : narrowHorizontal -->
+      <!-- 28 : darkVertical -->
+      <!-- 29 : darkHorizontal -->
+      <!-- 30 : dashedDownwardDiagonal -->
+      <!-- 31 : dashedUpwardDiagonal -->
+      <!-- 32 : dashedHorizontal -->
+      <!-- 33 : dashedVertical -->
+      <!-- 34 : smallConfetti -->
+      <!-- 35 : largeConfetti -->
+      <!-- 36 : zigZag -->
+      <!-- 37 : wave -->
+      <!-- 38 : diagonalBrick -->
+      <!-- 39 : horizontalBrick -->
+      <!-- 40 : weave -->
+      <!-- 41 : plaid -->
+      <!-- 42 : divot -->
+      <!-- 43 : dottedGrid -->
+      <!-- 44 : dottedDiamond -->
+      <!-- 45 : shingle -->
+      <!-- 46 : trellis -->
+      <!-- 47 : sphere -->
+      <!-- 48 : smallGrid -->
+      <!-- 49 : smallCheckerBoard -->
+      <!-- 50 : largeCheckerBoard -->
+      <!-- 51 : outlinedDiamond -->
+      <!-- 52 : solidDiamond -->
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="52" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      enum_textureWrapMode - 패턴 채움 방식
+  -->
+  <xs:simpleType name="enum_textureWrapMode">
+    <xs:restriction base="xs:integer">
+      <!-- 0 : tile - 반복 -->
+      <!-- 1 : tileFlipX - 가로축으로 대칭하면서 반복 -->
+      <!-- 2 : tileFlipY - 세로축으로 대칭하면서 반복 -->
+      <!-- 3 : tileFlipXY - 가로, 세로축으로 대칭 -->
+      <!-- 4 : clamp - 중앙에 하나 -->
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      enum_alignment - 정렬 위치
+  -->
+  <xs:simpleType name="enum_alignment">
+    <xs:restriction base="xs:integer">
+      <!-- 0 : near -->
+      <!-- 1 : center -->
+      <!-- 2 : far -->
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      enum_linearGradientMode - 선형 그라데이션 방향
+  -->
+  <xs:simpleType name="enum_linearGradientMode">
+    <xs:restriction base="xs:integer">
+      <!-- 0 : horizontal -->
+      <!-- 1 : vertical -->
+      <!-- 2 : forwardDiagonal -->
+      <!-- 3 : backwardDiagonal -->
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      enum_tacsymColorMode - 전술부호 색상 설정 방식
+  -->
+  <xs:simpleType name="enum_tacsymColorMode">
+    <xs:restriction base="xs:integer">
+      <!-- 0 : auto affiliation - 피아구분색 자동 적용 -->
+      <!-- 1 : user affiliation - 피아구분색으로 사용자 지정 색상 적용 -->
+      <!-- 2 : user fixed icon - 사용자가 지정한 선색상과 채움색상 적용 -->
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      enum_overlaySymbolType - 투명도 부호 종류 구분 코드
+  -->
+  <xs:simpleType name="enum_overlaySymbolType">
+    <xs:restriction base="xs:integer">
+      <!-- 0 : olsTypeGroup - 부호 그룹 -->
+      <!-- 1 : olsTypePoint - 점 부호 -->
+      <!-- 2 : olsTypeRect - 사각형 부호 -->
+      <!-- 3 : olsTypeEllipse - 타원 부호 -->
+      <!-- 4 : olsTypeArc - 호 부호 -->
+      <!-- 5 : olsTypePolyline - 다각선 부호 -->
+      <!-- 6 : olsTypeTacSym - 전술부호 -->
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      선 끝 모양 (line cap) 구분 코드
+  -->
+  <xs:simpleType name="enum_lineCap">
+    <xs:restriction base="xs:integer">
+      <!-- 0 : lineCapNone - 없음 -->
+      <!-- 1 : lineCapArrow - 화살표 -->
+      <!-- 2 : lineCapArrow_L - 화살표(좌) -->
+      <!-- 3 : lineCapArrow_R - 화살표(우) -->
+      <!-- 4 : lineCapTail - 화살꼬리 -->
+      <!-- 5 : lineCapTail_L - 화살꼬리(좌) -->
+      <!-- 6 : lineCapTail_R - 화살꼬리(우) -->
+      <!-- 7 : lineCapTail_F - 화살꼬리채움 -->
+      <!-- 8 : lineCapTail_LF - 화살꼬리채움(좌) -->
+      <!-- 9 : lineCapTail_RF - 화살꼬리채움(우) -->
+      <!-- 10 : lineCapTent_L - 텐트(좌) -->
+      <!-- 11 : lineCapTent_R - 텐트(우) -->
+      <!-- 12 : lineCapTent_LF - 텐트채움(좌) -->
+      <!-- 13 : lineCapTent_RF - 텐트채움(우) -->
+      <!-- 14 : lineCapSlash_L - 사선 -->
+      <!-- 15 : lineCapSlash_R - 역사선 -->
+      <!-- 16 : lineCapCross - 가위표 -->
+      <!-- 17 : lineCapTriangle - 삼각형 -->
+      <!-- 18 : lineCapTriangle_F - 삼각형채움 -->
+      <!-- 19 : lineCapTriangle_L - 삼각형(좌) -->
+      <!-- 20 : lineCapTriangle_LF - 삼각형채움(좌) -->
+      <!-- 21 : lineCapTriangle_R - 삼각형(우) -->
+      <!-- 22 : lineCapTriangle_RF - 삼각형채움(우) -->
+      <!-- 23 : lineCapRectangle - 사각형 -->
+      <!-- 24 : lineCapRectangle_F - 사각형채움 -->
+      <!-- 25 : lineCapCircle - 원 -->
+      <!-- 26 : lineCapCircle_F - 원채움 -->
+      <!-- 27 : lineCapDiamond - 마름모 -->
+      <!-- 28 : lineCapDiamond_F - 마름모채움 -->
+      <!-- 29 : lineCapThick - 겹화살표 -->
+      <!-- 30 : lineCapDoubleArrow - 이중화살표 -->
+      <!-- 31 : lineCapDoubleArrow_L - 이중화살표(좌) -->
+      <!-- 32 : lineCapDoubleArrow_R - 이중화살표(우) -->
+      <!-- 33 : lineCapDoubleTail - 이중화살꼬리 -->
+      <!-- 34 : lineCapDoubleTail_L - 이중화살꼬리(좌) -->
+      <!-- 35 : lineCapDoubleTail_R - 이중화살꼬리(우) -->
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="35" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      enum_pointShape - 점 부호(Point)의 점 모양 구분 코드
+  -->
+  <xs:simpleType name="enum_pointShape">
+    <xs:restriction base="xs:integer">
+      <!-- 1 : pointTypeRect -->
+      <!-- 2 : pointTypeCircle -->
+      <!-- 3 : pointTypeDia -->
+      <!-- 4 : pointTypeTri -->
+      <!-- 5 : pointTypeInvTri -->
+      <xs:minInclusive value="1" />
+      <xs:maxInclusive value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      원호 모양 (arc type) 구분 코드
+  -->
+  <xs:simpleType name="enum_arcType">
+    <xs:restriction base="xs:integer">
+      <!-- 1 : arcTypeArc - 호 -->
+      <!-- 2 : arcTypeChord - 현 -->
+      <!-- 3 : arcTypePie - 부채꼴 -->
+      <xs:minInclusive value="1" />
+      <xs:maxInclusive value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      enum_polylineType : 다각선의 직선/곡선 종류
+  -->
+  <xs:simpleType name="enum_polylineType">
+    <xs:restriction base="xs:integer">
+      <!-- 0 : polylineTypeStraight -->
+      <!-- 1 : polylineTypeSpline -->
+      <!-- 2 : polylineTypeBezier -->
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      enum_opPos : operation condition position - 운용조건 표시 위치 구분 코드
+  -->
+  <xs:simpleType name="enum_opPos">
+    <xs:restriction base="xs:integer">
+      <!-- 0 : opPosNone - 미표시 -->
+      <!-- 1 : opPosCenter - 중앙 -->
+      <!-- 2 : opPosBottom - 하단 -->
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      enum_security : 비밀등급 (Security classification) 구분 코드
+  -->
+  <xs:simpleType name="enum_security">
+    <xs:restriction base="xs:integer">
+      <!-- 0 : unclassified - 평문 -->
+      <!-- 1 : classified - 대외비 -->
+      <!-- 2 : confidential - III급 -->
+      <!-- 3 : secret - II급 -->
+      <!-- 4 : top secret - I급 -->
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      type_codeset : 표준코드 목록 저장 포맷
+  -->
+  <xs:complexType name="type_codeset">
+    <xs:sequence>
+      <!-- ol_code_list : 코드목록 -->
+      <xs:element name="ol_code_list" type="type_code_list" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <!--
+  
+      type_code_list : 코드목록
+  -->
+  <xs:complexType name="type_code_list">
+    <xs:sequence>
+      <!-- ol_code_item : 코드 항목 -->
+      <xs:element name="ol_code_item" type="type_code_item" maxOccurs="unbounded" />
+    </xs:sequence>
+    <!-- codeID : 코드 종류 식별자 -->
+    <!-- codeName : 코드 종류명 -->
+    <xs:attribute name="codeID" type="xs:string" use="required" />
+    <xs:attribute name="codeName" type="xs:string" use="required" />
+  </xs:complexType>
+  <!--
+  
+      type_code_item : 코드 항목
+  -->
+  <xs:complexType name="type_code_item">
+    <!-- code : 코드값 -->
+    <!-- id : 코드값 색별자 -->
+    <!-- name : 코드값 명칭 -->
+    <!-- desc : 토드값 설명 -->
+    <xs:attribute name="code" type="xs:integer" use="required" />
+    <xs:attribute name="id" type="xs:string" use="required" />
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="desc" type="xs:string" use="optional" />
+  </xs:complexType>
+  <!--
+
+      type_pointTypeList : 점 모양 정의 목록 자료 저장 포맷
+  -->
+  <xs:complexType name="type_pointTypeList">
+    <xs:sequence>
+      <!-- ol_pointType : 점모양 정의 -->
+      <xs:element name="ol_pointType" type="type_pointType" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <!--
+
+      type_pointType : 점부호 모양 정의
+  -->
+  <xs:complexType name="type_pointType">
+    <!-- ps : point shape - 점부호 모양 종류, 투명도 점부호의 점 종류 구분 식별자 -->
+    <!-- st : shape type - 점부호 모양 도형, 점부호 모양을 도시하는데 사용할 도형 종류 -->
+    <!-- pt : points - 좌표 -->
+    <xs:attribute name="ps" type="enum_pointShape" use="required" />
+    <xs:attribute name="st" type="enum_shapeType" use="required" />
+    <xs:attribute name="pt" type="type_coord" use="required" />
+  </xs:complexType>
+  <!--
+
+      enum_shapeType : 점부호 모양, 선 끝 모양 정의에 사용하는 도형 종류
+  -->
+  <xs:simpleType name="enum_shapeType">
+    <xs:restriction base="xs:integer">
+      <!-- 1 : rectangle - 사각형 -->
+      <!-- 2 : ellipse - 타원형 -->
+      <!-- 3 : polygon - 다각형 -->
+      <xs:minInclusive value="1" />
+      <xs:maxInclusive value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      type_lineCapList : 선 끝 모양 정의 자료 저장 포맷
+  -->
+  <xs:complexType name="type_lineCapList">
+    <xs:sequence>
+      <!-- ol_lineCapType : 선 끝 모양 정의 -->
+      <xs:element name="ol_lineCapType" type="type_lineCapType" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <!--
+
+      type_lineCapType : 선 끝 모양 정의
+  -->
+  <xs:complexType name="type_lineCapType">
+    <xs:sequence>
+      <!-- strokePath : 선 끝 모양의 외곽선 모양 -->
+      <!-- fillPath : 선 끝 모양의 채움 모양 -->
+      <xs:element name="strokePath" type="type_lineCapPath" minOccurs="0" maxOccurs="1" />
+      <xs:element name="fillPath" type="type_lineCapPath" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+    <!-- capType : 선 끝 모양 종류 -->
+    <!-- inset : 선 끝 조정 -->
+    <!-- widthScale : 선 굵기 조정 -->
+    <xs:attribute name="capType" type="enum_lineCap" use="required" />
+    <xs:attribute name="inset" type="xs:float" use="optional" default="0.0" />
+    <xs:attribute name="widthScale" type="xs:float" use="optional" default="1.0" />
+  </xs:complexType>
+  <!--
+
+      type_path : 선 끝 모양 도형 자료
+  -->
+  <xs:complexType name="type_lineCapPath">
+    <xs:sequence>
+      <!-- shape : 도형 -->
+      <xs:element name="shape" type="type_lineCapShape" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <!--
+
+      type_pathShape : 선 끝 모양 정의 도형
+  -->
+  <xs:complexType name="type_lineCapShape">
+    <!-- type : 도형 종류 -->
+    <!-- coord : 좌표 -->
+    <!-- start : 도형 시작 -->
+    <!-- close : 도형 닫음 -->
+    <xs:attribute name="type" type="enum_shapeType" use="required" />
+    <xs:attribute name="coord" type="type_coord" use="required" />
+    <xs:attribute name="start" type="xs:boolean" use="optional" default="0" />
+    <xs:attribute name="close" type="xs:boolean" use="optional" default="0" />
+  </xs:complexType>
+  <!--
+
+
+### 투명도 속성 자료형 정의
+
+  -->
+  <!--
+
+      좌표열 속성 자료형 정의
+  -->
+  <xs:simpleType name="type_coord">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[ \-.0-9A-Za-z]+,[ \-.0-9A-Za-z]+(,[ \-.0-9A-Za-z]+)?(\|[ \-.0-9A-Za-z]+,[ \-.0-9A-Za-z]+(,[ \-.0-9A-Za-z]+)?)*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      UUID(고유식별자) 속성 자료형 정의
+  -->
+  <xs:simpleType name="type_UUID">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\{[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}\}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      ARGB(색상) 속성 자료형 정의
+  -->
+  <xs:simpleType name="type_ARGB">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="#[0-9A-F]{8}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="type_ARGBs">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="#[0-9A-F]{8}(,#[0-9A-F]{8})*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      투명값 자료형 정의
+  -->
+  <xs:simpleType name="type_transparency">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="255" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+
+      물채움 값 자료형 정의
+  -->
+  <xs:simpleType name="type_fillrate">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

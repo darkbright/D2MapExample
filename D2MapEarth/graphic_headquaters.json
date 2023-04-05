@@ -1,0 +1,3289 @@
+{
+	"name": "Layer-01",
+	"guid": "c547556a-3f87-4644-1af3-c7c72b3f0d6d",
+	"createTime": "2022-03-14T16:43:53",
+	"editTime": "2022-03-14T16:43:53",
+	"author": "",
+	"exercise": false,
+	"security": 0,
+	"si": false,
+	"source": "",
+	"objects": [
+		{
+			"graphicObjProp": {
+				"type": "milSymbol",
+				"name": "전투",
+				"positions": [],
+				"pixelPositions": [],
+				"rotate": 0,
+				"trackerRotate": [],
+				"bound": {
+					"minX": 14017837.019929642,
+					"minY": 4566527.0388473235,
+					"maxX": 14017837.019929642,
+					"maxY": 4566527.0388473235
+				},
+				"lock": false,
+				"screenMode": false,
+				"screenAnchor": [
+					0,
+					0
+				],
+				"guid": "6190d204-07e9-ed00-ee06-2c421dce8e05",
+				"createTime": "2022-03-14T16:44:38",
+				"editTime": "2022-03-14T17:11:29",
+				"scaleLimit": false,
+				"scaleUpper": 999999999,
+				"scaleLower": 0,
+				"text": "",
+				"links": {},
+				"attribute": {},
+				"sameRatio": false,
+				"msType": "msPoint",
+				"msOriginKey": "S*G*UC----*****",
+				"msKey": "S*G*UC----*****",
+				"msUseDefineColor": false,
+				"msOldStyle": {},
+				"msFontRatio": 1,
+				"msLineRatio": 1,
+				"msSize": 1,
+				"lineType": 0,
+				"options": {
+					"SIDC": "SUG*UC----*E***",
+					"operationalConditionPoint": "0",
+					"civilianColor": false,
+					"userDefineFillColor": "",
+					"headquarters": true,
+					"uniqueDesignation": "고유명칭",
+					"reinforcedReduced": "부대증",
+					"higherFormation": "상급부대",
+					"showCombatEffectivenessLabel": false,
+					"showCombatEffectivenessWaterFill": false,
+					"showUseDefineColor": false,
+					"size": 14,
+					"strokeWidth": 4,
+					"fillOpacity": 1,
+					"infoColor": "#000000",
+					"infoFields": true,
+					"icon": true,
+					"frame": true,
+					"fill": true,
+					"installation": false
+				},
+				"visibility": true
+			},
+			"graphicObjStyle": {
+				"marker": {
+					"imgUrl": null,
+					"size": 10
+				},
+				"point": {
+					"type": "rectangle",
+					"size": 10
+				},
+				"line": {
+					"type": "simple",
+					"width": 3,
+					"color": [
+						0,
+						178,
+						255,
+						0.9
+					],
+					"arrow": {
+						"begin": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						},
+						"end": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						}
+					},
+					"dashOffset": 0,
+					"lineJoin": "round",
+					"lineCap": "round",
+					"fill": {
+						"type": "simple",
+						"pattern": "horizontal",
+						"patternColor": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"gradient": {
+							"type": "horizontal",
+							"color": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"anchor": [
+								0.5,
+								0.5
+							],
+							"stopPoint": [
+								0,
+								1
+							]
+						}
+					}
+				},
+				"fill": {
+					"type": "simple",
+					"color": [
+						198,
+						234,
+						255,
+						0.85
+					],
+					"pattern": "horizontal",
+					"patternColor": [
+						[
+							0,
+							0,
+							0,
+							0.85
+						],
+						[
+							255,
+							255,
+							255,
+							0.85
+						]
+					],
+					"gradient": {
+						"type": "horizontal",
+						"color": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"anchor": [
+							0.5,
+							0.5
+						],
+						"stopPoint": [
+							0,
+							1
+						]
+					}
+				},
+				"text": {
+					"color": [
+						0,
+						0,
+						0,
+						1
+					],
+					"outlineColor": [
+						255,
+						255,
+						255,
+						1
+					],
+					"backgroundColor": [
+						42,
+						42,
+						42,
+						0
+					],
+					"font": "Arial",
+					"fontSize": 15,
+					"showBackground": true,
+					"outlineWidth": 3,
+					"placement": "point",
+					"rotation": 0,
+					"textAlign": "left",
+					"textBaseline": "top",
+					"offsetX": 0,
+					"offsetY": 0,
+					"bold": false,
+					"italic": false,
+					"directionRightToLeft": false,
+					"directionVertical": false
+				},
+				"zIndex": 0
+			},
+			"graphicObjFeatures": [
+				{
+					"type": "Point",
+					"id": 0,
+					"coordinates": [
+						125.92437245299242,
+						37.908635059302725
+					]
+				}
+			]
+		},
+		{
+			"graphicObjProp": {
+				"type": "milSymbol",
+				"name": "전투cp(1)",
+				"positions": [],
+				"pixelPositions": [],
+				"rotate": 0,
+				"trackerRotate": [],
+				"bound": {
+					"minX": 14030066.986443382,
+					"minY": 4693514.415617969,
+					"maxX": 14030066.986443382,
+					"maxY": 4693514.415617969
+				},
+				"lock": false,
+				"screenMode": false,
+				"screenAnchor": [
+					0,
+					0
+				],
+				"guid": "bab45207-4e8d-cff7-517d-9519bbf2bb2f",
+				"createTime": "2022-03-14T16:44:38",
+				"editTime": "2022-03-14T16:50:34",
+				"scaleLimit": false,
+				"scaleUpper": 999999999,
+				"scaleLower": 0,
+				"text": "",
+				"links": {},
+				"attribute": {},
+				"sameRatio": false,
+				"msType": "msPoint",
+				"msOriginKey": "S*G*UC----*****",
+				"msKey": "S*G*UC----*****",
+				"msUseDefineColor": false,
+				"msOldStyle": {},
+				"msFontRatio": 1,
+				"msLineRatio": 1,
+				"msSize": 1,
+				"lineType": 0,
+				"options": {
+					"SIDC": "SFG*UC----*F***",
+					"operationalConditionPoint": "0",
+					"civilianColor": false,
+					"userDefineFillColor": "",
+					"headquarters": true,
+					"showCombatEffectivenessLabel": false,
+					"showCombatEffectivenessWaterFill": false,
+					"showUseDefineColor": false,
+					"size": 14,
+					"strokeWidth": 4,
+					"fillOpacity": 1,
+					"infoColor": "#000000",
+					"infoFields": true,
+					"icon": true,
+					"frame": true,
+					"fill": true,
+					"installation": false
+				},
+				"visibility": true
+			},
+			"graphicObjStyle": {
+				"marker": {
+					"imgUrl": null,
+					"size": 10
+				},
+				"point": {
+					"type": "rectangle",
+					"size": 10
+				},
+				"line": {
+					"type": "simple",
+					"width": 3,
+					"color": [
+						0,
+						178,
+						255,
+						0.9
+					],
+					"arrow": {
+						"begin": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						},
+						"end": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						}
+					},
+					"dashOffset": 0,
+					"lineJoin": "round",
+					"lineCap": "round",
+					"fill": {
+						"type": "simple",
+						"pattern": "horizontal",
+						"patternColor": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"gradient": {
+							"type": "horizontal",
+							"color": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"anchor": [
+								0.5,
+								0.5
+							],
+							"stopPoint": [
+								0,
+								1
+							]
+						}
+					}
+				},
+				"fill": {
+					"type": "simple",
+					"color": [
+						198,
+						234,
+						255,
+						0.85
+					],
+					"pattern": "horizontal",
+					"patternColor": [
+						[
+							0,
+							0,
+							0,
+							0.85
+						],
+						[
+							255,
+							255,
+							255,
+							0.85
+						]
+					],
+					"gradient": {
+						"type": "horizontal",
+						"color": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"anchor": [
+							0.5,
+							0.5
+						],
+						"stopPoint": [
+							0,
+							1
+						]
+					}
+				},
+				"text": {
+					"color": [
+						0,
+						0,
+						0,
+						1
+					],
+					"outlineColor": [
+						255,
+						255,
+						255,
+						1
+					],
+					"backgroundColor": [
+						42,
+						42,
+						42,
+						0
+					],
+					"font": "Arial",
+					"fontSize": 15,
+					"showBackground": true,
+					"outlineWidth": 3,
+					"placement": "point",
+					"rotation": 0,
+					"textAlign": "left",
+					"textBaseline": "top",
+					"offsetX": 0,
+					"offsetY": 0,
+					"bold": false,
+					"italic": false,
+					"directionRightToLeft": false,
+					"directionVertical": false
+				},
+				"zIndex": 1
+			},
+			"graphicObjFeatures": [
+				{
+					"type": "Point",
+					"id": 0,
+					"coordinates": [
+						126.03423611142804,
+						38.803155740505105
+					]
+				}
+			]
+		},
+		{
+			"graphicObjProp": {
+				"type": "milSymbol",
+				"name": "전투cp(1)cp(1)",
+				"positions": [],
+				"pixelPositions": [],
+				"rotate": 0,
+				"trackerRotate": [],
+				"bound": {
+					"minX": 14104465.70641521,
+					"minY": 4591394.545828974,
+					"maxX": 14104465.70641521,
+					"maxY": 4591394.545828974
+				},
+				"lock": false,
+				"screenMode": false,
+				"screenAnchor": [
+					0,
+					0
+				],
+				"guid": "c3046f87-f5e9-1899-6407-83f58ec87fbd",
+				"createTime": "2022-03-14T16:44:38",
+				"editTime": "2022-03-14T17:11:55",
+				"scaleLimit": false,
+				"scaleUpper": 999999999,
+				"scaleLower": 0,
+				"text": "",
+				"links": {},
+				"attribute": {},
+				"sameRatio": false,
+				"msType": "msPoint",
+				"msOriginKey": "S*G*UC----*****",
+				"msKey": "S*G*UC----*****",
+				"msUseDefineColor": false,
+				"msOldStyle": {},
+				"msFontRatio": 1,
+				"msLineRatio": 1,
+				"msSize": 1,
+				"lineType": 0,
+				"options": {
+					"SIDC": "SNG*UC----*J***",
+					"operationalConditionPoint": "0",
+					"civilianColor": false,
+					"userDefineFillColor": "",
+					"headquarters": true,
+					"showCombatEffectivenessLabel": false,
+					"showCombatEffectivenessWaterFill": false,
+					"showUseDefineColor": false,
+					"size": 14,
+					"strokeWidth": 4,
+					"fillOpacity": 1,
+					"infoColor": "#000000",
+					"infoFields": true,
+					"icon": true,
+					"frame": true,
+					"fill": true,
+					"installation": false
+				},
+				"visibility": true
+			},
+			"graphicObjStyle": {
+				"marker": {
+					"imgUrl": null,
+					"size": 10
+				},
+				"point": {
+					"type": "rectangle",
+					"size": 10
+				},
+				"line": {
+					"type": "simple",
+					"width": 3,
+					"color": [
+						0,
+						178,
+						255,
+						0.9
+					],
+					"arrow": {
+						"begin": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						},
+						"end": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						}
+					},
+					"dashOffset": 0,
+					"lineJoin": "round",
+					"lineCap": "round",
+					"fill": {
+						"type": "simple",
+						"pattern": "horizontal",
+						"patternColor": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"gradient": {
+							"type": "horizontal",
+							"color": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"anchor": [
+								0.5,
+								0.5
+							],
+							"stopPoint": [
+								0,
+								1
+							]
+						}
+					}
+				},
+				"fill": {
+					"type": "simple",
+					"color": [
+						198,
+						234,
+						255,
+						0.85
+					],
+					"pattern": "horizontal",
+					"patternColor": [
+						[
+							0,
+							0,
+							0,
+							0.85
+						],
+						[
+							255,
+							255,
+							255,
+							0.85
+						]
+					],
+					"gradient": {
+						"type": "horizontal",
+						"color": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"anchor": [
+							0.5,
+							0.5
+						],
+						"stopPoint": [
+							0,
+							1
+						]
+					}
+				},
+				"text": {
+					"color": [
+						0,
+						0,
+						0,
+						1
+					],
+					"outlineColor": [
+						255,
+						255,
+						255,
+						1
+					],
+					"backgroundColor": [
+						42,
+						42,
+						42,
+						0
+					],
+					"font": "Arial",
+					"fontSize": 15,
+					"showBackground": true,
+					"outlineWidth": 3,
+					"placement": "point",
+					"rotation": 0,
+					"textAlign": "left",
+					"textBaseline": "top",
+					"offsetX": 0,
+					"offsetY": 0,
+					"bold": false,
+					"italic": false,
+					"directionRightToLeft": false,
+					"directionVertical": false
+				},
+				"zIndex": 2
+			},
+			"graphicObjFeatures": [
+				{
+					"type": "Point",
+					"id": 0,
+					"coordinates": [
+						126.70257118412427,
+						38.08467556541143
+					]
+				}
+			]
+		},
+		{
+			"graphicObjProp": {
+				"type": "milSymbol",
+				"name": "전투cp(1)cp(1)cp(1)",
+				"positions": [],
+				"pixelPositions": [],
+				"rotate": 0,
+				"trackerRotate": [],
+				"bound": {
+					"minX": 14200674.35893036,
+					"minY": 4627065.174579876,
+					"maxX": 14200674.35893036,
+					"maxY": 4627065.174579876
+				},
+				"lock": false,
+				"screenMode": false,
+				"screenAnchor": [
+					0,
+					0
+				],
+				"guid": "bd50c80b-a88d-e9a6-7c3a-20c1a488ce2f",
+				"createTime": "2022-03-14T16:44:38",
+				"editTime": "2022-03-14T17:11:53",
+				"scaleLimit": false,
+				"scaleUpper": 999999999,
+				"scaleLower": 0,
+				"text": "",
+				"links": {},
+				"attribute": {},
+				"sameRatio": false,
+				"msType": "msPoint",
+				"msOriginKey": "S*G*UC----*****",
+				"msKey": "S*G*UC----*****",
+				"msUseDefineColor": false,
+				"msOldStyle": {},
+				"msFontRatio": 1,
+				"msLineRatio": 1,
+				"msSize": 1,
+				"lineType": 0,
+				"options": {
+					"SIDC": "SHG*UC----*H***",
+					"operationalConditionPoint": "0",
+					"civilianColor": false,
+					"userDefineFillColor": "",
+					"headquarters": true,
+					"showCombatEffectivenessLabel": false,
+					"showCombatEffectivenessWaterFill": false,
+					"showUseDefineColor": false,
+					"size": 14,
+					"strokeWidth": 4,
+					"fillOpacity": 1,
+					"infoColor": "#000000",
+					"infoFields": true,
+					"icon": true,
+					"frame": true,
+					"fill": true,
+					"installation": false
+				},
+				"visibility": true
+			},
+			"graphicObjStyle": {
+				"marker": {
+					"imgUrl": null,
+					"size": 10
+				},
+				"point": {
+					"type": "rectangle",
+					"size": 10
+				},
+				"line": {
+					"type": "simple",
+					"width": 3,
+					"color": [
+						0,
+						178,
+						255,
+						0.9
+					],
+					"arrow": {
+						"begin": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						},
+						"end": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						}
+					},
+					"dashOffset": 0,
+					"lineJoin": "round",
+					"lineCap": "round",
+					"fill": {
+						"type": "simple",
+						"pattern": "horizontal",
+						"patternColor": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"gradient": {
+							"type": "horizontal",
+							"color": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"anchor": [
+								0.5,
+								0.5
+							],
+							"stopPoint": [
+								0,
+								1
+							]
+						}
+					}
+				},
+				"fill": {
+					"type": "simple",
+					"color": [
+						198,
+						234,
+						255,
+						0.85
+					],
+					"pattern": "horizontal",
+					"patternColor": [
+						[
+							0,
+							0,
+							0,
+							0.85
+						],
+						[
+							255,
+							255,
+							255,
+							0.85
+						]
+					],
+					"gradient": {
+						"type": "horizontal",
+						"color": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"anchor": [
+							0.5,
+							0.5
+						],
+						"stopPoint": [
+							0,
+							1
+						]
+					}
+				},
+				"text": {
+					"color": [
+						0,
+						0,
+						0,
+						1
+					],
+					"outlineColor": [
+						255,
+						255,
+						255,
+						1
+					],
+					"backgroundColor": [
+						42,
+						42,
+						42,
+						0
+					],
+					"font": "Arial",
+					"fontSize": 15,
+					"showBackground": true,
+					"outlineWidth": 3,
+					"placement": "point",
+					"rotation": 0,
+					"textAlign": "left",
+					"textBaseline": "top",
+					"offsetX": 0,
+					"offsetY": 0,
+					"bold": false,
+					"italic": false,
+					"directionRightToLeft": false,
+					"directionVertical": false
+				},
+				"zIndex": 3
+			},
+			"graphicObjFeatures": [
+				{
+					"type": "Point",
+					"id": 0,
+					"coordinates": [
+						127.56682821431329,
+						38.3364543937725
+					]
+				}
+			]
+		},
+		{
+			"graphicObjProp": {
+				"type": "milSymbol",
+				"name": "통신",
+				"positions": [],
+				"pixelPositions": [],
+				"rotate": 0,
+				"trackerRotate": [],
+				"bound": {
+					"minX": 14087241.790293777,
+					"minY": 4402034.572639009,
+					"maxX": 14087241.790293777,
+					"maxY": 4402034.572639009
+				},
+				"lock": false,
+				"screenMode": false,
+				"screenAnchor": [
+					0,
+					0
+				],
+				"guid": "daa05619-b759-256a-5e7d-0fb9f9b476df",
+				"createTime": "2022-03-14T16:58:09",
+				"editTime": "2022-03-14T17:26:00",
+				"scaleLimit": false,
+				"scaleUpper": 999999999,
+				"scaleLower": 0,
+				"text": "",
+				"links": {},
+				"attribute": {},
+				"sameRatio": false,
+				"msType": "msPoint",
+				"msOriginKey": "S*G*UULCE-*****",
+				"msKey": "S*G*UULCE-*****",
+				"msUseDefineColor": false,
+				"msOldStyle": {},
+				"msFontRatio": 1,
+				"msLineRatio": 1,
+				"msSize": 1,
+				"lineType": 0,
+				"options": {
+					"SIDC": "SFG*UULCE-*****",
+					"operationalConditionPoint": "0",
+					"civilianColor": false,
+					"userDefineFillColor": "",
+					"headquarters": false,
+					"showCombatEffectivenessLabel": false,
+					"showCombatEffectivenessWaterFill": false,
+					"showUseDefineColor": false,
+					"size": 7,
+					"strokeWidth": 4,
+					"fillOpacity": 1,
+					"infoColor": "#000000",
+					"infoFields": true,
+					"icon": true,
+					"frame": true,
+					"fill": true,
+					"installation": false
+				},
+				"visibility": true
+			},
+			"graphicObjStyle": {
+				"marker": {
+					"imgUrl": null,
+					"size": 10
+				},
+				"point": {
+					"type": "rectangle",
+					"size": 10
+				},
+				"line": {
+					"type": "simple",
+					"width": 3,
+					"color": [
+						0,
+						178,
+						255,
+						0.9
+					],
+					"arrow": {
+						"begin": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						},
+						"end": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						}
+					},
+					"dashOffset": 0,
+					"lineJoin": "round",
+					"lineCap": "round",
+					"fill": {
+						"type": "simple",
+						"pattern": "horizontal",
+						"patternColor": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"gradient": {
+							"type": "horizontal",
+							"color": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"anchor": [
+								0.5,
+								0.5
+							],
+							"stopPoint": [
+								0,
+								1
+							]
+						}
+					}
+				},
+				"fill": {
+					"type": "simple",
+					"color": [
+						198,
+						234,
+						255,
+						0.85
+					],
+					"pattern": "horizontal",
+					"patternColor": [
+						[
+							0,
+							0,
+							0,
+							0.85
+						],
+						[
+							255,
+							255,
+							255,
+							0.85
+						]
+					],
+					"gradient": {
+						"type": "horizontal",
+						"color": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"anchor": [
+							0.5,
+							0.5
+						],
+						"stopPoint": [
+							0,
+							1
+						]
+					}
+				},
+				"text": {
+					"color": [
+						0,
+						0,
+						0,
+						1
+					],
+					"outlineColor": [
+						255,
+						255,
+						255,
+						1
+					],
+					"backgroundColor": [
+						42,
+						42,
+						42,
+						0
+					],
+					"font": "Arial",
+					"fontSize": 15,
+					"showBackground": true,
+					"outlineWidth": 3,
+					"placement": "point",
+					"rotation": 0,
+					"textAlign": "left",
+					"textBaseline": "top",
+					"offsetX": 0,
+					"offsetY": 0,
+					"bold": false,
+					"italic": false,
+					"directionRightToLeft": false,
+					"directionVertical": false
+				},
+				"zIndex": 4
+			},
+			"graphicObjFeatures": [
+				{
+					"type": "Point",
+					"id": 0,
+					"coordinates": [
+						126.5478461130815,
+						36.733569358154966
+					]
+				}
+			]
+		},
+		{
+			"graphicObjProp": {
+				"type": "milSymbol",
+				"name": "통신cp(1)",
+				"positions": [],
+				"pixelPositions": [],
+				"rotate": 0,
+				"trackerRotate": [],
+				"bound": {
+					"minX": 14288220.154460318,
+					"minY": 4521480.1563983895,
+					"maxX": 14288220.154460318,
+					"maxY": 4521480.1563983895
+				},
+				"lock": false,
+				"screenMode": false,
+				"screenAnchor": [
+					0,
+					0
+				],
+				"guid": "3013cf99-fad7-0d9c-2fc9-c83d71443530",
+				"createTime": "2022-03-14T16:58:09",
+				"editTime": "2022-03-14T17:01:19",
+				"scaleLimit": false,
+				"scaleUpper": 999999999,
+				"scaleLower": 0,
+				"text": "",
+				"links": {},
+				"attribute": {},
+				"sameRatio": false,
+				"msType": "msPoint",
+				"msOriginKey": "S*G*UULCE-*****",
+				"msKey": "S*G*UULCE-*****",
+				"msUseDefineColor": false,
+				"msOldStyle": {},
+				"msFontRatio": 1,
+				"msLineRatio": 1,
+				"msSize": 1,
+				"lineType": 0,
+				"options": {
+					"SIDC": "SFG*UULCE-*****",
+					"operationalConditionPoint": "0",
+					"civilianColor": false,
+					"userDefineFillColor": "",
+					"dtg": "활동시각",
+					"altitudeDepth": "고도/심도/거리",
+					"location": "위치",
+					"headquarters": false,
+					"uniqueDesignation": "고유명칭",
+					"speed": "속도",
+					"direction": 315,
+					"mobileUnit": "기동부대",
+					"reinforcedReduced": "부대증",
+					"staffComments": "국가구분코드",
+					"additionalInformation": "활동사항",
+					"higherFormation": "상급부대",
+					"iffSif": "12345",
+					"showCombatEffectivenessLabel": false,
+					"showCombatEffectivenessWaterFill": false,
+					"showUseDefineColor": false,
+					"size": 14,
+					"strokeWidth": 4,
+					"fillOpacity": 1,
+					"infoColor": "#000000",
+					"infoFields": true,
+					"icon": true,
+					"frame": true,
+					"fill": true,
+					"installation": false
+				},
+				"visibility": true
+			},
+			"graphicObjStyle": {
+				"marker": {
+					"imgUrl": null,
+					"size": 10
+				},
+				"point": {
+					"type": "rectangle",
+					"size": 10
+				},
+				"line": {
+					"type": "simple",
+					"width": 3,
+					"color": [
+						0,
+						178,
+						255,
+						0.9
+					],
+					"arrow": {
+						"begin": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						},
+						"end": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						}
+					},
+					"dashOffset": 0,
+					"lineJoin": "round",
+					"lineCap": "round",
+					"fill": {
+						"type": "simple",
+						"pattern": "horizontal",
+						"patternColor": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"gradient": {
+							"type": "horizontal",
+							"color": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"anchor": [
+								0.5,
+								0.5
+							],
+							"stopPoint": [
+								0,
+								1
+							]
+						}
+					}
+				},
+				"fill": {
+					"type": "simple",
+					"color": [
+						198,
+						234,
+						255,
+						0.85
+					],
+					"pattern": "horizontal",
+					"patternColor": [
+						[
+							0,
+							0,
+							0,
+							0.85
+						],
+						[
+							255,
+							255,
+							255,
+							0.85
+						]
+					],
+					"gradient": {
+						"type": "horizontal",
+						"color": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"anchor": [
+							0.5,
+							0.5
+						],
+						"stopPoint": [
+							0,
+							1
+						]
+					}
+				},
+				"text": {
+					"color": [
+						0,
+						0,
+						0,
+						1
+					],
+					"outlineColor": [
+						255,
+						255,
+						255,
+						1
+					],
+					"backgroundColor": [
+						42,
+						42,
+						42,
+						0
+					],
+					"font": "Arial",
+					"fontSize": 15,
+					"showBackground": true,
+					"outlineWidth": 3,
+					"placement": "point",
+					"rotation": 0,
+					"textAlign": "left",
+					"textBaseline": "top",
+					"offsetX": 0,
+					"offsetY": 0,
+					"bold": false,
+					"italic": false,
+					"directionRightToLeft": false,
+					"directionVertical": false
+				},
+				"zIndex": 5
+			},
+			"graphicObjFeatures": [
+				{
+					"type": "Point",
+					"id": 0,
+					"coordinates": [
+						128.35326547616293,
+						37.58866730274019
+					]
+				}
+			]
+		},
+		{
+			"graphicObjProp": {
+				"type": "milSymbol",
+				"name": "통신cp(2)",
+				"positions": [],
+				"pixelPositions": [],
+				"rotate": 0,
+				"trackerRotate": [],
+				"bound": {
+					"minX": 14188546.344221985,
+					"minY": 4548793.62962378,
+					"maxX": 14188546.344221985,
+					"maxY": 4548793.62962378
+				},
+				"lock": false,
+				"screenMode": false,
+				"screenAnchor": [
+					0,
+					0
+				],
+				"guid": "5ce3a014-dad6-c90b-ed0e-42fb508183c0",
+				"createTime": "2022-03-14T16:58:09",
+				"editTime": "2022-03-14T17:17:15",
+				"scaleLimit": false,
+				"scaleUpper": 999999999,
+				"scaleLower": 0,
+				"text": "",
+				"links": {},
+				"attribute": {},
+				"sameRatio": false,
+				"msType": "msPoint",
+				"msOriginKey": "S*G*UULCE-*****",
+				"msKey": "S*G*UULCE-*****",
+				"msUseDefineColor": false,
+				"msOldStyle": {},
+				"msFontRatio": 1,
+				"msLineRatio": 1,
+				"msSize": 1,
+				"lineType": 0,
+				"options": {
+					"SIDC": "SFG*UULCE-*****",
+					"operationalConditionPoint": "0",
+					"civilianColor": false,
+					"userDefineFillColor": "",
+					"headquarters": false,
+					"showCombatEffectivenessLabel": false,
+					"showCombatEffectivenessWaterFill": false,
+					"showUseDefineColor": false,
+					"size": 7,
+					"strokeWidth": 4,
+					"fillOpacity": 1,
+					"infoColor": "#000000",
+					"infoFields": true,
+					"icon": true,
+					"frame": true,
+					"fill": true,
+					"installation": false
+				},
+				"visibility": true
+			},
+			"graphicObjStyle": {
+				"marker": {
+					"imgUrl": null,
+					"size": 10
+				},
+				"point": {
+					"type": "rectangle",
+					"size": 10
+				},
+				"line": {
+					"type": "simple",
+					"width": 3,
+					"color": [
+						0,
+						178,
+						255,
+						0.9
+					],
+					"arrow": {
+						"begin": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						},
+						"end": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						}
+					},
+					"dashOffset": 0,
+					"lineJoin": "round",
+					"lineCap": "round",
+					"fill": {
+						"type": "simple",
+						"pattern": "horizontal",
+						"patternColor": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"gradient": {
+							"type": "horizontal",
+							"color": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"anchor": [
+								0.5,
+								0.5
+							],
+							"stopPoint": [
+								0,
+								1
+							]
+						}
+					}
+				},
+				"fill": {
+					"type": "simple",
+					"color": [
+						198,
+						234,
+						255,
+						0.85
+					],
+					"pattern": "horizontal",
+					"patternColor": [
+						[
+							0,
+							0,
+							0,
+							0.85
+						],
+						[
+							255,
+							255,
+							255,
+							0.85
+						]
+					],
+					"gradient": {
+						"type": "horizontal",
+						"color": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"anchor": [
+							0.5,
+							0.5
+						],
+						"stopPoint": [
+							0,
+							1
+						]
+					}
+				},
+				"text": {
+					"color": [
+						0,
+						0,
+						0,
+						1
+					],
+					"outlineColor": [
+						255,
+						255,
+						255,
+						1
+					],
+					"backgroundColor": [
+						42,
+						42,
+						42,
+						0
+					],
+					"font": "Arial",
+					"fontSize": 15,
+					"showBackground": true,
+					"outlineWidth": 3,
+					"placement": "point",
+					"rotation": 0,
+					"textAlign": "left",
+					"textBaseline": "top",
+					"offsetX": 0,
+					"offsetY": 0,
+					"bold": false,
+					"italic": false,
+					"directionRightToLeft": false,
+					"directionVertical": false
+				},
+				"zIndex": 6
+			},
+			"graphicObjFeatures": [
+				{
+					"type": "Point",
+					"id": 0,
+					"coordinates": [
+						127.45788040452769,
+						37.7828398811468
+					]
+				}
+			]
+		},
+		{
+			"graphicObjProp": {
+				"type": "milSymbol",
+				"name": "지상차량",
+				"positions": [],
+				"pixelPositions": [],
+				"rotate": 0,
+				"trackerRotate": [],
+				"bound": {
+					"minX": 14142378.509767415,
+					"minY": 4448966.898675416,
+					"maxX": 14142378.509767415,
+					"maxY": 4448966.898675416
+				},
+				"lock": false,
+				"screenMode": false,
+				"screenAnchor": [
+					0,
+					0
+				],
+				"guid": "63e2038a-db5f-82fa-6978-0d191db14f00",
+				"createTime": "2022-03-14T17:17:54",
+				"editTime": "2022-03-14T17:24:59",
+				"scaleLimit": false,
+				"scaleUpper": 999999999,
+				"scaleLower": 0,
+				"text": "",
+				"links": {},
+				"attribute": {},
+				"sameRatio": false,
+				"msType": "msPoint",
+				"msOriginKey": "S*G*EV----*****",
+				"msKey": "S*G*EV----*****",
+				"msUseDefineColor": false,
+				"msOldStyle": {},
+				"msFontRatio": 1,
+				"msLineRatio": 1,
+				"msSize": 1,
+				"lineType": 0,
+				"options": {
+					"SIDC": "SFG*EV----*****",
+					"size": 7,
+					"strokeWidth": 4,
+					"fillOpacity": 1,
+					"infoFields": false,
+					"icon": true,
+					"frame": true,
+					"fill": true,
+					"areaOfUncertainty": "",
+					"deadReckoningTrailer": "",
+					"speedLeaderTrailer": "",
+					"addSymbolOnly": false,
+					"civilianColor": false,
+					"operationalConditionPoint": 0,
+					"installation": false
+				},
+				"visibility": true
+			},
+			"graphicObjStyle": {
+				"marker": {
+					"imgUrl": null,
+					"size": 10
+				},
+				"point": {
+					"type": "rectangle",
+					"size": 10
+				},
+				"line": {
+					"type": "simple",
+					"width": 3,
+					"color": [
+						0,
+						178,
+						255,
+						0.9
+					],
+					"arrow": {
+						"begin": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						},
+						"end": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						}
+					},
+					"dashOffset": 0,
+					"lineJoin": "round",
+					"lineCap": "round",
+					"fill": {
+						"type": "simple",
+						"pattern": "horizontal",
+						"patternColor": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"gradient": {
+							"type": "horizontal",
+							"color": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"anchor": [
+								0.5,
+								0.5
+							],
+							"stopPoint": [
+								0,
+								1
+							]
+						}
+					}
+				},
+				"fill": {
+					"type": "simple",
+					"color": [
+						198,
+						234,
+						255,
+						0.85
+					],
+					"pattern": "horizontal",
+					"patternColor": [
+						[
+							0,
+							0,
+							0,
+							0.85
+						],
+						[
+							255,
+							255,
+							255,
+							0.85
+						]
+					],
+					"gradient": {
+						"type": "horizontal",
+						"color": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"anchor": [
+							0.5,
+							0.5
+						],
+						"stopPoint": [
+							0,
+							1
+						]
+					}
+				},
+				"text": {
+					"color": [
+						0,
+						0,
+						0,
+						1
+					],
+					"outlineColor": [
+						255,
+						255,
+						255,
+						1
+					],
+					"backgroundColor": [
+						42,
+						42,
+						42,
+						0
+					],
+					"font": "Arial",
+					"fontSize": 15,
+					"showBackground": true,
+					"outlineWidth": 3,
+					"placement": "point",
+					"rotation": 0,
+					"textAlign": "left",
+					"textBaseline": "top",
+					"offsetX": 0,
+					"offsetY": 0,
+					"bold": false,
+					"italic": false,
+					"directionRightToLeft": false,
+					"directionVertical": false
+				},
+				"zIndex": 7
+			},
+			"graphicObjFeatures": [
+				{
+					"type": "Point",
+					"id": 0,
+					"coordinates": [
+						127.0431476912753,
+						37.07070613668607
+					]
+				}
+			]
+		},
+		{
+			"graphicObjProp": {
+				"type": "milSymbol",
+				"name": "전투함",
+				"positions": [],
+				"pixelPositions": [],
+				"rotate": 0,
+				"trackerRotate": [],
+				"bound": {
+					"minX": 13903487.281599155,
+					"minY": 4536003.201103263,
+					"maxX": 13903487.281599155,
+					"maxY": 4536003.201103263
+				},
+				"lock": false,
+				"screenMode": false,
+				"screenAnchor": [
+					0,
+					0
+				],
+				"guid": "f0119821-bb44-bb41-8793-ffa93e745986",
+				"createTime": "2022-03-14T17:18:02",
+				"editTime": "2022-03-14T17:18:12",
+				"scaleLimit": false,
+				"scaleUpper": 999999999,
+				"scaleLower": 0,
+				"text": "",
+				"links": {},
+				"attribute": {},
+				"sameRatio": false,
+				"msType": "msPoint",
+				"msOriginKey": "S*S*C-----*****",
+				"msKey": "S*S*C-----*****",
+				"msUseDefineColor": false,
+				"msOldStyle": {},
+				"msFontRatio": 1,
+				"msLineRatio": 1,
+				"msSize": 1,
+				"lineType": 0,
+				"options": {
+					"SIDC": "SHS*C-----*****",
+					"operationalConditionPoint": "0",
+					"civilianColor": false,
+					"userDefineFillColor": "",
+					"headquarters": false,
+					"showCombatEffectivenessLabel": false,
+					"showCombatEffectivenessWaterFill": false,
+					"showUseDefineColor": false,
+					"size": 7,
+					"strokeWidth": 4,
+					"fillOpacity": 1,
+					"infoColor": "#000000",
+					"infoFields": true,
+					"icon": true,
+					"frame": true,
+					"fill": true,
+					"installation": false
+				},
+				"visibility": true
+			},
+			"graphicObjStyle": {
+				"marker": {
+					"imgUrl": null,
+					"size": 10
+				},
+				"point": {
+					"type": "rectangle",
+					"size": 10
+				},
+				"line": {
+					"type": "simple",
+					"width": 3,
+					"color": [
+						0,
+						178,
+						255,
+						0.9
+					],
+					"arrow": {
+						"begin": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						},
+						"end": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						}
+					},
+					"dashOffset": 0,
+					"lineJoin": "round",
+					"lineCap": "round",
+					"fill": {
+						"type": "simple",
+						"pattern": "horizontal",
+						"patternColor": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"gradient": {
+							"type": "horizontal",
+							"color": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"anchor": [
+								0.5,
+								0.5
+							],
+							"stopPoint": [
+								0,
+								1
+							]
+						}
+					}
+				},
+				"fill": {
+					"type": "simple",
+					"color": [
+						198,
+						234,
+						255,
+						0.85
+					],
+					"pattern": "horizontal",
+					"patternColor": [
+						[
+							0,
+							0,
+							0,
+							0.85
+						],
+						[
+							255,
+							255,
+							255,
+							0.85
+						]
+					],
+					"gradient": {
+						"type": "horizontal",
+						"color": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"anchor": [
+							0.5,
+							0.5
+						],
+						"stopPoint": [
+							0,
+							1
+						]
+					}
+				},
+				"text": {
+					"color": [
+						0,
+						0,
+						0,
+						1
+					],
+					"outlineColor": [
+						255,
+						255,
+						255,
+						1
+					],
+					"backgroundColor": [
+						42,
+						42,
+						42,
+						0
+					],
+					"font": "Arial",
+					"fontSize": 15,
+					"showBackground": true,
+					"outlineWidth": 3,
+					"placement": "point",
+					"rotation": 0,
+					"textAlign": "left",
+					"textBaseline": "top",
+					"offsetX": 0,
+					"offsetY": 0,
+					"bold": false,
+					"italic": false,
+					"directionRightToLeft": false,
+					"directionVertical": false
+				},
+				"zIndex": 8
+			},
+			"graphicObjFeatures": [
+				{
+					"type": "Point",
+					"id": 0,
+					"coordinates": [
+						124.89715127621896,
+						37.6919754979246
+					]
+				}
+			]
+		},
+		{
+			"graphicObjProp": {
+				"type": "milSymbol",
+				"name": "전투함cp(1)",
+				"positions": [],
+				"pixelPositions": [],
+				"rotate": 0,
+				"trackerRotate": [],
+				"bound": {
+					"minX": 14335203.626684524,
+					"minY": 4682966.124375996,
+					"maxX": 14335203.626684524,
+					"maxY": 4682966.124375996
+				},
+				"lock": false,
+				"screenMode": false,
+				"screenAnchor": [
+					0,
+					0
+				],
+				"guid": "dd4d2252-ec6a-07e9-9c8d-c023586383d4",
+				"createTime": "2022-03-14T17:18:02",
+				"editTime": "2022-03-14T17:18:16",
+				"scaleLimit": false,
+				"scaleUpper": 999999999,
+				"scaleLower": 0,
+				"text": "",
+				"links": {},
+				"attribute": {},
+				"sameRatio": false,
+				"msType": "msPoint",
+				"msOriginKey": "S*S*C-----*****",
+				"msKey": "S*S*C-----*****",
+				"msUseDefineColor": false,
+				"msOldStyle": {},
+				"msFontRatio": 1,
+				"msLineRatio": 1,
+				"msSize": 1,
+				"lineType": 0,
+				"options": {
+					"SIDC": "SHS*C-----*****",
+					"operationalConditionPoint": "0",
+					"civilianColor": false,
+					"userDefineFillColor": "",
+					"headquarters": false,
+					"showCombatEffectivenessLabel": false,
+					"showCombatEffectivenessWaterFill": false,
+					"showUseDefineColor": false,
+					"size": 7,
+					"strokeWidth": 4,
+					"fillOpacity": 1,
+					"infoColor": "#000000",
+					"infoFields": true,
+					"icon": true,
+					"frame": true,
+					"fill": true,
+					"installation": false
+				},
+				"visibility": true
+			},
+			"graphicObjStyle": {
+				"marker": {
+					"imgUrl": null,
+					"size": 10
+				},
+				"point": {
+					"type": "rectangle",
+					"size": 10
+				},
+				"line": {
+					"type": "simple",
+					"width": 3,
+					"color": [
+						0,
+						178,
+						255,
+						0.9
+					],
+					"arrow": {
+						"begin": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						},
+						"end": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						}
+					},
+					"dashOffset": 0,
+					"lineJoin": "round",
+					"lineCap": "round",
+					"fill": {
+						"type": "simple",
+						"pattern": "horizontal",
+						"patternColor": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"gradient": {
+							"type": "horizontal",
+							"color": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"anchor": [
+								0.5,
+								0.5
+							],
+							"stopPoint": [
+								0,
+								1
+							]
+						}
+					}
+				},
+				"fill": {
+					"type": "simple",
+					"color": [
+						198,
+						234,
+						255,
+						0.85
+					],
+					"pattern": "horizontal",
+					"patternColor": [
+						[
+							0,
+							0,
+							0,
+							0.85
+						],
+						[
+							255,
+							255,
+							255,
+							0.85
+						]
+					],
+					"gradient": {
+						"type": "horizontal",
+						"color": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"anchor": [
+							0.5,
+							0.5
+						],
+						"stopPoint": [
+							0,
+							1
+						]
+					}
+				},
+				"text": {
+					"color": [
+						0,
+						0,
+						0,
+						1
+					],
+					"outlineColor": [
+						255,
+						255,
+						255,
+						1
+					],
+					"backgroundColor": [
+						42,
+						42,
+						42,
+						0
+					],
+					"font": "Arial",
+					"fontSize": 15,
+					"showBackground": true,
+					"outlineWidth": 3,
+					"placement": "point",
+					"rotation": 0,
+					"textAlign": "left",
+					"textBaseline": "top",
+					"offsetX": 0,
+					"offsetY": 0,
+					"bold": false,
+					"italic": false,
+					"directionRightToLeft": false,
+					"directionVertical": false
+				},
+				"zIndex": 9
+			},
+			"graphicObjFeatures": [
+				{
+					"type": "Point",
+					"id": 0,
+					"coordinates": [
+						128.77532518816304,
+						38.72927309410167
+					]
+				}
+			]
+		},
+		{
+			"graphicObjProp": {
+				"type": "milSymbol",
+				"name": "통신cp(3)",
+				"positions": [],
+				"pixelPositions": [],
+				"rotate": 0,
+				"trackerRotate": [],
+				"bound": {
+					"minX": 14154914.05177651,
+					"minY": 4380020.708492879,
+					"maxX": 14154914.05177651,
+					"maxY": 4380020.708492879
+				},
+				"lock": false,
+				"screenMode": false,
+				"screenAnchor": [
+					0,
+					0
+				],
+				"guid": "92c1c048-3f0e-c3c7-6dae-b26543d328e7",
+				"createTime": "2022-03-14T16:58:09",
+				"editTime": "2022-03-14T17:26:02",
+				"scaleLimit": false,
+				"scaleUpper": 999999999,
+				"scaleLower": 0,
+				"text": "",
+				"links": {},
+				"attribute": {},
+				"sameRatio": false,
+				"msType": "msPoint",
+				"msOriginKey": "S*G*UULCE-*****",
+				"msKey": "S*G*UULCE-*****",
+				"msUseDefineColor": false,
+				"msOldStyle": {},
+				"msFontRatio": 1,
+				"msLineRatio": 1,
+				"msSize": 1,
+				"lineType": 0,
+				"options": {
+					"SIDC": "SFG*UULCE-*****",
+					"operationalConditionPoint": "0",
+					"civilianColor": false,
+					"userDefineFillColor": "",
+					"headquarters": false,
+					"showCombatEffectivenessLabel": false,
+					"showCombatEffectivenessWaterFill": false,
+					"showUseDefineColor": false,
+					"size": 9,
+					"strokeWidth": 4,
+					"fillOpacity": 1,
+					"infoColor": "#000000",
+					"infoFields": true,
+					"icon": true,
+					"frame": true,
+					"fill": true,
+					"installation": false
+				},
+				"visibility": true
+			},
+			"graphicObjStyle": {
+				"marker": {
+					"imgUrl": null,
+					"size": 10
+				},
+				"point": {
+					"type": "rectangle",
+					"size": 10
+				},
+				"line": {
+					"type": "simple",
+					"width": 3,
+					"color": [
+						0,
+						178,
+						255,
+						0.9
+					],
+					"arrow": {
+						"begin": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						},
+						"end": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						}
+					},
+					"dashOffset": 0,
+					"lineJoin": "round",
+					"lineCap": "round",
+					"fill": {
+						"type": "simple",
+						"pattern": "horizontal",
+						"patternColor": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"gradient": {
+							"type": "horizontal",
+							"color": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"anchor": [
+								0.5,
+								0.5
+							],
+							"stopPoint": [
+								0,
+								1
+							]
+						}
+					}
+				},
+				"fill": {
+					"type": "simple",
+					"color": [
+						198,
+						234,
+						255,
+						0.85
+					],
+					"pattern": "horizontal",
+					"patternColor": [
+						[
+							0,
+							0,
+							0,
+							0.85
+						],
+						[
+							255,
+							255,
+							255,
+							0.85
+						]
+					],
+					"gradient": {
+						"type": "horizontal",
+						"color": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"anchor": [
+							0.5,
+							0.5
+						],
+						"stopPoint": [
+							0,
+							1
+						]
+					}
+				},
+				"text": {
+					"color": [
+						0,
+						0,
+						0,
+						1
+					],
+					"outlineColor": [
+						255,
+						255,
+						255,
+						1
+					],
+					"backgroundColor": [
+						42,
+						42,
+						42,
+						0
+					],
+					"font": "Arial",
+					"fontSize": 15,
+					"showBackground": true,
+					"outlineWidth": 3,
+					"placement": "point",
+					"rotation": 0,
+					"textAlign": "left",
+					"textBaseline": "top",
+					"offsetX": 0,
+					"offsetY": 0,
+					"bold": false,
+					"italic": false,
+					"directionRightToLeft": false,
+					"directionVertical": false
+				},
+				"zIndex": 10
+			},
+			"graphicObjFeatures": [
+				{
+					"type": "Point",
+					"id": 0,
+					"coordinates": [
+						127.15575638109021,
+						36.57492087238194
+					]
+				}
+			]
+		},
+		{
+			"graphicObjProp": {
+				"type": "milSymbol",
+				"name": "통신cp(4)",
+				"positions": [],
+				"pixelPositions": [],
+				"rotate": 0,
+				"trackerRotate": [],
+				"bound": {
+					"minX": 14228701.16355375,
+					"minY": 4369421.490334358,
+					"maxX": 14228701.16355375,
+					"maxY": 4369421.490334358
+				},
+				"lock": false,
+				"screenMode": false,
+				"screenAnchor": [
+					0,
+					0
+				],
+				"guid": "42b49ec2-7599-b37d-5794-0aa2db361bb2",
+				"createTime": "2022-03-14T16:58:09",
+				"editTime": "2022-03-14T17:26:03",
+				"scaleLimit": false,
+				"scaleUpper": 999999999,
+				"scaleLower": 0,
+				"text": "",
+				"links": {},
+				"attribute": {},
+				"sameRatio": false,
+				"msType": "msPoint",
+				"msOriginKey": "S*G*UULCE-*****",
+				"msKey": "S*G*UULCE-*****",
+				"msUseDefineColor": false,
+				"msOldStyle": {},
+				"msFontRatio": 1,
+				"msLineRatio": 1,
+				"msSize": 1,
+				"lineType": 0,
+				"options": {
+					"SIDC": "SFG*UULCE-*****",
+					"operationalConditionPoint": "0",
+					"civilianColor": false,
+					"userDefineFillColor": "",
+					"headquarters": false,
+					"showCombatEffectivenessLabel": false,
+					"showCombatEffectivenessWaterFill": false,
+					"showUseDefineColor": false,
+					"size": 10,
+					"strokeWidth": 4,
+					"fillOpacity": 1,
+					"infoColor": "#000000",
+					"infoFields": true,
+					"icon": true,
+					"frame": true,
+					"fill": true,
+					"installation": false
+				},
+				"visibility": true
+			},
+			"graphicObjStyle": {
+				"marker": {
+					"imgUrl": null,
+					"size": 10
+				},
+				"point": {
+					"type": "rectangle",
+					"size": 10
+				},
+				"line": {
+					"type": "simple",
+					"width": 3,
+					"color": [
+						0,
+						178,
+						255,
+						0.9
+					],
+					"arrow": {
+						"begin": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						},
+						"end": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						}
+					},
+					"dashOffset": 0,
+					"lineJoin": "round",
+					"lineCap": "round",
+					"fill": {
+						"type": "simple",
+						"pattern": "horizontal",
+						"patternColor": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"gradient": {
+							"type": "horizontal",
+							"color": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"anchor": [
+								0.5,
+								0.5
+							],
+							"stopPoint": [
+								0,
+								1
+							]
+						}
+					}
+				},
+				"fill": {
+					"type": "simple",
+					"color": [
+						198,
+						234,
+						255,
+						0.85
+					],
+					"pattern": "horizontal",
+					"patternColor": [
+						[
+							0,
+							0,
+							0,
+							0.85
+						],
+						[
+							255,
+							255,
+							255,
+							0.85
+						]
+					],
+					"gradient": {
+						"type": "horizontal",
+						"color": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"anchor": [
+							0.5,
+							0.5
+						],
+						"stopPoint": [
+							0,
+							1
+						]
+					}
+				},
+				"text": {
+					"color": [
+						0,
+						0,
+						0,
+						1
+					],
+					"outlineColor": [
+						255,
+						255,
+						255,
+						1
+					],
+					"backgroundColor": [
+						42,
+						42,
+						42,
+						0
+					],
+					"font": "Arial",
+					"fontSize": 15,
+					"showBackground": true,
+					"outlineWidth": 3,
+					"placement": "point",
+					"rotation": 0,
+					"textAlign": "left",
+					"textBaseline": "top",
+					"offsetX": 0,
+					"offsetY": 0,
+					"bold": false,
+					"italic": false,
+					"directionRightToLeft": false,
+					"directionVertical": false
+				},
+				"zIndex": 11
+			},
+			"graphicObjFeatures": [
+				{
+					"type": "Point",
+					"id": 0,
+					"coordinates": [
+						127.81859728389551,
+						36.49841840112606
+					]
+				}
+			]
+		},
+		{
+			"graphicObjProp": {
+				"type": "milSymbol",
+				"name": "통신cp(5)",
+				"positions": [],
+				"pixelPositions": [],
+				"rotate": 0,
+				"trackerRotate": [],
+				"bound": {
+					"minX": 14306157.476625292,
+					"minY": 4353114.874536496,
+					"maxX": 14306157.476625292,
+					"maxY": 4353114.874536496
+				},
+				"lock": false,
+				"screenMode": false,
+				"screenAnchor": [
+					0,
+					0
+				],
+				"guid": "512c4254-da37-2e77-9b22-c2e4c68de85e",
+				"createTime": "2022-03-14T16:58:09",
+				"editTime": "2022-03-14T17:26:05",
+				"scaleLimit": false,
+				"scaleUpper": 999999999,
+				"scaleLower": 0,
+				"text": "",
+				"links": {},
+				"attribute": {},
+				"sameRatio": false,
+				"msType": "msPoint",
+				"msOriginKey": "S*G*UULCE-*****",
+				"msKey": "S*G*UULCE-*****",
+				"msUseDefineColor": false,
+				"msOldStyle": {},
+				"msFontRatio": 1,
+				"msLineRatio": 1,
+				"msSize": 1,
+				"lineType": 0,
+				"options": {
+					"SIDC": "SFG*UULCE-*****",
+					"operationalConditionPoint": "0",
+					"civilianColor": false,
+					"userDefineFillColor": "",
+					"headquarters": false,
+					"showCombatEffectivenessLabel": false,
+					"showCombatEffectivenessWaterFill": false,
+					"showUseDefineColor": false,
+					"size": 12,
+					"strokeWidth": 4,
+					"fillOpacity": 1,
+					"infoColor": "#000000",
+					"infoFields": true,
+					"icon": true,
+					"frame": true,
+					"fill": true,
+					"installation": false
+				},
+				"visibility": true
+			},
+			"graphicObjStyle": {
+				"marker": {
+					"imgUrl": null,
+					"size": 10
+				},
+				"point": {
+					"type": "rectangle",
+					"size": 10
+				},
+				"line": {
+					"type": "simple",
+					"width": 3,
+					"color": [
+						0,
+						178,
+						255,
+						0.9
+					],
+					"arrow": {
+						"begin": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						},
+						"end": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						}
+					},
+					"dashOffset": 0,
+					"lineJoin": "round",
+					"lineCap": "round",
+					"fill": {
+						"type": "simple",
+						"pattern": "horizontal",
+						"patternColor": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"gradient": {
+							"type": "horizontal",
+							"color": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"anchor": [
+								0.5,
+								0.5
+							],
+							"stopPoint": [
+								0,
+								1
+							]
+						}
+					}
+				},
+				"fill": {
+					"type": "simple",
+					"color": [
+						198,
+						234,
+						255,
+						0.85
+					],
+					"pattern": "horizontal",
+					"patternColor": [
+						[
+							0,
+							0,
+							0,
+							0.85
+						],
+						[
+							255,
+							255,
+							255,
+							0.85
+						]
+					],
+					"gradient": {
+						"type": "horizontal",
+						"color": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"anchor": [
+							0.5,
+							0.5
+						],
+						"stopPoint": [
+							0,
+							1
+						]
+					}
+				},
+				"text": {
+					"color": [
+						0,
+						0,
+						0,
+						1
+					],
+					"outlineColor": [
+						255,
+						255,
+						255,
+						1
+					],
+					"backgroundColor": [
+						42,
+						42,
+						42,
+						0
+					],
+					"font": "Arial",
+					"fontSize": 15,
+					"showBackground": true,
+					"outlineWidth": 3,
+					"placement": "point",
+					"rotation": 0,
+					"textAlign": "left",
+					"textBaseline": "top",
+					"offsetX": 0,
+					"offsetY": 0,
+					"bold": false,
+					"italic": false,
+					"directionRightToLeft": false,
+					"directionVertical": false
+				},
+				"zIndex": 12
+			},
+			"graphicObjFeatures": [
+				{
+					"type": "Point",
+					"id": 0,
+					"coordinates": [
+						128.51439918273263,
+						36.38057366969204
+					]
+				}
+			]
+		},
+		{
+			"graphicObjProp": {
+				"type": "milSymbol",
+				"name": "통신cp(5)cp(1)",
+				"positions": [],
+				"pixelPositions": [],
+				"rotate": 0,
+				"trackerRotate": [],
+				"bound": {
+					"minX": 14382390.647953195,
+					"minY": 4336400.582146859,
+					"maxX": 14382390.647953195,
+					"maxY": 4336400.582146859
+				},
+				"lock": false,
+				"screenMode": false,
+				"screenAnchor": [
+					0,
+					0
+				],
+				"guid": "28cccf34-8ff5-3904-6c81-42d0d482b8ed",
+				"createTime": "2022-03-14T16:58:09",
+				"editTime": "2022-03-14T17:26:07",
+				"scaleLimit": false,
+				"scaleUpper": 999999999,
+				"scaleLower": 0,
+				"text": "",
+				"links": {},
+				"attribute": {},
+				"sameRatio": false,
+				"msType": "msPoint",
+				"msOriginKey": "S*G*UULCE-*****",
+				"msKey": "S*G*UULCE-*****",
+				"msUseDefineColor": false,
+				"msOldStyle": {},
+				"msFontRatio": 1,
+				"msLineRatio": 1,
+				"msSize": 1,
+				"lineType": 0,
+				"options": {
+					"SIDC": "SFG*UULCE-*****",
+					"operationalConditionPoint": "0",
+					"civilianColor": false,
+					"userDefineFillColor": "",
+					"headquarters": false,
+					"showCombatEffectivenessLabel": false,
+					"showCombatEffectivenessWaterFill": false,
+					"showUseDefineColor": false,
+					"size": 14,
+					"strokeWidth": 4,
+					"fillOpacity": 1,
+					"infoColor": "#000000",
+					"infoFields": true,
+					"icon": true,
+					"frame": true,
+					"fill": true,
+					"installation": false
+				},
+				"visibility": true
+			},
+			"graphicObjStyle": {
+				"marker": {
+					"imgUrl": null,
+					"size": 10
+				},
+				"point": {
+					"type": "rectangle",
+					"size": 10
+				},
+				"line": {
+					"type": "simple",
+					"width": 3,
+					"color": [
+						0,
+						178,
+						255,
+						0.9
+					],
+					"arrow": {
+						"begin": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						},
+						"end": {
+							"type": "none",
+							"width": 3,
+							"height": 3
+						}
+					},
+					"dashOffset": 0,
+					"lineJoin": "round",
+					"lineCap": "round",
+					"fill": {
+						"type": "simple",
+						"pattern": "horizontal",
+						"patternColor": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"gradient": {
+							"type": "horizontal",
+							"color": [
+								[
+									0,
+									0,
+									0,
+									0.85
+								],
+								[
+									255,
+									255,
+									255,
+									0.85
+								]
+							],
+							"anchor": [
+								0.5,
+								0.5
+							],
+							"stopPoint": [
+								0,
+								1
+							]
+						}
+					}
+				},
+				"fill": {
+					"type": "simple",
+					"color": [
+						198,
+						234,
+						255,
+						0.85
+					],
+					"pattern": "horizontal",
+					"patternColor": [
+						[
+							0,
+							0,
+							0,
+							0.85
+						],
+						[
+							255,
+							255,
+							255,
+							0.85
+						]
+					],
+					"gradient": {
+						"type": "horizontal",
+						"color": [
+							[
+								0,
+								0,
+								0,
+								0.85
+							],
+							[
+								255,
+								255,
+								255,
+								0.85
+							]
+						],
+						"anchor": [
+							0.5,
+							0.5
+						],
+						"stopPoint": [
+							0,
+							1
+						]
+					}
+				},
+				"text": {
+					"color": [
+						0,
+						0,
+						0,
+						1
+					],
+					"outlineColor": [
+						255,
+						255,
+						255,
+						1
+					],
+					"backgroundColor": [
+						42,
+						42,
+						42,
+						0
+					],
+					"font": "Arial",
+					"fontSize": 15,
+					"showBackground": true,
+					"outlineWidth": 3,
+					"placement": "point",
+					"rotation": 0,
+					"textAlign": "left",
+					"textBaseline": "top",
+					"offsetX": 0,
+					"offsetY": 0,
+					"bold": false,
+					"italic": false,
+					"directionRightToLeft": false,
+					"directionVertical": false
+				},
+				"zIndex": 13
+			},
+			"graphicObjFeatures": [
+				{
+					"type": "Point",
+					"id": 0,
+					"coordinates": [
+						129.1992134123402,
+						36.25959713591983
+					]
+				}
+			]
+		}
+	],
+	"selectObjectsGUID": []
+}

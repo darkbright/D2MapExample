@@ -1,0 +1,20 @@
+.cke_lineheightblock {
+    font-size: 11px;
+    font-family: "Microsoft Sans Serif", Tahoma, Arial, Verdana, sans-serif;
+    height: 100%;
+}
+
+.cke_lineheightblock > span > div {
+    padding: 3px;
+    text-align: center;
+}
+
+.cke_lineheightblock > span {
+    align-items: center;
+}
+
+/* .custom_lineheight div:hover, .custom_lineheight div.checked {
+    background-color: #d1d1d1;
+   
+} */
+ /* #c2d5f2; */

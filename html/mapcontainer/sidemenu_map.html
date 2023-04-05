@@ -1,0 +1,63 @@
+<!--지도관리 html -->
+<!--
+    d2map.ui.js에서 지도 레이어를 추가한다.
+-->
+<div id="sidemenu-layer">
+    <hr />
+    <ul id="sidemenu-layer-list">
+    </ul>
+    <hr />
+    <ul>
+        <li><button id="overview-show">인덱스 맵 보이기</button> <button id="overview-hide">인덱스 맵 숨기기</button></li>
+    </ul>
+    <hr />
+    <div id="effect-brightness-contrast">
+        <p>Brightness & Contrast</p>
+        <button id="reset-brightness-contrast">초기화</button>
+        <button id="apply-brightness-contrast">적용</button>
+    </div>
+    <ul>
+        <li>
+            <label>Brightness(0 ~ 100)</label>
+            <input type="text" id="effect-brightness" value="50" />
+        </li>
+        <li>
+            <label for="effect-contrast">Contrast(0 ~ 100)</label>
+            <input type="text" id="effect-contrast" value="50" />
+        </li>
+    </ul>
+    <hr />
+    <div id="copy-canvas-clipboard">
+        <p>Copy Canvas to Clipboard</p>
+        <button id="apply-copy-canvas-clipboard">복사</button>
+    </div>
+    <div id="return-canvas-base64">
+        <p>Return Canvas to base64</p>
+        <button id="apply-return-canvas-base64">반환</button>
+    </div>
+    <hr />
+    <ul>
+        <li>
+            <label>축척</label>
+            <input type="text" id="map-scale"/>
+            <button id="apply-map-scale">적용</button>
+            <button id="apply-map-scale-zoomin">확대</button>
+            <button id="apply-map-scale-zoomout">축소</button>
+            <button id="apply-map-scale-zoomregion">영역</button>
+        </li>
+    </ul>
+    <hr />
+    <ul>
+        <li>
+            <label>Create Distance</label> <!-- 세부 구현 내용은 d2map.ui.toolbar.js 파일 참조 -->
+            <button id="create-distance-by-coordinates">좌표 배열값으로 생성</button>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <label>Create Area</label> <!-- 세부 구현 내용은 d2map.ui.toolbar.js 파일 참조 -->
+            <button id="create-area-by-coordinates">좌표 배열값으로 생성</button>
+        </li>
+    </ul>
+    <hr />
+</div>

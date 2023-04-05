@@ -1,0 +1,39 @@
+<!--지도 영역 설정 html -->
+<!-- 
+    좌측 메뉴 구성 sub 페이지를 임포트한다.
+-->
+<div id="mapcontainer" class="mapcontainer">
+    <!-- 좌측 메뉴 -->
+    <div id="sidemenu" class="sidemenu">
+        <div id="sidemenu-controller">
+            <span class="toolbar-select"><select id="sidemenu-controller-select" class="toolbar-select">
+                    <option value="layer">지도관리</option>
+                    <option value="mvtlayer">지도관리-FDB</option>
+                    <option value="coordinate">좌표계관리</option>
+                    <option value="measurement">측정관리</option>
+                    <option value="terrainanalysis">지형분석관리</option>
+                    <option value="milSym">상황도관리</option>
+                    <option value="graphiclayer">투명도 레이어</option>
+                    <option value="graphicapp1">투명도 응용1</option>
+                    <option value="graphicapp2">투명도 응용2</option>
+                </select></span>
+            <a href="#" id="sidemenu-controller-fold-button" class="pin-on"></a>
+        </div>
+        <div id="sidemenu-container">
+            <div include-html="./html/mapcontainer/sidemenu_map.html"></div>
+            <div include-html="./html/mapcontainer/sidemenu_mvtlayer.html"></div>
+            <div include-html="./html/mapcontainer/sidemenu_measurement.html"></div>
+            <div include-html="./html/mapcontainer/sidemenu_coordinate.html"></div>
+            <div include-html="./html/mapcontainer/sidemenu_terrainanalysis.html"></div>
+            <div include-html="./html/mapcontainer/sidemenu_milsym.html"></div>
+            <div include-html="./html/mapcontainer/sidemenu_graphiclayer.html"></div>
+            <div include-html="./html/mapcontainer/sidemenu_graphicapp.html"></div>
+        </div>
+    </div>
+
+    <!-- 지도 영역 -->
+    <div id="map" class="map" style="width: 100%;height: 100%;">
+        <div include-html="./html/graphic/graphic_editor.html"></div>
+    </div>
+    <div id="d2map-coord-bottom"></div>
+</div>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lineCapList
+    xmlns="urn:icops.cngsol.co.kr"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="urn:icops.cngsol.co.kr C:/ICOPS/overlay/schema/Overlay.xsd"
+  >
+
+  <ol_lineCapType capType="1">
+    <strokePath>
+      <shape type="3" coord="-2,-3|0,0|2,-3" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="2">
+    <strokePath>
+      <shape type="3" coord="2,-3|0,0|0.0,-3" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="3">
+    <strokePath>
+      <shape type="3" coord="0,-3|0.0,0.0|-2,-3" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="4" inset="2.9">
+    <strokePath>
+      <shape type="3" coord="-2,0|0,-3|2,0" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="5" inset="2.9">
+    <strokePath>
+      <shape type="3" coord="0,-3|2,0" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="6" inset="2.9">
+    <strokePath>
+      <shape type="3" coord="0,-3|-2,0" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="7" inset="2.9">
+    <fillPath>
+      <shape type="3" coord="-2,0|0,-3|2,0" close="true" />
+    </fillPath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="8" inset="2.9">
+    <fillPath>
+      <shape type="3" coord="0,-3|2,0|0,0" close="true" />
+    </fillPath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="9" inset="2.9">
+    <fillPath>
+      <shape type="3" coord="0,0|-2,0|0,-3" close="true" />
+    </fillPath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="10" inset="2.9">
+    <strokePath>
+      <shape type="3" coord="0,-3|2,-1.5|0,0" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="11" inset="2.9">
+    <strokePath>
+      <shape type="3" coord="0,0|-2,-1.5|0,-3" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="12" inset="2.9">
+    <fillPath>
+      <shape type="3" coord="0,-3|2,-1.5|0,0" close="true" />
+    </fillPath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="13" inset="2.9">
+    <fillPath>
+      <shape type="3" coord="0,0|-2,-1.5|0,-3" close="true" />
+    </fillPath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="14">
+    <strokePath>
+      <shape type="3" coord="2,-2|-2,2" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="15">
+    <strokePath>
+      <shape type="3" coord="-2,-2|2,2" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="16">
+    <strokePath>
+      <shape type="3" coord="2,-2|-2,2" />
+      <shape type="3" coord="-2,-2|2,2" start="true" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="17" inset="2.9">
+    <strokePath>
+      <shape type="3" coord="0,-3|2,-3|0,0|-2,-3|0,-3" close="true" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="18" inset="2.9">
+    <fillPath>
+      <shape type="3" coord="0,-3|2,-3|0,0|-2,-3|0,-3" close="true" />
+    </fillPath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="19" inset="2.9">
+    <strokePath>
+      <shape type="3" coord="0,-3|2,-3|0,0|0,-3" close="true" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="20" inset="2.9">
+    <fillPath>
+      <shape type="3" coord="0,-3|2,-3|0,0|0,-3" close="true" />
+    </fillPath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="21" inset="2.9">
+    <strokePath>
+      <shape type="3" coord="0,-3|0,0|-2,-3|0,-3" close="true" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="22" inset="2.9">
+    <fillPath>
+      <shape type="3" coord="0,-3|0,0|-2,-3|0,-3" close="true"/>
+    </fillPath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="23" inset="2.9">
+    <strokePath>
+      <shape type="1" coord="-1.5,-3|1.5,0" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="24" inset="2.9">
+    <fillPath>
+      <shape type="1" coord="-1.5,-3|1.5,0" />
+    </fillPath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="25" inset="2.9">
+    <strokePath>
+      <shape type="2" coord="-1.5,-3|1.5,0" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="26" inset="2.9">
+    <fillPath>
+      <shape type="2" coord="-1.5,-3|1.5,0" />
+    </fillPath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="27" inset="2.9">
+    <strokePath>
+      <shape type="3" coord="0,-3|1.5,-1.5|0,0|-1.5,-1.5|0,-3" close="true" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="28" inset="2.9">
+    <fillPath>
+      <shape type="3" coord="0,-3|1.5,-1.5|0,0|-1.5,-1.5|0,-3" close="true" />
+    </fillPath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="29" inset="2.4" widthScale="0.5">
+    <strokePath>
+      <shape type="3" coord="0,-2|3,-8|4.2,-8|0,0|-4.2,-8|-3,-8|0,-2" close="true"/>
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="30" inset="2.9" >
+    <strokePath>
+      <shape type="3" coord="2,-3|0,0|-2,-3" />
+      <shape type="3" coord="2,-6|0,-3|0,-0.1" start="true" />
+      <shape type="3" coord="-2,-6|0,-3|0,-0.1" start="true" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="31" inset="2.9" >
+    <strokePath>
+      <shape type="3" coord="2,-3|0,0|0,-3|2,-6" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="32" inset="2.9" >
+    <strokePath>
+      <shape type="3" coord="-2,-3|0,0|0,-3|-2,-6" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="33" inset="6" >
+    <strokePath>
+      <shape type="3" coord="2,-3|0,-6|-2,-3" />
+      <shape type="3" coord="2,0|0,-3|0,-5.9" start="true" />
+      <shape type="3" coord="-2,0|0,-3|0,-5.9" start="true" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="34" inset="6">
+    <strokePath>
+      <shape type="3" coord="2,0|0,-3|0,-6|2,-3" />
+    </strokePath>
+  </ol_lineCapType>
+
+  <ol_lineCapType capType="35" inset="6">
+    <strokePath>
+      <shape type="3" coord="-2,0|0,-3|0,-6|-2,-3" />
+    </strokePath>
+  </ol_lineCapType>
+</lineCapList>

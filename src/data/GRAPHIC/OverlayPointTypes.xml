@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pointTypeList
+    xmlns="urn:icops.cngsol.co.kr"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="urn:icops.cngsol.co.kr C:/ICOPS/overlay/schema/Overlay.xsd"
+  >
+  <ol_pointType ps="1" st="1" pt="-0.5,-0.5|0.5,0.5" />
+  <ol_pointType ps="2" st="2" pt="-0.5,-0.5|0.5,0.5" />
+  <ol_pointType ps="3" st="3" pt="0.0,-0.5|0.5,0.0|0.0,0.5|-0.5,0.0" />
+  <ol_pointType ps="4" st="3" pt="-0.433,0.25|0.0,-0.5|0.433,0.25" />
+  <ol_pointType ps="5" st="3" pt="-0.433,-0.25|0,0.5|0.433,-0.25" />
+</pointTypeList>

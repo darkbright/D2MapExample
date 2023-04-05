@@ -1,0 +1,163 @@
+<!--좌표계관리 html -->
+<!--
+    2021년12월8일패치 : 화면 하단에 좌표값 표시를 위한 ID 값 수정(예 : coord-sub-scale을 d2map_coord-sub-scale로 수정)
+-->
+<div id="sidemenu-coordinate">
+    <ul>
+        <hr />
+        <li><input type="checkbox" name="d2map_coord-sub"
+            id="d2map_coord-sub-scale" checked>
+        <label for="d2map_coord-sub-scale">Scale</label>
+        </li>
+        <li><input type="checkbox" name="d2map_coord-sub"
+            id="d2map_coord-sub-geographic" checked>
+        <label for="d2map_coord-sub-geographic">Geographic (Degree)</label>
+        </li>
+        <li><input type="checkbox" name="d2map_coord-sub"
+            id="d2map_coord-sub-geographic-dms">
+        <label for="d2map_coord-sub-geographic-dms">Geographic (DMS)</label>
+        </li>
+        <li><input type="checkbox" name="d2map_coord-sub"
+            id="d2map_coord-sub-utm">
+        <label for="d2map_coord-sub-utm">UTM</label>
+        </li>
+        <li><input type="checkbox" name="d2map_coord-sub"
+            id="d2map_coord-sub-mgrs" checked>
+        <label for="d2map_coord-sub-mgrs">MGRS</label>
+        </li>
+        <li><input type="checkbox" name="d2map_coord-sub"
+            id="d2map_coord-sub-georef">
+        <label for="d2map_coord-sub-georef">GeoRef</label>
+        </li>
+        <li><input type="checkbox" name="d2map_coord-sub"
+            id="d2map_coord-sub-gars">
+        <label for="d2map_coord-sub-gars">GARS</label>
+        </li>
+        <li><input type="checkbox" name="d2map_coord-sub"
+            id="d2map_coord-sub-elevation">
+        <label for="d2map_coord-sub-elevation">Elevation</label>
+        </li>
+    </ul>
+    <div id="coordinate-system">
+        <hr/>
+        <li><input type="checkbox" name="pointermove-coord-sub"
+            id="pointermove-coord-sub-cb">
+        <label for="pointermove-coord-sub-cb">좌표 조회</label>
+        </li>
+        <p>Geographic (Degree)</p>
+        <ul>
+            <li>
+                <label>Longitude</label>
+                <input type="text" id="geographic-lon" value="126.5"/>
+            </li>
+            <li>
+                <label>Latitude</label>
+                <input type="text" id="geographic-lat" value="37.5"/>
+                <button id="geo2every">변환</button>
+            </li>
+        </ul>                 
+        <p>Geographic (DMS)</p>
+        <ul>
+            <li>
+                <label>Longitude</label>
+                <input type="text" id="geographic-dms-lon"/>
+            </li>
+            <li>
+                <label>Latitude</label>
+                <input type="text" id="geographic-dms-lat"/>
+                <button id="geodms2geo">변환</button>
+            </li>
+        </ul>
+        <p>UTM</p>
+        <ul>
+            <li>
+                <label>Zone</label>
+                <input type="text" id="utm-zone"/>
+                <input type="text" id="utm-band"/>
+            </li>
+            <li>
+                <label>Easting</label>
+                <input type="text" id="utm-easting"/>
+            </li>
+            <li>
+                <label>Northing</label>
+                <input type="text" id="utm-northing"/>
+                <button id="utm2geo"  title="경위도 좌표값으로 변환됩니다.">변환</button>
+            </li>                         
+        </ul>
+        <p>MGRS</p>
+        <ul>
+            <li>
+                <label>Zone</label>
+                <input type="text" id="mgrs-zone"/>
+                <input type="text" id="mgrs-band"/>
+                <label id="label-sq">Square ID</label>
+                <input type="text" id="mgrs-sq"/>
+            </li>
+            <li>
+                <label>Easting</label>
+                <input type="text" id="mgrs-easting"/>
+            </li>
+            <li>
+                <label>Northing</label>
+                <input type="text" id="mgrs-northing"/>
+                <button id="mgrs2geo"  title="위경도 좌표값으로 변환됩니다.">변환</button>
+            </li>    
+        </ul>
+        <div id="coord-georef-li">
+            <p>GeoRef</p>
+            <ul>
+                <li>
+                    <input type="text" id="coord-georef"/>
+                    <button id="georef2geo" title="위경도 좌표값으로 변환됩니다.">변환</button>
+                </li>
+            </ul>
+        </div>        
+        <p id="title-gars">GARS</p>
+        <ui>
+            <li>
+                <label>gars</label>
+                <input type="text" id="coord-gars"/>        
+                <button id="gars2geo" title="위경도 좌표값으로 변환됩니다.">변환</button>
+            </li>
+            <li>
+                <label>Geo MinX</label>
+                <input type="text" id="coord-gars2geo-minx"/>
+            </li>
+            <li>
+                <label>Geo MaxY</label>
+                <input type="text" id="coord-gars2geo-maxy"/>
+            </li>
+            <li>
+                <label>Geo MaxX</label>
+                <input type="text" id="coord-gars2geo-maxx"/>
+            </li>
+            <li>
+                <label>Geo MinY</label>
+                <input type="text" id="coord-gars2geo-miny"/>
+            </li>
+        </ul>
+
+        <p id="title-distance">Target Coordinate</p>
+        <ui>
+            <li>
+                <label>Bearing</label>
+                <input type="text" id="coord-target-bearing" value="135"/>                        
+            </li>
+            <li>
+                <label>Distance(m)</label>
+                <input type="text" id="coord-target-distance" value="100000"/>
+                <button id="coord-target-distance-run" title="대상지점의 좌표를 구한다.">변환</button>
+            </li>
+            <li>
+                <label>Target lon</label>
+                <input type="text" id="coord-target-lon"/>
+            </li>
+            <li>
+                <label>Target Lat</label>
+                <input type="text" id="coord-target-lat"/>
+            </li>
+        </ul>
+        <hr />
+    </div>
+</div>

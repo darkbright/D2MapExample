@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<codeset
+    xmlns="urn:icops.cngsol.co.kr"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="urn:icops.cngsol.co.kr C:/ICOPS/overlay/schema/Overlay.xsd"
+  >
+  <ol_code_list codeID="arcType" codeName="원호 모양 구분 코드">
+    <ol_code_item code="1" id="arcTypeArc" name="호" desc="원호 부호를 호로 도시" />
+    <ol_code_item code="2" id="arcTypeChord" name="현" desc="원호 부호를 현으로 도시" />
+    <ol_code_item code="3" id="arcTypePie" name="부채꼴" desc="원호 부호를 부채꼴로 도시" />
+  </ol_code_list>
+
+  <ol_code_list codeID="coordType" codeName="적용 좌표 종류 구분 코드">
+    <ol_code_item code="0" id="geographic" name="지리좌표" desc="지리좌표" />
+    <ol_code_item code="1" id="screen" name="화면좌표" desc="화면좌표" />
+  </ol_code_list>
+
+  <ol_code_list codeID="fillType" codeName="면 채움 방법">
+    <ol_code_item code="0" id="solid color" name="단색" desc="단색 채움" />
+    <ol_code_item code="1" id="hatch fill" name="음영" desc="음영 채움" />
+    <!-- <ol_code_item code="2" id="(reserved)" name="(사용하지 않음)" desc="사용하지 않음" /> -->
+    <ol_code_item code="3" id="path gradient" name="경로형 그라데이션" desc="경로형 그라데이션 채움" />
+    <ol_code_item code="4" id="linear gradation" name="선형 그라데이션" desc="" />
+  </ol_code_list>
+
+  <ol_code_list codeID="hatchStyle" codeName="음영 모양">
+    <ol_code_item code="0" id="horizontal" name="넓은간격 가로줄" desc="넓은간격 가로줄" />
+    <ol_code_item code="1" id="vertical" name="넓은간격 가로줄" desc="넓은간격 가로줄" />
+    <ol_code_item code="2" id="forwardDiagonal" name="넓은간격 우하 대각선" desc="넓은간격 우하 대각선" />
+    <ol_code_item code="3" id="backwardDiagonal" name="넓은간격 우상 대각선" desc="넓은간격 우상 대각선" />
+    <ol_code_item code="4" id="cross" name="넓은간격 격자" desc="넓은간격 격자" />
+    <ol_code_item code="5" id="diagonalCross" name="넓은간격 기울인격자" desc="넓은간격 기울인격자" />
+    <ol_code_item code="6" id="percent05" name="5퍼센트" desc="5퍼센트" />
+    <ol_code_item code="7" id="percent10" name="10퍼센트" desc="10퍼센트" />
+    <ol_code_item code="8" id="percent20" name="20퍼센트" desc="20퍼센트" />
+    <ol_code_item code="9" id="percent25" name="25퍼센트" desc="25퍼센트" />
+    <ol_code_item code="10" id="percent30" name="30퍼센트" desc="30퍼센트" />
+    <ol_code_item code="11" id="percent40" name="40퍼센트" desc="40퍼센트" />
+    <ol_code_item code="12" id="percent50" name="50퍼센트" desc="50퍼센트" />
+    <ol_code_item code="13" id="percent60" name="60퍼센트" desc="60퍼센트" />
+    <ol_code_item code="14" id="percent70" name="70퍼센트" desc="70퍼센트" />
+    <ol_code_item code="15" id="percent75" name="75퍼센트" desc="75퍼센트" />
+    <ol_code_item code="16" id="percent80" name="80퍼센트" desc="80퍼센트" />
+    <ol_code_item code="17" id="percent90" name="90퍼센트" desc="90퍼센트" />
+    <ol_code_item code="18" id="lightDownwardDiagonal" name="가는 우하 대각선" desc="가는 우하 대각선" />
+    <ol_code_item code="19" id="lightUpwardDiagonal" name="가는 우상 대각선" desc="가는 우상 대각선" />
+    <ol_code_item code="20" id="darkDownwardDiagonal" name="보통 우하 대각선" desc="보통 우하 대각선" />
+    <ol_code_item code="21" id="darkUpwardDiagonal" name="보통 우상 대각선" desc="보통 우상 대각선" />
+    <ol_code_item code="22" id="wideDownwardDiagonal" name="굵은 우하 대각선" desc="굵은 우하 대각선" />
+    <ol_code_item code="23" id="wideUpwardDiagonal" name="굵은 우상 대각선" desc="굵은 우상 대각선" />
+    <ol_code_item code="24" id="lightVertical" name="가는 세로줄" desc="가는 세로줄" />
+    <ol_code_item code="25" id="lightHorizontal" name="가는 가로줄" desc="가는 가로줄" />
+    <ol_code_item code="26" id="narrowVertical" name="좁은간격 세로줄" desc="좁은간격 세로" />
+    <ol_code_item code="27" id="narrowHorizontal" name="좁은간격 가로줄" desc="좁은간격 가로줄" />
+    <ol_code_item code="28" id="darkVertical" name="굵은 세로줄" desc="굵은 세로줄" />
+    <ol_code_item code="29" id="darkHorizontal" name="굵은 가로줄" desc="굵은 가로줄" />
+    <ol_code_item code="30" id="dashedDownwardDiagonal" name="우하 점선 대각선" desc="우하 점선 대각선" />
+    <ol_code_item code="31" id="dashedUpwardDiagonal" name="우상 점선 대각선" desc="우상 점선 대각선" />
+    <ol_code_item code="32" id="dashedHorizontal" name="가로 점선" desc="가로 점선" />
+    <ol_code_item code="33" id="dashedVertical" name="세로 점선" desc="세로 점선" />
+    <ol_code_item code="34" id="smallConfetti" name="작은 조각" desc="작은 조각" />
+    <ol_code_item code="35" id="largeConfetti" name="큰 조각" desc="큰 조각" />
+    <ol_code_item code="36" id="zigZag" name="지그재그" desc="지그재그" />
+    <ol_code_item code="37" id="wave" name="물결" desc="물결" />
+    <ol_code_item code="38" id="diagonalBrick" name="대각선 벽돌" desc="대각선 벽돌" />
+    <ol_code_item code="39" id="horizontalBrick" name="벽돌" desc="벽돌" />
+    <ol_code_item code="40" id="weave" name="엮음" desc="엮음" />
+    <ol_code_item code="41" id="plaid" name="격자무늬 천" desc="격자무늬 천" />
+    <ol_code_item code="42" id="divot" name="패인 자국" desc="패인 자국" />
+    <ol_code_item code="43" id="dottedGrid" name="점선 격자" desc="점선 격자" />
+    <ol_code_item code="44" id="dottedDiamond" name="대각선 점선 격자" desc="대각선 점선 격자" />
+    <ol_code_item code="45" id="shingle" name="널빤지 지붕" desc="널빤지 지붕" />
+    <ol_code_item code="46" id="trellis" name="작은 원" desc="작은 원" />
+    <ol_code_item code="47" id="sphere" name="큰 원" desc="큰 원" />
+    <ol_code_item code="48" id="smallGrid" name="작은 격자" desc="작은 격자" />
+    <ol_code_item code="49" id="smallCheckerBoard" name="작은 체스판" desc="작은 체스판" />
+    <ol_code_item code="50" id="largeCheckerBoard" name="큰 체스판" desc="큰 체스판" />
+    <ol_code_item code="51" id="outlinedDiamond" name="대각선 격자" desc="대각선 격자" />
+    <ol_code_item code="52" id="solidDiamond" name="대각선 체스판" desc="대각선 체스판" />
+  </ol_code_list>
+
+  <ol_code_list codeID="lineAlignment" codeName="선 치우침 상태">
+    <ol_code_item code="0" id="center" name="치우치지 않음" desc="선이 치우치지 않음" />
+    <ol_code_item code="1" id="inset" name="안쪽으로 치우침" desc="선이 안쪽으로 치우침" />
+  </ol_code_list>
+
+  <ol_code_list codeID="linearGradientMode" codeName="선형 그라데이션 방향">
+    <ol_code_item code="0" id="horizontal" name="수평" desc="수평 선형 그라데이션" />
+    <ol_code_item code="1" id="vertical" name="수직" desc="수직 선형 그라데이션" />
+    <ol_code_item code="2" id="fowardDiagonal" name="우하" desc="우하 방향 대각선 선형 그라데이션" />
+    <ol_code_item code="3" id="backwardDiagonal" name="우상" desc="우상 방향 대각선 선형 그라데이션" />
+  </ol_code_list>
+
+  <ol_code_list codeID="lineCap" codeName="선 끝 모양 구분 코드">
+    <ol_code_item code="0" id="lineCapNone" name="없음" desc="없음" />
+    <ol_code_item code="1" id="lineCapArrow" name="화살표" desc="화살표" />
+    <ol_code_item code="2" id="lineCapArrow_L" name="화살표(좌)" desc="화살표(좌)" />
+    <ol_code_item code="3" id="lineCapArrow_R" name="화살표(우)" desc="화살표(우)" />
+    <ol_code_item code="4" id="lineCapTail" name="화살꼬리" desc="화살꼬리" />
+    <ol_code_item code="5" id="lineCapTail_L" name="화살꼬리(좌)" desc="화살꼬리(좌)" />
+    <ol_code_item code="6" id="lineCapTail_R" name="화살꼬리(우)" desc="화살꼬리(우)" />
+    <ol_code_item code="7" id="lineCapTail_F" name="화살꼬리채움" desc="화살꼬리채움" />
+    <ol_code_item code="8" id="lineCapTail_LF" name="화살꼬리채움(좌)" desc="화살꼬리채움(좌)" />
+    <ol_code_item code="9" id="lineCapTail_RF" name="화살꼬리채움(우)" desc="화살꼬리채움(우)" />
+    <ol_code_item code="10" id="lineCapTent_L" name="텐트(좌)" desc="텐트(좌)" />
+    <ol_code_item code="11" id="lineCapTent_R" name="텐트(우)" desc="텐트(우)" />
+    <ol_code_item code="12" id="lineCapTent_LF" name="텐트채움(좌)" desc="텐트채움(좌)" />
+    <ol_code_item code="13" id="lineCapTent_RF" name="텐트채움(우)" desc="텐트채움(우)" />
+    <ol_code_item code="14" id="lineCapSlash_L" name="사선" desc="사선" />
+    <ol_code_item code="15" id="lineCapSlash_R" name="역사선" desc="역사선" />
+    <ol_code_item code="16" id="lineCapCross" name="가위표" desc="가위표" />
+    <ol_code_item code="17" id="lineCapTriangle" name="삼각형" desc="삼각형" />
+    <ol_code_item code="18" id="lineCapTriangle_F" name="삼각형채움" desc="삼각형채움" />
+    <ol_code_item code="19" id="lineCapTriangle_L" name="삼각형(좌)" desc="삼각형(좌)" />
+    <ol_code_item code="20" id="lineCapTriangle_LF" name="삼각형채움(좌)" desc="삼각형채움(좌)" />
+    <ol_code_item code="21" id="lineCapTriangle_R" name="삼각형(우)" desc="삼각형(우)" />
+    <ol_code_item code="22" id="lineCapTriangle_RF" name="삼각형채움(우)" desc="삼각형채움(우)" />
+    <ol_code_item code="23" id="lineCapRectangle" name="사각형" desc="사각형" />
+    <ol_code_item code="24" id="lineCapRectangle_F" name="사각형채움" desc="사각형채움" />
+    <ol_code_item code="25" id="lineCapCircle" name="원" desc="원" />
+    <ol_code_item code="26" id="lineCapCircle_F" name="원채움" desc="원채움" />
+    <ol_code_item code="27" id="lineCapDiamond" name="마름모" desc="마름모" />
+    <ol_code_item code="28" id="lineCapDiamond_F" name="마름모채움" desc="마름모채움" />
+    <ol_code_item code="29" id="lineCapThick" name="겹화살표" desc="겹화살표" />
+    <ol_code_item code="30" id="lineCapDoubleArrow" name="이중화살표" desc="이중화살표" />
+    <ol_code_item code="31" id="lineCapDoubleArrow_L" name="이중화살표(좌)" desc="이중화살표(좌)" />
+    <ol_code_item code="32" id="lineCapDoubleArrow_R" name="이중화살표(우)" desc="이중화살표(우)" />
+    <ol_code_item code="33" id="lineCapDoubleTail" name="이중화살꼬리" desc="이중화살꼬리" />
+    <ol_code_item code="34" id="lineCapDoubleTail_L" name="이중화살꼬리(좌)" desc="이중화살꼬리(좌)" />
+    <ol_code_item code="35" id="lineCapDoubleTail_R" name="이중화살꼬리(우)" desc="이중화살꼬리(우)" />
+  </ol_code_list>
+
+  <ol_code_list codeID="lineDashCap" codeName="점선 사이의 선 끝 모양 구분 코드">
+    <ol_code_item code="0" id="flat" name="편평" desc="점선 사이의 선 끝을 편평하게 도시" />
+    <ol_code_item code="2" id="round" name="원형" desc="점선 사이의 선 끝을 둥글게 도시" />
+    <ol_code_item code="3" id="triangle" name="삼각형" desc="점선 사이의 선 끝을 뾰족하게 도시" />
+  </ol_code_list>
+
+  <ol_code_list codeID="lineDashStyle" codeName="점선 모양 구분 코드">
+    <ol_code_item code="0" id="solid" name="실선" desc="실선" />
+    <ol_code_item code="1" id="dash" name="점선" desc="점선" />
+    <ol_code_item code="2" id="dot" name="둥근모양 점선" desc="둥근모양 점선" />
+    <ol_code_item code="3" id="dashDot" name="일점쇄선" desc="일점쇄선" />
+    <ol_code_item code="4" id="dashDotDot" name="이점쇄선" desc="이점쇄선" />
+    <ol_code_item code="5" id="custom" name="점선 패턴 적용" desc="사용자 지정 점선 패턴 적용" />
+  </ol_code_list>
+
+  <ol_code_list codeID="lineFillType" codeName="선 채움 방법 구분 코드">
+    <ol_code_item code="0" id="solid color" name="단색" desc="단색" />
+    <ol_code_item code="1" id="hatch fill" name="음영" desc="음영" />
+    <!-- <ol_code_item code="2" id="(reserved)" name="-" desc="(확장성 고려하여 비워둠)" /> -->
+    <ol_code_item code="3" id="path gradient" name="경로형 그라데이션" desc="경로형 그라데이션" />
+    <ol_code_item code="4" id="linear gradation" name="선형 그라데이션" desc="선형 그라데이션" />
+  </ol_code_list>
+
+  <ol_code_list codeID="lineJoin" codeName="선 연결 모양 구분 코드">
+    <ol_code_item code="0" id="miter" name="뾰족하게 연결" desc="선 연결 부위를 뾰족하게 처리" />
+    <ol_code_item code="1" id="bevel" name="뾰족한 부분 잘라냄" desc="선 연결 부위의 뾰족한 부분을 잘라냄" />
+    <ol_code_item code="2" id="round" name="둥글게 연결" desc="선 연결 부위를 둥글게 처리" />
+    <ol_code_item code="3" id="meterClipped" name="뾰족한 부분 길이 제한" desc="선 연결 부위가 길어질 경우 뾰족한 부분을 잘라냄" />
+  </ol_code_list>
+
+  <ol_code_list codeID="opPos" codeName="운용조건 표시 위치 구분 코드">
+    <ol_code_item code="0" id="opPosNone" name="미표시" desc="운용조건을 표시하지 않음" />
+    <ol_code_item code="1" id="opPosCenter" name="중앙" desc="부호 중앙에 표시" />
+    <ol_code_item code="2" id="opPosBottom" name="하단" desc="부호 하단에 표시" />
+  </ol_code_list>
+
+  <ol_code_list codeID="overlaySymbolType" codeName="투명도 부호 종류 구분 코드">
+    <ol_code_item code="0" id="olsTypeGroup" name="그룹" desc="부호 그룹" />
+    <ol_code_item code="1" id="olsTypePoint" name="점" desc="점 모양의 투명도 부호" />
+    <ol_code_item code="2" id="olsTypeRect" name="사각형" desc="사각형 모양의 투명도 부호" />
+    <ol_code_item code="3" id="olsTypeEllipse" name="타원" desc="타원 모양의 투명도 부호" />
+    <ol_code_item code="4" id="olsTypeArc" name="원호" desc="원호 모양의 투명도 부호" />
+    <ol_code_item code="5" id="olsTypePolyline" name="다각형" desc="다각형 모양의 투명도 부호" />
+    <ol_code_item code="6" id="olsTypeTacSym" name="전술부호" desc="한국군군대부호 표준에 등록된 군대부호를 사용하는 투명도 부호" />
+  </ol_code_list>
+
+  <ol_code_list codeID="pointShape" codeName="점 부호(Point)의 점 모양 구분 코드">
+    <ol_code_item code="1" id="pointTypeRect" name="사각형" desc="점 부호를 사각형으로 도시" />
+    <ol_code_item code="2" id="pointTypeCircle" name="원" desc="점 부호를 원으로 도시" />
+    <ol_code_item code="3" id="pointTypeDia" name="마름모" desc="점 부호를 마름모로 도시" />
+    <ol_code_item code="4" id="pointTypeTri" name="정삼각형" desc="점 부호를 정삼각형으로 도시" />
+    <ol_code_item code="5" id="pointTypeInvTri" name="역삼각형" desc="점 부호를 역삼각형으로 도시" />
+  </ol_code_list>
+
+  <ol_code_list codeID="polylineType" codeName="다각선의 직선/곡선 종류">
+    <ol_code_item code="0" id="polylineTypeStraight" name="직선" desc="점간을 직선으로 연결한 다각선으로 도시" />
+    <ol_code_item code="1" id="polylineTypeSpline" name="스프라인 곡선" desc="점을 지나는 곡선으로 도시" />
+    <ol_code_item code="2" id="polylineTypeBezier" name="베지어 곡선" desc="4개의 점을 제어점으로 사용하여 베지어 곡선으로 도시" />
+  </ol_code_list>
+
+  <ol_code_list codeID="security" codeName="비밀등급">
+    <ol_code_item code="0" id="unclassified" name="평문" desc="평문" />
+    <ol_code_item code="1" id="classified" name="대외비" desc="대외비" />
+    <ol_code_item code="2" id="confidential" name="III급" desc="III급" />
+    <ol_code_item code="3" id="secret" name="II급" desc="II급" />
+    <ol_code_item code="4" id="topSecret" name="I급" desc="I급" />
+  </ol_code_list>
+
+  <ol_code_list codeID="shapeType" codeName="점 부호 모양">
+    <ol_code_item code="1" id="rectangle" name="사각형" desc="사각형 도형" />
+    <ol_code_item code="2" id="ellipse" name="타원" desc="타원 도형" />
+    <ol_code_item code="3" id="polygon" name="다각형" desc="다각형 도형" />
+  </ol_code_list>
+
+  <ol_code_list codeID="alignment" codeName="정렬 위치">
+    <ol_code_item code="0" id="near" name="가까움" desc="기준점에서 가까운 쪽의 기준영역 내부" />
+    <ol_code_item code="1" id="center" name="중앙" desc="기준영역 중앙" />
+    <ol_code_item code="2" id="far" name="떨어짐" desc="기준점에서 먼 쪽의 기준영역 내부" />
+  </ol_code_list>
+
+  <ol_code_list codeID="tacsymColorMode" codeName="전술부호 색상 설정 방식">
+    <ol_code_item code="0" id="auto affiliation" name="자동적용" desc="피아구분색 자동 적용" />
+    <ol_code_item code="1" id="user affiliation" name="피아구분색으로 사용자 지정" desc="피아구분색으로 사용자 지정 색상 적용" />
+    <ol_code_item code="2" id="user fixed icon" name="사용자 지정" desc="사용자가 지정한 선색상과 채움색상 적용" />
+  </ol_code_list>
+
+  <ol_code_list codeID="textureWrapMode" codeName="패턴 채움 방식">
+    <ol_code_item code="0" id="tile" name="반복" desc="반복" />
+    <ol_code_item code="1" id="tileFlipX" name="가로축 대칭" desc="가로축으로 대칭하여 반복" />
+    <ol_code_item code="2" id="tileFlipY" name="세로축 대칭" desc="세로축으롣 대칭하여 반복" />
+    <ol_code_item code="3" id="tileFlipXY" name="가로,세로축 대칭" desc="가로, 세로축으로 대칭" />
+    <ol_code_item code="4" id="clamp" name="중앙" desc="중앙에 하나" />
+  </ol_code_list>
+
+</codeset>

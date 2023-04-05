@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ovd did="{57ead4c1-4925-55f4-71a0-0e0407e277d0}">
+  <ovi nm="std_2525c_append" ex="false" sec="0" si="false" dc="2023-03-08T14:35:17" de="2023-03-08T14:35:17"></ovi>
+  <ovsd>
+    <ovs oid="{6fceba73-52ae-aac7-0beb-86c6f3c975f8}" nm="노드통신소(소)" dc="2023-03-08T14:35:35" de="2023-03-08T14:35:36" sh="1" lck="0" st="6">
+      <geo pt="126.79687,38.034216" as="0" asl="0" asu="999999999" ha="0" va="0"></geo>
+      <sts sym="SFG*EXCN1-*****;" sz="7" shi="1" shf="1" shc="0" ff="1" ocp="0" tp="255"></sts>
+    </ovs>
+    <ovs oid="{f50ebfc1-a3d9-8050-d43d-915a203445fa}" nm="노드통신소(대)" dc="2023-03-08T14:35:37" de="2023-03-08T14:35:38" sh="1" lck="0" st="6">
+      <geo pt="127.252803,37.934635" as="0" asl="0" asu="999999999" ha="0" va="0"></geo>
+      <sts sym="SFG*EXCN--*****;" sz="7" shi="1" shf="1" shc="0" ff="1" ocp="0" tp="255"></sts>
+    </ovs>
+    <ovs oid="{a5614cbb-e27b-5890-f10a-d367e8246166}" nm="부대통신소(소)" dc="2023-03-08T14:35:39" de="2023-03-08T14:35:40" sh="1" lck="0" st="6">
+      <geo pt="127.197871,37.582863" as="0" asl="0" asu="999999999" ha="0" va="0"></geo>
+      <sts sym="SFG*EXCW--*****;" sz="7" shi="1" shf="1" shc="0" ff="1" ocp="0" tp="255"></sts>
+    </ovs>
+    <ovs oid="{7fe59714-0c67-6ebc-6a2b-5bcf6c5ec14c}" nm="부대통신소(중)" dc="2023-03-08T14:35:41" de="2023-03-08T14:35:42" sh="1" lck="0" st="6">
+      <geo pt="127.406611,37.321215" as="0" asl="0" asu="999999999" ha="0" va="0"></geo>
+      <sts sym="SFG*EXCW1-*****;" sz="7" shi="1" shf="1" shc="0" ff="1" ocp="0" tp="255"></sts>
+    </ovs>
+    <ovs oid="{4a89dfb0-36bf-83e5-eaa8-079c621474ab}" nm="부대통신소(대)" dc="2023-03-08T14:35:43" de="2023-03-08T14:35:44" sh="1" lck="0" st="6">
+      <geo pt="127.840571,37.211925" as="0" asl="0" asu="999999999" ha="0" va="0"></geo>
+      <sts sym="SFG*EXCW2-*****;" sz="7" shi="1" shf="1" shc="0" ff="1" ocp="0" tp="255"></sts>
+    </ovs>
+    <ovs oid="{da709049-7a35-48a1-2688-9c123ca4f908}" nm="노드통신소(소)" dc="2023-03-08T14:35:46" de="2023-03-08T14:35:47" sh="1" lck="0" st="6">
+      <geo pt="128.378901,37.656831" as="0" asl="0" asu="999999999" ha="0" va="0"></geo>
+      <sts sym="GFG*GPRES-****X;" sz="7" shi="1" shf="1" shc="0" ff="1" ocp="0" tp="255"></sts>
+    </ovs>
+    <ovs oid="{50bb64bf-9402-0e3e-8a9c-77658a38bf18}" nm="노드통신소(대)" dc="2023-03-08T14:35:48" de="2023-03-08T14:35:49" sh="1" lck="0" st="6">
+      <geo pt="128.675532,37.36052" as="0" asl="0" asu="999999999" ha="0" va="0"></geo>
+      <sts sym="GFG*GPREL-****X;" sz="7" shi="1" shf="1" shc="0" ff="1" ocp="0" tp="255"></sts>
+    </ovs>
+    <ovs oid="{edec9e1c-cee9-016b-ed27-783c3ccf396e}" nm="부대통신소(소)" dc="2023-03-08T14:35:53" de="2023-03-08T14:35:54" sh="1" lck="0" st="6">
+      <geo pt="128.576655,36.869921" as="0" asl="0" asu="999999999" ha="0" va="0"></geo>
+      <sts sym="GFG*GL5AS-****X;" sz="7" shi="1" shf="1" shc="0" ff="1" ocp="0" tp="255"></sts>
+    </ovs>
+    <ovs oid="{0297f757-59a5-769e-5fb0-0dfb5ee86b7b}" nm="부대통신소(중)" dc="2023-03-08T14:35:55" de="2023-03-08T14:35:56" sh="1" lck="0" st="6">
+      <geo pt="128.30749,36.825963" as="0" asl="0" asu="999999999" ha="0" va="0"></geo>
+      <sts sym="GFG*GL5AM-****X;" sz="7" shi="1" shf="1" shc="0" ff="1" ocp="0" tp="255"></sts>
+    </ovs>
+    <ovs oid="{462f259a-d9dd-74f6-05ee-3bed25cbdf62}" nm="부대통신소(대)" dc="2023-03-08T14:35:58" de="2023-03-08T14:35:58" sh="1" lck="0" st="6">
+      <geo pt="128.587642,36.62784" as="0" asl="0" asu="999999999" ha="0" va="0"></geo>
+      <sts sym="GFG*GL5AL-****X;" sz="7" shi="1" shf="1" shc="0" ff="1" ocp="0" tp="255"></sts>
+    </ovs>
+    <ovs oid="{c892df59-10e9-944a-d5ed-2bc8c1e2f50b}" nm="도착점" dc="2023-03-08T14:36:05" de="2023-03-08T14:36:07" sh="1" lck="0" st="6">
+      <geo pt="127.346187,36.698342" as="0" asl="0" asu="999999999" ha="0" va="0"></geo>
+      <sts sym="GFG*GPPT--****X;" sz="7" shi="1" shf="1" shc="0" ff="1" ocp="0" tp="255"></sts>
+    </ovs>
+    <ovs oid="{2bdb2d32-7634-7c73-8366-03fe07e956ca}" nm="통로" dc="2023-03-08T14:36:12" de="2023-03-08T14:36:16" sh="1" lck="0" st="6">
+      <geo pt="126.126704,38.353687|126.983638,38.512897|127.626338,38.120697|128.120723,38.228656|128.433833,38.09044|128.686519,38.176856" as="0" asl="0" asu="999999999" ha="0" va="0"></geo>
+      <sts sym="GFMPCL----****X;"></sts>
+    </ovs>
+  </ovsd>
+</ovd>

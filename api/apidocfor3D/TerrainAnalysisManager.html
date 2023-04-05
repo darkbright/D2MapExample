@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>TerrainAnalysisManager - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav class="wrap">
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Area.html">Area</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Area.html#add">add</a></li><li data-type='method' style='display: none;'><a href="Area.html#getAreaColor">getAreaColor</a></li><li data-type='method' style='display: none;'><a href="Area.html#getAreaVisible">getAreaVisible</a></li><li data-type='method' style='display: none;'><a href="Area.html#getMapHeight">getMapHeight</a></li><li data-type='method' style='display: none;'><a href="Area.html#getScaleByDistance">getScaleByDistance</a></li><li data-type='method' style='display: none;'><a href="Area.html#getTextVisible">getTextVisible</a></li><li data-type='method' style='display: none;'><a href="Area.html#setAreaColor">setAreaColor</a></li><li data-type='method' style='display: none;'><a href="Area.html#setAreaVisible">setAreaVisible</a></li><li data-type='method' style='display: none;'><a href="Area.html#setHeightOffset">setHeightOffset</a></li><li data-type='method' style='display: none;'><a href="Area.html#setScaleByDistance">setScaleByDistance</a></li><li data-type='method' style='display: none;'><a href="Area.html#setTextVisible">setTextVisible</a></li></ul></li><li><a href="CoordinateManager.html">CoordinateManager</a><ul class='methods'><li data-type='method' style='display: none;'><a href="CoordinateManager.html#.GARS2Geo">GARS2Geo</a></li><li data-type='method' style='display: none;'><a href="CoordinateManager.html#.Geo2DMS">Geo2DMS</a></li><li data-type='method' style='display: none;'><a href="CoordinateManager.html#.Geo2GARS">Geo2GARS</a></li><li data-type='method' style='display: none;'><a href="CoordinateManager.html#.Geo2GeoRef">Geo2GeoRef</a></li><li data-type='method' style='display: none;'><a href="CoordinateManager.html#.Geo2KCGRS">Geo2KCGRS</a></li><li data-type='method' style='display: none;'><a href="CoordinateManager.html#.Geo2MGRS">Geo2MGRS</a></li><li data-type='method' style='display: none;'><a href="CoordinateManager.html#.Geo2TM">Geo2TM</a></li><li data-type='method' style='display: none;'><a href="CoordinateManager.html#.Geo2UTM_Ex">Geo2UTM_Ex</a></li><li data-type='method' style='display: none;'><a href="CoordinateManager.html#.GeoRef2Geo">GeoRef2Geo</a></li><li data-type='method' style='display: none;'><a href="CoordinateManager.html#.KCGRS2Geo">KCGRS2Geo</a></li><li data-type='method' style='display: none;'><a href="CoordinateManager.html#.MGRS2Geo">MGRS2Geo</a></li><li data-type='method' style='display: none;'><a href="CoordinateManager.html#.TM2Geo">TM2Geo</a></li><li data-type='method' style='display: none;'><a href="CoordinateManager.html#.UTM2Geo">UTM2Geo</a></li><li data-type='method' style='display: none;'><a href="CoordinateManager.html#.UTM2Geo_Ex">UTM2Geo_Ex</a></li></ul></li><li><a href="Distance.html">Distance</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Distance.html#add">add</a></li><li data-type='method' style='display: none;'><a href="Distance.html#getBearing">getBearing</a></li><li data-type='method' style='display: none;'><a href="Distance.html#getBearing">getBearing</a></li><li data-type='method' style='display: none;'><a href="Distance.html#getLineColor">getLineColor</a></li><li data-type='method' style='display: none;'><a href="Distance.html#getLineVisible">getLineVisible</a></li><li data-type='method' style='display: none;'><a href="Distance.html#getLineWidth">getLineWidth</a></li><li data-type='method' style='display: none;'><a href="Distance.html#getMapHeight">getMapHeight</a></li><li data-type='method' style='display: none;'><a href="Distance.html#getScaleByDistance">getScaleByDistance</a></li><li data-type='method' style='display: none;'><a href="Distance.html#getSegmentTextVisible">getSegmentTextVisible</a></li><li data-type='method' style='display: none;'><a href="Distance.html#getSpeed">getSpeed</a></li><li data-type='method' style='display: none;'><a href="Distance.html#getTakeTime">getTakeTime</a></li><li data-type='method' style='display: none;'><a href="Distance.html#getTextVisible">getTextVisible</a></li><li data-type='method' style='display: none;'><a href="Distance.html#getUnit">getUnit</a></li><li data-type='method' style='display: none;'><a href="Distance.html#setBearing">setBearing</a></li><li data-type='method' style='display: none;'><a href="Distance.html#setHeightOffset">setHeightOffset</a></li><li data-type='method' style='display: none;'><a href="Distance.html#setLineColor">setLineColor</a></li><li data-type='method' style='display: none;'><a href="Distance.html#setLineVisible">setLineVisible</a></li><li data-type='method' style='display: none;'><a href="Distance.html#setLineWidth">setLineWidth</a></li><li data-type='method' style='display: none;'><a href="Distance.html#setScaleByDistance">setScaleByDistance</a></li><li data-type='method' style='display: none;'><a href="Distance.html#setSegmentTextVisible">setSegmentTextVisible</a></li><li data-type='method' style='display: none;'><a href="Distance.html#setSlope">setSlope</a></li><li data-type='method' style='display: none;'><a href="Distance.html#setSpeed">setSpeed</a></li><li data-type='method' style='display: none;'><a href="Distance.html#setTextVisible">setTextVisible</a></li><li data-type='method' style='display: none;'><a href="Distance.html#setUnit">setUnit</a></li></ul></li><li><a href="EventManager.html">EventManager</a><ul class='methods'><li data-type='method' style='display: none;'><a href="EventManager.html#.getDoubleClick">getDoubleClick</a></li><li data-type='method' style='display: none;'><a href="EventManager.html#.getMapMode">getMapMode</a></li><li data-type='method' style='display: none;'><a href="EventManager.html#.setMapMode">setMapMode</a></li></ul></li><li><a href="ExportImage.html">ExportImage</a><ul class='methods'><li data-type='method' style='display: none;'><a href="ExportImage.html#copyClipboard">copyClipboard</a></li><li data-type='method' style='display: none;'><a href="ExportImage.html#downloadJPG">downloadJPG</a></li><li data-type='method' style='display: none;'><a href="ExportImage.html#downloadPNG">downloadPNG</a></li><li data-type='method' style='display: none;'><a href="ExportImage.html#print">print</a></li><li data-type='method' style='display: none;'><a href="ExportImage.html#setCopyRight">setCopyRight</a></li><li data-type='method' style='display: none;'><a href="ExportImage.html#setFileName">setFileName</a></li><li data-type='method' style='display: none;'><a href="ExportImage.html#setTitle">setTitle</a></li></ul></li><li><a href="ExportImagePartialArea.html">ExportImagePartialArea</a><ul class='methods'><li data-type='method' style='display: none;'><a href="ExportImagePartialArea.html#downloadJPG">downloadJPG</a></li><li data-type='method' style='display: none;'><a href="ExportImagePartialArea.html#downloadJPGEx">downloadJPGEx</a></li><li data-type='method' style='display: none;'><a href="ExportImagePartialArea.html#downloadPNG">downloadPNG</a></li><li data-type='method' style='display: none;'><a href="ExportImagePartialArea.html#downloadPNGEx">downloadPNGEx</a></li><li data-type='method' style='display: none;'><a href="ExportImagePartialArea.html#setFileName">setFileName</a></li><li data-type='method' style='display: none;'><a href="ExportImagePartialArea.html#setPositionAbsolute">setPositionAbsolute</a></li></ul></li><li><a href="GARS.html">GARS</a><ul class='methods'><li data-type='method' style='display: none;'><a href="GARS.html#.GARS2Geo">GARS2Geo</a></li><li data-type='method' style='display: none;'><a href="GARS.html#.Geo2GARS">Geo2GARS</a></li></ul></li><li><a href="KCGRS.html">KCGRS</a><ul class='methods'><li data-type='method' style='display: none;'><a href="KCGRS.html#.Geo2KCGRS">Geo2KCGRS</a></li><li data-type='method' style='display: none;'><a href="KCGRS.html#.KCGRS2Geo">KCGRS2Geo</a></li></ul></li><li><a href="RenderObject.html">RenderObject</a><ul class='methods'><li data-type='method' style='display: none;'><a href="RenderObject.html#.addBillboard">addBillboard</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.addBillboardGreen">addBillboardGreen</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.addBillboardImage">addBillboardImage</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.addBillboardMilitarySymbol">addBillboardMilitarySymbol</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.addBillboardOrange">addBillboardOrange</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.addBillboardTerrain">addBillboardTerrain</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.addCircleExtrude">addCircleExtrude</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.addLabelHeight">addLabelHeight</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.addLine">addLine</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.addLines">addLines</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.addPinBoardImage">addPinBoardImage</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.addPoint">addPoint</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.addPointSize">addPointSize</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.addPolygon">addPolygon</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.getCenter">getCenter</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.removeEntity">removeEntity</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.setViewer">setViewer</a></li><li data-type='method' style='display: none;'><a href="RenderObject.html#.updateMap">updateMap</a></li></ul></li><li><a href="TM.html">TM</a><ul class='methods'><li data-type='method' style='display: none;'><a href="TM.html#.Geo2TM">Geo2TM</a></li><li data-type='method' style='display: none;'><a href="TM.html#.TM2Geo">TM2Geo</a></li></ul></li><li><a href="TerrainAnalysisManager.html">TerrainAnalysisManager</a><ul class='methods'><li data-type='method' style='display: none;'><a href="TerrainAnalysisManager.html#.clear">clear</a></li><li data-type='method' style='display: none;'><a href="TerrainAnalysisManager.html#.getOperationMode">getOperationMode</a></li><li data-type='method' style='display: none;'><a href="TerrainAnalysisManager.html#.setOperationMode">setOperationMode</a></li></ul></li><li><a href="TerrainProviderAvailability.html">TerrainProviderAvailability</a><ul class='methods'><li data-type='method' style='display: none;'><a href="TerrainProviderAvailability.html#initialize">initialize</a></li></ul></li><li><a href="ViewShed.html">ViewShed</a><ul class='methods'><li data-type='method' style='display: none;'><a href="ViewShed.html#getHeightResolution">getHeightResolution</a></li><li data-type='method' style='display: none;'><a href="ViewShed.html#getInvisibleColor">getInvisibleColor</a></li><li data-type='method' style='display: none;'><a href="ViewShed.html#getMapHeight">getMapHeight</a></li><li data-type='method' style='display: none;'><a href="ViewShed.html#getVisibleColor">getVisibleColor</a></li><li data-type='method' style='display: none;'><a href="ViewShed.html#setHeightOffset">setHeightOffset</a></li><li data-type='method' style='display: none;'><a href="ViewShed.html#setHeightResolution">setHeightResolution</a></li><li data-type='method' style='display: none;'><a href="ViewShed.html#setInvisibleColor">setInvisibleColor</a></li><li data-type='method' style='display: none;'><a href="ViewShed.html#setVisibleColor">setVisibleColor</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#Dms">Dms</a></li><li><a href="global.html#LatLon">LatLon</a></li><li><a href="global.html#Mgrs">Mgrs</a></li><li><a href="global.html#Utm">Utm</a></li><li><a href="global.html#Vector3d">Vector3d</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">TerrainAnalysisManager</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        TerrainAnalysisManager
+        </h2>
+        
+            <div class="class-description usertext"><p>측정과 관련된 객체를 관리하기 위한 클래스이다.</p></div>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+    
+    <h2>Constructor</h2>
+    
+
+    <h4 class="name" id="TerrainAnalysisManager"><span class="type-signature"></span>new TerrainAnalysisManager<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>객체 초기 상태를 설정한다.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".clear"><span class="type-signature">(static) </span>clear<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>측정 관리 객체를 초기화한다.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".getOperationMode"><span class="type-signature">(static) </span>getOperationMode<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>측정 관리 객체 모드를 리턴한다.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>측정 관리 상태를 리턴(None, Distance, Area, RadarCircle, Radar로 리턴)한다.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".setOperationMode"><span class="type-signature">(static) </span>setOperationMode<span class="signature">(mode)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>측정 관리 객체 모드를 설정한다.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>mode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>None</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>측정 관리 상태 설정(None, Distance, Area, RadarCircle, Radar로 설정 가능)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.0</a> on Wed Feb 22 2023 13:27:02 GMT+0900 (대한민국 표준시) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>
